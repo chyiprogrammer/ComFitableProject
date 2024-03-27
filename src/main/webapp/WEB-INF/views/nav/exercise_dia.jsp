@@ -1,5 +1,4 @@
 <%@page import="kr.co.namu.user.member.UserMemberVO"%>
-<%@ page import="kr.co.namu.book.ExerciseVO" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -42,37 +41,46 @@
 <div class="container mt-5">
 
     <h1 class="text-center mb-4">고른 운동 리스트</h1>
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
+    <div class="row text-center">
+        <div class="col-md-8 offset-md-2">
 
             <form action="<c:url value='/user/member/exerciseDiaConfirm'/> " name="exercise_dia" method="post">
 
-                <c:forEach items="${exerciseVOs}" var="vo">
+                <table class="table table-dark table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">운동 명</th>
+                        <th scope="col">무게 (kg)</th>
+                        <th scope="col">세트 수</th>
+                        <th scope="col">상태</th>
+                        <th scope="col">총 볼륨 (kg)</th>
+                    </tr>
+                    </thead>
 
-                    <hr>
+                    <c:forEach items="${exerciseVOs}" var="vo">
 
-                    <div class="mt-3">
+                        <tbody>
+                        <tr>
+                            <td>${vo.exer_name}</td>
+                            <td>${vo.exer_wgt}</td>
+                            <td>${vo.exer_set}</td>
+                            <td>${vo.exer_status}</td>
+                            <td>${vo.exer_totalVolume}</td>
+                        </tr>
+                        </tbody>
 
-                        <div class="input-group input-group-sm mb-3 row-cols-md-4 inform">
-                            <span class="input-group-text" id="inputGroup-sizing-sm1">운동 명</span>
-                            <input type="text" name="exer_name" value="${vo.exer_name}" class="form-control" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
-                        </div>
+                    </c:forEach>
 
-                        <div class="input-group input-group-sm mb-3 row-cols-md-4 inform">
-                            <span class="input-group-text" id="inputGroup-sizing-sm2">무게 (kg)</span>
-                            <input type="number" name="exer_wgt" value="${vo.exer_wgt}" class="form-control" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
-                        </div>
+                    <tfoot>
 
-                        <div class="input-group input-group-sm mb-3 row-cols-md-4 inform">
-                            <span class="input-group-text" id="inputGroup-sizing-sm3">세트 수</span>
-                            <input type="number" name="exer_set" value="${vo.exer_set}" class="form-control" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
-                        </div>
+                    <tr>
+                        <td colspan="4">총 볼륨 합계</td>
+                        <td>${totalVolume}</td>
+                    </tr>
 
-                    </div>
+                    </tfoot>
 
-                    <hr>
-
-                </c:forEach>
+                </table>
 
             <!-- Submit Button -->
             <div class="text-center mt-4">
