@@ -232,7 +232,7 @@ public class ExerciseController {
             return "nav/exercise_none";
         }
 
-        return "nav/exercise_prog";
+        return "nav/exercise_history";
     }
 
 
