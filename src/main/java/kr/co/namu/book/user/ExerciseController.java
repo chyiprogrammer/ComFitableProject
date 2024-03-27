@@ -212,7 +212,7 @@ public class ExerciseController {
         return "nav/exercise_dia";
     }
 
-    @RequestMapping("/exerciseDiaConfirm")
+/*    @RequestMapping("/exerciseDiaConfirm")
     public String exerciseDiaConfirm(ExerciseVO exerciseVO, HttpSession session, Model model){
 
         UserMemberVO userMemberVO = (UserMemberVO) session.getAttribute("loginedUserMemberVo");
@@ -233,7 +233,7 @@ public class ExerciseController {
         }
 
         return "nav/exercise_history";
-    }
+    }*/
 
 
 /*    @RequestMapping(value="/exerciseProg", method= RequestMethod.GET)
