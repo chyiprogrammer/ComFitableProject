@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="rental.mapper">
+
+    <insert id="insert" >
+        INSERT INTO rental_book ( b_no, u_m_no) VALUES ( #{b_no},#{ u_m_no} )
+    </insert>
+
+    <select id="entershelf" resultType="kr.co.namu.book.RentalBookVO">
+        SELECT * FROM rental_book rb
+        JOIN namu_book mb ON rb.b_no = mb.b_no
+        JOIN user_member um ON rb.u_m_no = um.u_m_no
+        WHERE rb.u_m_no = #{u_m_no} AND rb.rb_end_date = '1000-01-01'
+    </select>
+
+    <select id="rentalallbooks" resultType="kr.co.namu.book.RentalBookVO">
+        SELECT * FROM rental_book rb
+        JOIN namu_book mb ON rb.b_no = mb.b_no
+        JOIN user_member um ON rb.u_m_no = um.u_m_no
+        WHERE rb.rb_end_date = '1000-01-01'
+        ORDER BY um.u_m_id ASC, rb.rb_reg_date DESC;
+    </select>
+
+    <update id="updaterentalbook">
+        UPDATE rental_book SET rb_end_date = NOW() WHERE rb_no = #{rb_no}
+    </update>
+
+    <select id="rentalbookhistory" resultType="kr.co.namu.book.RentalBookVO">
+        SELECT * FROM rental_book rb
+                          JOIN namu_book mb ON rb.b_no = mb.b_no
+                          JOIN user_member um ON rb.u_m_no = um.u_m_no
+        WHERE rb.u_m_no = #{u_m_no}
+        ORDER BY rb.rb_reg_date DESC;
+    </select>
+
+</mapper>
+

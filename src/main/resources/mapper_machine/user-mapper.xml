@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user.mapper">
+
+    <select id ="login" resultType="kr.co.namu.user.member.UserMemberVO">
+        SELECT * FROM user_member WHERE u_m_id=#{u_m_id}
+        <!-- 원래 로그인시 u_m_id와 u_m_pw를 함께 where로 요청하여야 하나, pw가 encoding 되어 있음에 따라,
+             db의 pw과 vo의 pw는 다르므로, pw 비교는 DAO에서 encoder.match로 한다. -->
+
+    </select>
+
+    <select id="id_check" resultType="integer">
+        SELECT COUNT(*) FROM user_member WHERE u_m_id=#{u_m_id}
+    </select>
+
+    <insert id="join" >
+        INSERT INTO user_member(u_m_id, u_m_pw, u_m_name, u_m_gender, u_m_mail, u_m_phone)
+        VALUES ( #{u_m_id},#{u_m_pw},#{u_m_name},#{u_m_gender},#{u_m_mail},#{u_m_phone})
+    </insert>
+
+    <update id="updateAll">
+        UPDATE user_member SET u_m_name =#{u_m_name}, u_m_gender=#{u_m_gender}, u_m_mail=#{u_m_mail},
+                               u_m_phone=#{u_m_phone}, u_m_mod_date =NOW() WHERE u_m_no = #{u_m_no}
+    </update>
+
+    <select id ="userinfo" resultType="kr.co.namu.user.member.UserMemberVO">
+        SELECT * FROM user_member WHERE u_m_no=#{u_m_no}
+
+    </select>
+
+    <select id="listforpassword" resultType="int">
+
+        SELECT u_m_no FROM user_member WHERE u_m_id = #{u_m_id} AND u_m_name = #{u_m_name} AND u_m_mail = #{u_m_mail}
+
+    </select>
+
+    <update id="updatepassword">
+        UPDATE user_member SET u_m_pw = #{u_m_pw} WHERE u_m_no = #{u_m_no}
+    </update>
+
+
+    <!-- adnmin 에서 가져온것 -->
+
+
+
+
+
+
+
+    <resultMap id="myResultMap" type="kr.co.namu.admin.AdminMemberVO">
+        <!-- 리스트 타입 반환 -->
+    </resultMap>
+
+    <select id="list" resultMap="myResultMap">
+        SELECT * FROM admin_member WHERE a_m_id=#{a_m_id} and a_m_approval = 1
+    </select>
+
+    <select id="lists" resultMap="myResultMap">
+        SELECT * FROM admin_member
+    </select>
+
+    <update id="listup">
+        UPDATE admin_member SET a_m_approval = 1 WHERE a_m_no = #{a_m_no}
+    </update>
+
+
+
+    <select id="listOne" resultMap="myResultMap">
+        SELECT * FROM admin_member WHERE a_m_no = #{a_m_no}
+
+    </select>
+
+</mapper>
+

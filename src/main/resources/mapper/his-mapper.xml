@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="his.mapper">
+
+    <insert id="ing">
+        INSERT INTO exercise_history(his_id, his_name, his_wgt, his_set, his_totalVolume, his_status)
+        VALUES (#{his_id}, #{his_name},#{his_wgt},#{his_set}, #{his_totalVolume}, "...ing")
+    </insert>
+
+<!--
+    <select id="exerList" resultType="kr.co.namu.book.ExerciseVO">
+        select * from user_exercise WHERE exer_id = #{exer_id} and exer_status = "start"
+    </select>
+-->
+</mapper>
+
