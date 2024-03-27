@@ -83,3 +83,52 @@ CREATE TABLE hope_book(
 );
 
 select * from hope_book;
+
+CREATE TABLE user_exercise(
+                              exer_no		INT AUTO_INCREMENT,
+                              exer_id		VARCHAR(20),
+                              exer_name	VARCHAR(50),
+                              exer_wgt	INT		NOT NULL,
+                              exer_set	INT		NOT NULL,
+                              exer_totalVolume INT,
+                              exer_date 	datetime default current_timestamp,
+                              exer_start 	TIME default NULL,
+                              exer_end 	TIME default NULL,
+                              exer_status VARCHAR(20) NOT NULL,
+                              PRIMARY KEY(exer_no),
+                              FOREIGN KEY (exer_id) REFERENCES user_member(u_m_id)
+);
+
+DELIMITER //
+
+CREATE TRIGGER calculate_totalVolume
+    BEFORE INSERT ON user_exercise
+    FOR EACH ROW
+BEGIN
+    DECLARE totalVolume INT;
+    SET totalVolume = NEW.exer_wgt * NEW.exer_set;
+    SET NEW.exer_totalVolume = totalVolume;
+END;
+//
+
+DELIMITER ;
+
+select * from user_exercise;
+delete from user_exercise where exer_id="doodleg";
+drop table user_exercise;
+
+alter table user_exercise drop column exer_end;
+
+
+CREATE TABLE exercise_history(
+                                 his_no		INT AUTO_INCREMENT,
+                                 his_id		VARCHAR(20),
+                                 his_name	VARCHAR(50),
+                                 his_wgt	INT		NOT NULL,
+                                 his_set	INT		NOT NULL,
+                                 his_totalVolume INT,
+                                 his_date 	datetime default current_timestamp,
+                                 his_status VARCHAR(30),
+                                 PRIMARY KEY(his_no),
+                                 FOREIGN KEY (his_id) REFERENCES user_member(u_m_id)
+);
