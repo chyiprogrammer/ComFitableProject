@@ -8,7 +8,7 @@ public interface ExerciseService { // 내가 필요한건 운동 일지에 등�
 
     void exercise_insert(ExerciseVO exerciseVO); // 운동 일지 등록
 
-    List<ExerciseVO> exercise_list(ExerciseVO exerciseVO);
+    List<ExerciseVO> exercise_list(ExerciseVO exerciseVO); // 운동 리스트 보기
 
 }
 

@@ -196,7 +196,14 @@ public class ExerciseController {
 
         List<ExerciseVO> exerciseVOs = service.exercise_list(exerciseVO);
 
+        int totalVolume = 0;
+        for(ExerciseVO exerVO : exerciseVOs){
+            totalVolume += exerVO.getExer_totalVolume();
+        }
+
         model.addAttribute("exerciseVOs",exerciseVOs);
+        model.addAttribute("totalVolume", totalVolume);
+
 
         if(exerciseVOs.isEmpty()){
             return "nav/exercise_none";
@@ -225,7 +232,7 @@ public class ExerciseController {
             return "nav/exercise_none";
         }
 
-        return "nav/exercise_prog";
+        return "nav/exercise_history";
     }
 
 
