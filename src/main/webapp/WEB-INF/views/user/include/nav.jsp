@@ -16,7 +16,7 @@
 
 	<div class="text-center text-md-end">
 
-		<button type="button" class="btn btn-warning me-2 p-4">
+		<button type="button" class="btn btn-warning me-5 p-4">
 			<a href="<c:url value='/user/member/logoutConfirm' />" class="text-decoration-none">로그아웃</a>
 		</button>
 

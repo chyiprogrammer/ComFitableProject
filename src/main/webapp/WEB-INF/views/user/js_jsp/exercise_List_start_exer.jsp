@@ -36,4 +36,6 @@
         }else
             exer_Start.style.display = "block";
     }
+
+
 </script>

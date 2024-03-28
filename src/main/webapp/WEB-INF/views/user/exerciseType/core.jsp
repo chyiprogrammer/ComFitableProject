@@ -101,7 +101,7 @@
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <input type="number" name="exer_wgt" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
@@ -179,7 +179,7 @@
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <input type="number" name="exer_wgt" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
@@ -258,7 +258,7 @@
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <input type="number" name="exer_wgt" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
@@ -338,7 +338,7 @@
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <input type="number" name="exer_wgt" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
@@ -417,7 +417,7 @@
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <input type="number" name="exer_wgt" class="form-control"  value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
