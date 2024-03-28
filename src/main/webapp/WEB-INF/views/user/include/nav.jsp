@@ -60,7 +60,7 @@
 					<li class="nav-item text-center"><a href="#" class="nav-link">기구 목록</a></li>
 					<li class="nav-item text-center"><a href="<c:url value='/user/member/exerciseDia' />" class="nav-link">오늘 할 운동</a></li>
 					<li class="nav-item text-center"><a href="<c:url value='/user/member/exerStatus' />" class="nav-link">운동 현황</a></li>
-
+					<li class="nav-item text-center"><a href="<c:url value='/user/member/exerHisAll' />" class="nav-link">전체 현황</a></li>
 
 				</ul>
 			</div>

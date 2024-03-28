@@ -31,4 +31,10 @@ public class HistoryDAO implements HistoryService{
     public int exer_check(ExerciseVO exerciseVO) {
         return sql.update("history.mapper.exercheck",exerciseVO);
     }
+
+    @Override
+    public List<ExerciseVO> exer_his_all(ExerciseVO exerciseVO) {
+        return sql.selectList("history.mapper.exerhisall", exerciseVO);
+    }
+
 }

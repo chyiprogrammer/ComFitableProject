@@ -13,4 +13,6 @@ public interface HistoryService {
     List<ExerciseVO> exer_status(ExerciseVO exerciseVO);
 
     int exer_check(ExerciseVO exerciseVO);
+
+    List<ExerciseVO> exer_his_all(ExerciseVO exerciseVO);
 }

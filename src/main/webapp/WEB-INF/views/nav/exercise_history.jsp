@@ -50,19 +50,16 @@
                     <td>${vo.exer_set}</td>
                     <td>${vo.exer_status}</td>
 
-
                     <td>
                         <c:url value='/user/member/exerCheck' var='detail_url'>
-                        <c:param name='exer_no' value='${vo.exer_no}'/>
+                            <c:param name='exer_no' value='${vo.exer_no}'/>
                         </c:url>
 
                         <c:if test="${vo.exer_status == '...ing'}">
                             <button type="button" class="btn btn-primary btn-sm" onclick="location.href='${detail_url}'" >확인 </button>
                         </c:if>
-                        <c:if test="${vo.exer_status == 'done'}">
-                            <button type="button">완료</button>
-                        </c:if>
                     </td>
+
                 </tr>
             </tbody>
 

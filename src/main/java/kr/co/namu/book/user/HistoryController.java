@@ -52,7 +52,7 @@ public class HistoryController {
             model.addAttribute("status",exer_status);
             nextPage = "/nav/exercise_history";
         }else{
-            nextPage = "user/member/login_ng";
+            nextPage = "nav/exercise_his_all";
         }
 
         return nextPage;
@@ -70,10 +70,30 @@ public class HistoryController {
         if(checkVOs > 0){
             nextPage = "redirect:/user/member/exerStatus";
         }else{
-            nextPage = "user/member/login_ng";
+            nextPage = "nav/exercise_his_all";
         }
         return nextPage;
 
     }
+
+    @RequestMapping("/exerHisAll")
+    public String exerHisAll(ExerciseVO exerciseVO, HttpSession session, Model model){
+        model.addAttribute("list", 1);
+
+        UserMemberVO userMemberVO = (UserMemberVO) session.getAttribute("loginedUserMemberVo");
+        exerciseVO.setExer_id(userMemberVO.getU_m_id());
+
+        String nextPage;
+        List<ExerciseVO> exer_his_all = service.exer_his_all(exerciseVO);
+
+        if(!exer_his_all.isEmpty()){
+            model.addAttribute("history",exer_his_all);
+            nextPage = "/nav/exercise_his_all";
+        }else{
+            nextPage = "nav/exercise_type";
+        }
+        return nextPage;
+    }
+
 
 }
