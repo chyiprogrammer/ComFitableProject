@@ -55,6 +55,11 @@ public class HistoryController {
             nextPage = "nav/exercise_his_all";
         }
 
+        if(exer_status.isEmpty()){
+            nextPage = "nav/exercise_no_ing";
+
+        }
+
         return nextPage;
     }
 
@@ -91,6 +96,9 @@ public class HistoryController {
             nextPage = "/nav/exercise_his_all";
         }else{
             nextPage = "nav/exercise_type";
+        }
+        if(exer_his_all.isEmpty()){
+            nextPage = "nav/exercise_no_all";
         }
         return nextPage;
     }

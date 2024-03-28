@@ -24,9 +24,11 @@
 			<a href="<c:url value='/user/member/modifyAccountForm' />" class="text-decoration-none">계정수정</a>
 		</button>
 
+<%--
 		<button type="button" class="btn btn-light me-2">
 			<a href="<c:url value='/book/user/enterBookshelf' />" class="text-decoration-none">나의책장</a>
 		</button>
+--%>
 
 	</div>
 

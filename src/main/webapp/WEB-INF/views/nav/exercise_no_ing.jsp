@@ -9,13 +9,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>운동을 골라주세요</title>
+  <title>운동을 골라주세요</title>
 </head>
 <body>
 
 <script>
 
-  alert("선택하신 운동이 없습니다. 운동 목록으로 돌아갑니다.")
+  alert("진행중인 운동이 없습니다. 운동 목록으로 돌아갑니다.")
   window.location.href = "<c:url value='/user/member/exerciseType/Main' />";
 
 </script>

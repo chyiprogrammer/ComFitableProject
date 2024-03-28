@@ -26,24 +26,25 @@
 %>
 
 <table class="table table-dark table-bordered table-hover">
+
     <thead>
-    <tr>
-        <th scope="col">운동 명</th>
-        <th scope="col">무게 (kg)</th>
-        <th scope="col">세트 수</th>
-        <th colspan="2" scope="col">상태</th>
-    </tr>
+        <tr>
+            <th scope="col">운동 명</th>
+            <th scope="col">무게 (kg)</th>
+            <th scope="col">세트 수</th>
+            <th colspan="2" scope="col">상태</th>
+        </tr>
     </thead>
 
     <c:forEach items="${history}" var="vo">
 
         <tbody>
-        <tr>
-            <td>${vo.exer_name}</td>
-            <td>${vo.exer_wgt}</td>
-            <td>${vo.exer_set}</td>
-            <td>${vo.exer_status}</td>
-        </tr>
+            <tr>
+                <td>${vo.exer_name}</td>
+                <td>${vo.exer_wgt}</td>
+                <td>${vo.exer_set}</td>
+                <td>${vo.exer_status}</td>
+            </tr>
         </tbody>
 
     </c:forEach>
