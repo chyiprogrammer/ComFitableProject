@@ -57,7 +57,6 @@ public class HistoryController {
 
         if(exer_status.isEmpty()){
             nextPage = "nav/exercise_no_ing";
-
         }
 
         return nextPage;
