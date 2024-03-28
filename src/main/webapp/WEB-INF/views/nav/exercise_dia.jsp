@@ -44,7 +44,7 @@
     <div class="row text-center">
         <div class="col-md-8 offset-md-2">
 
-            <form action="<c:url value='/user/member/exerciseDiaConfirm'/> " name="exercise_dia" method="post">
+            <form action="<c:url value='/user/member/hitoryConfirm'/> " name="exercise_dia" method="post">
 
                 <table class="table table-dark table-bordered table-hover">
                     <thead>
@@ -84,7 +84,7 @@
 
             <!-- Submit Button -->
             <div class="text-center mt-4">
-                <button type="button" class="btn btn-primary" id="submit-btn" onclick="goWork()">운동 시작</button>
+                <input type="submit" class="btn btn-primary" id="submit-btn" value="운동 시작">
             </div>
 
             </form>
@@ -94,32 +94,7 @@
     </div>
 
 
-        <script>
-
-            function goWork(){
-            window.location.href = "<c:url value='/user/member/exerciseDiaConfirm' />";
-        }
-
-    // Submit 버튼 클릭 시 동작
-    document.getElementById('submit-btn').addEventListener('click', function () {
-
-        var startTime = document.getElementById('start-time').value;
-        var endTime = document.getElementById('end-time').value;
-
-        // 선택한 날짜와 시간 정보를 콘솔에 출력
-
-        console.log("Start Time: " + startTime);
-        console.log("End Time: " + endTime);
-
-        // 여기서 선택한 날짜와 시간 정보를 서버로 전송하여 처리할 수 있습니다.
-    });
-
-</script>
-
-
 <%--<jsp:include page="../user/js_jsp/exercise_dia_calender.jsp" />--%>
-
-
 
 <%
 } else {	// 로그인이 되어있지 않을 때

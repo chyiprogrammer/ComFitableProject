@@ -29,7 +29,7 @@
 
 		<section>
 
-		<div id="section_wrap">
+		<div id="section_wrap" class="p-5">
 
 		<img class="mb-4 mt-5" src="/resources/choi_machine/img/login.png" alt="" width="55" height="72">
 		<h1 class="h3 mb-3 fw-normal ms-5 me-5 ">로그인</h1>
@@ -46,7 +46,7 @@
 				<label for="floatingPassword">패스워드</label>
 			</div>
 
-			<input type="button" class="mt-4" value="로그인" onclick="loginForm();">
+			<button type="button" class="btn btn-warning m-5 mt-4 p-3" onclick="loginForm();">로그인</button>
 
 		</form>
 

@@ -1,5 +1,3 @@
-use namu_db;
-
 CREATE TABLE admin_member(
                              a_m_no		INT 	AUTO_INCREMENT,
                              a_m_approval	INT	NOT NULL DEFAULT 0,
@@ -16,6 +14,8 @@ CREATE TABLE admin_member(
 
                              PRIMARY KEY(a_m_no)
 );
+
+select * from user_member;
 
 select * from admin_member where a_m_no =2;
 
@@ -41,7 +41,6 @@ select * from namu_book;
 
 
 CREATE TABLE user_member(
-                            u_m_no		INT 	AUTO_INCREMENT,
                             u_m_id		VARCHAR(20) 	NOT NULL,
                             u_m_pw		VARCHAR(100) 	NOT NULL,
                             u_m_name	VARCHAR(20) 	NOT NULL,
@@ -50,10 +49,47 @@ CREATE TABLE user_member(
                             u_m_phone	VARCHAR(20) 	NOT NULL,
                             u_m_reg_date 	DATETIME DEFAULT CURRENT_TIMESTAMP,
                             u_m_mod_date	DATETIME DEFAULT CURRENT_TIMESTAMP,
-                            PRIMARY KEY(u_m_no)
+                            PRIMARY KEY(u_m_id)
 );
 
+drop table user_member;
+
 select * from user_member;
+
+CREATE TABLE user_exercise(
+                              exer_no		INT AUTO_INCREMENT,
+                              exer_id		VARCHAR(20),
+                              exer_name	VARCHAR(50),
+                              exer_wgt	INT		NOT NULL,
+                              exer_set	INT		NOT NULL,
+                              exer_totalVolume INT,
+                              exer_date 	datetime default current_timestamp,
+                              exer_start 	datetime default current_timestamp,
+                              exer_end 	datetime default current_timestamp,
+                              exer_status VARCHAR(20) NOT NULL,
+                              PRIMARY KEY(exer_no),
+                              FOREIGN KEY (exer_id) REFERENCES user_member(u_m_id)
+);
+
+DELIMITER //
+
+CREATE TRIGGER calculate_totalVolume
+    BEFORE INSERT ON user_exercise
+    FOR EACH ROW
+BEGIN
+    DECLARE totalVolume INT;
+    SET totalVolume = NEW.exer_wgt * NEW.exer_set;
+    SET NEW.exer_totalVolume = totalVolume;
+END;
+//
+
+DELIMITER ;
+
+select * from user_exercise;
+delete from user_exercise where exer_id="doodleg";
+drop table user_exercise;
+
+alter table user_exercise drop column exer_end;
 
 CREATE TABLE rental_book(
                             rb_no            INT AUTO_INCREMENT,
@@ -84,42 +120,6 @@ CREATE TABLE hope_book(
 
 select * from hope_book;
 
-CREATE TABLE user_exercise(
-                              exer_no		INT AUTO_INCREMENT,
-                              exer_id		VARCHAR(20),
-                              exer_name	VARCHAR(50),
-                              exer_wgt	INT		NOT NULL,
-                              exer_set	INT		NOT NULL,
-                              exer_totalVolume INT,
-                              exer_date 	datetime default current_timestamp,
-                              exer_start 	TIME default NULL,
-                              exer_end 	TIME default NULL,
-                              exer_status VARCHAR(20) NOT NULL,
-                              PRIMARY KEY(exer_no),
-                              FOREIGN KEY (exer_id) REFERENCES user_member(u_m_id)
-);
-
-DELIMITER //
-
-CREATE TRIGGER calculate_totalVolume
-    BEFORE INSERT ON user_exercise
-    FOR EACH ROW
-BEGIN
-    DECLARE totalVolume INT;
-    SET totalVolume = NEW.exer_wgt * NEW.exer_set;
-    SET NEW.exer_totalVolume = totalVolume;
-END;
-//
-
-DELIMITER ;
-
-select * from user_exercise;
-delete from user_exercise where exer_id="doodleg";
-drop table user_exercise;
-
-alter table user_exercise drop column exer_end;
-
-
 CREATE TABLE exercise_history(
                                  his_no		INT AUTO_INCREMENT,
                                  his_id		VARCHAR(20),
@@ -127,8 +127,19 @@ CREATE TABLE exercise_history(
                                  his_wgt	INT		NOT NULL,
                                  his_set	INT		NOT NULL,
                                  his_totalVolume INT,
-                                 his_date 	datetime default current_timestamp,
-                                 his_status VARCHAR(30),
+                                 his_date 	datetime,
+                                 his_status VARCHAR(20),
                                  PRIMARY KEY(his_no),
                                  FOREIGN KEY (his_id) REFERENCES user_member(u_m_id)
 );
+
+select * from exercise_history;
+drop table exercise_history;
+
+SELECT exer_status FROM user_exercise WHERE exer_id = "doodleg" AND exer_status = "start";
+UPDATE user_exercise SET exer_status = "start" where exer_id ="doodleg" AND exer_status ="...ing";
+
+SELECT * FROM user_exercise WHERE exer_id = "doodleg" AND exer_status = "...ing";
+
+
+
