@@ -80,13 +80,12 @@
 
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="move_img btn btn-sm btn-outline-secondary" onclick="javascript:exer_How(0)">운동보기</button>
+                                <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(0)">운동법</button>
                             </div>
 
-                            <small class="text-muted">9 mins</small>
 
                             <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary" onclick="javascript:exer_Start(0)">운동시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(0)">시작</button>
                             </div>
                         </div>
 
@@ -112,7 +111,7 @@
                                     <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary" value="완료" onclick="valid_Check(0)"> <%--파라미터 숫자 바꾸기--%>
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(0)"> <%--파라미터 숫자 바꾸기--%>
 
                             </div>
 
@@ -158,13 +157,12 @@
 
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="move_img btn btn-sm btn-outline-secondary" onclick="javascript:exer_How(1)">운동보기</button>
+                                <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(1)">운동법</button>
                             </div>
 
-                            <small class="text-muted">9 mins</small>
 
                             <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary" onclick="javascript:exer_Start(1)">운동시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(1)">시작</button>
                             </div>
 
                         </div>
@@ -191,7 +189,7 @@
                                     <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary" value="완료" onclick="valid_Check(1)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(1)">
 
                             </div>
 
@@ -239,13 +237,12 @@
 
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="move_img btn btn-sm btn-outline-secondary" onclick="javascript:exer_How(2)">운동보기</button>
+                                <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(2)">운동법</button>
                             </div>
 
-                            <small class="text-muted">9 mins</small>
 
                             <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary" onclick="javascript:exer_Start(2)">운동시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(2)">시작</button>
                             </div>
                         </div>
 
@@ -271,7 +268,7 @@
                                     <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary" value="완료" onclick="valid_Check(2)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(2)">
 
                             </div>
 
@@ -320,13 +317,12 @@
 
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="move_img btn btn-sm btn-outline-secondary" onclick="javascript:exer_How(3)">운동보기</button>
+                                <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(3)">운동법</button>
                             </div>
 
-                            <small class="text-muted">9 mins</small>
 
                             <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary" onclick="javascript:exer_Start(3)">운동시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(3)">시작</button>
                             </div>
                         </div>
 
@@ -352,7 +348,7 @@
                                     <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary" value="완료" onclick="valid_Check(3)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(3)">
 
                             </div>
 
@@ -400,13 +396,12 @@
 
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="move_img btn btn-sm btn-outline-secondary" onclick="javascript:exer_How(4)">운동보기</button>
+                                <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(4)">운동법</button>
                             </div>
 
-                            <small class="text-muted">9 mins</small>
 
                             <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary" onclick="javascript:exer_Start(4)">운동시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(4)">시작</button>
                             </div>
 
                         </div>
@@ -432,7 +427,7 @@
                                     <span class="input-group-text">세트 수</span>
                                     <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
-                                <input type="button" class="btn btn-sm btn-outline-secondary" value="완료" onclick="valid_Check(4)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(4)">
 
                             </div>
 
