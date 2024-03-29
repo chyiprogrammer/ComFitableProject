@@ -6,12 +6,21 @@
 
     <insert id="start">
         INSERT INTO user_exercise(exer_id, exer_name, exer_wgt, exer_set, exer_totalVolume, exer_status)
-        VALUES (#{exer_id}, #{exer_name},#{exer_wgt},#{exer_set}, #{exer_totalVolume}, "start")
+        VALUES (#{exer_id}, #{exer_name}, #{exer_wgt}, #{exer_set}, #{exer_totalVolume}, "start")
+    </insert>
+
+    <insert id="bodyExer">
+        INSERT INTO user_exercise_b(exer_id_b, exer_name_b, exer_sec_b, exer_set_b, exer_totalTime_b, exer_status_b)
+        VALUES (#{exer_id_b}, #{exer_name_b}, #{exer_sec_b}, #{exer_set_b}, #{exer_totalTime_b}, "start")
     </insert>
 
     <select id="exerList" resultType="kr.co.namu.book.ExerciseVO">
         select * from user_exercise WHERE exer_id = #{exer_id} and exer_status = "start"
     </select>
+
+    <delete id="exerDeleteOne">
+        delete from user_exercise WHERE exer_no = #{exer_no} AND exer_status = "start"
+    </delete>
 
 
 </mapper>
