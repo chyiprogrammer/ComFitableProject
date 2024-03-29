@@ -22,6 +22,15 @@
         delete from user_exercise WHERE exer_no = #{exer_no} AND exer_status = "start"
     </delete>
 
+    <select id="bodyList" resultType="kr.co.namu.book.B_ExerciseVO">
+        select * from user_exercise_b WHERE exer_id_b = #{exer_id_b} and exer_status_b = "start"
+    </select>
+
+    <delete id="bodyListDeleteOne">
+        delete from user_exercise_b WHERE exer_no_b = #{exer_no_b} AND exer_status_b = "start"
+    </delete>
+
+
 
 </mapper>
 

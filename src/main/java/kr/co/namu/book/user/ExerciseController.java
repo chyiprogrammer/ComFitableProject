@@ -241,6 +241,30 @@ public class ExerciseController {
 
     // 운동 부위에 따른 url 끝
 
+    @RequestMapping("/exerBody")
+    public String exerBody(B_ExerciseVO B_exerciseVO, HttpSession session, Model model){
+        UserMemberVO userMemberVO = (UserMemberVO) session.getAttribute("loginedUserMemberVo");
+        B_exerciseVO.setExer_id_b(userMemberVO.getU_m_id());
+
+        List<B_ExerciseVO> B_exerciseVOs = b_service.b_exercise_list(B_exerciseVO);
+
+        int totalTime = 0;
+        for(B_ExerciseVO B_exerVO : B_exerciseVOs){
+            totalTime += B_exerVO.getExer_totalTime_b();
+        }
+
+        model.addAttribute("B_exerciseVOs",B_exerciseVOs);
+        model.addAttribute("totalTime_b", totalTime);
+
+
+        if(B_exerciseVOs.isEmpty()){
+            return "nav/exercise_none";
+        }
+
+        return "nav/exercise_body";
+
+    }
+
 
 
     @RequestMapping("/exerciseDia")
