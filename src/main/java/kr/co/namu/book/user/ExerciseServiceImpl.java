@@ -22,6 +22,13 @@ public class ExerciseServiceImpl implements ExerciseService{
         return dao.exercise_list(exerciseVO);
     }
 
+    @Override
+    public int exercise_deleteOne(ExerciseVO exerciseVO) {
+        return dao.exercise_deleteOne(exerciseVO);
+    }
+
+
+
 /*
     @Override // 운동 일지 수정
     public void exercise_update(ExerciseVO vo) {

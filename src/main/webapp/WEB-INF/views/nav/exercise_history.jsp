@@ -23,51 +23,66 @@
 <%
     UserMemberVO loginedUserMemberVo = (UserMemberVO) session.getAttribute("loginedUserMemberVo");
     if (loginedUserMemberVo != null) {	//로그인이 되어있을 때
-
 %>
+
     <table class="table table-dark table-bordered table-hover">
             <thead>
                 <tr>
-                    <th scope="col">운동 명</th>
-                    <th scope="col">무게 (kg)</th>
-                    <th scope="col">세트 수</th>
-                    <th scope="col">상태</th>
-                    <th scope="col">총 볼륨 (kg)</th>
+                    <th scope="col" class="fs-3">운동 명</th>
+                    <th scope="col" class="fs-3">무게 (kg)</th>
+                    <th colspan="2" scope="col" class="fs-3">상태</th>
                 </tr>
             </thead>
 
-    <c:forEach items="${exerciseVOs}" var="vo">
+    <c:forEach items="${status}" var="vo">
 
             <tbody>
                 <tr>
                     <td>
                         <div class="form-check">
+<%--
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                            <label class="form-check-label" for="flexCheckChecked"> ${vo.exer_name}
+--%>
+                            <label class="form-check-label fs-3" for="flexCheckChecked">
+                                    ${vo.exer_name}
                             </label>
+
                         </div>
                     </td>
-                    <td>${vo.exer_wgt}</td>
-                    <td>${vo.exer_set}</td>
-                    <td>${vo.exer_status}</td>
-                    <td>${vo.exer_totalVolume}</td>
+
+                    <td class="fs-3 text-center">
+                        <c:forEach begin="1" end="${vo.exer_set}" varStatus="loop">
+                            ${vo.exer_wgt}
+                            <input type="number" style="width: 90px" min="1" value="${vo.exer_wgt}" class="ms-5 fs-3"><br>
+                        </c:forEach>
+                    </td>
+
+                    <td class="fs-2 text-center text-warning">${vo.exer_status}</td>
+
+                    <td>
+                        <c:url value='/user/member/exerCheck' var='detail_url'>
+                            <c:param name='exer_no' value='${vo.exer_no}'/>
+                            <c:param name='exer_wgt' value='${vo.exer_wgt}'/>
+                        </c:url>
+
+                        <c:if test="${vo.exer_status == '...ing'}">
+                            <button type="button" class="btn btn-primary btn-sm p-3" onclick="location.href='${detail_url}'" >확인 </button>
+                        </c:if>
+                    </td>
+
                 </tr>
             </tbody>
 
     </c:forEach>
 
-        <tfoot>
-            <tr>
-                <td colspan="4">총 볼륨 합계</td>
-                <td>${totalVolume}</td>
-            </tr>
-        </tfoot>
 
     </table>
 
+<%--
 <div class="text-center mt-4">
     <button type="button" class="btn btn-primary" id="submit-btn">운동 완료</button>
 </div>
+--%>
 
 <%--<script>
     var statusChecks = document.querySelectorAll('.form-check-input');

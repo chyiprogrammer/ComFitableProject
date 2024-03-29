@@ -2,17 +2,38 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="his.mapper">
+<mapper namespace="history.mapper">
 
-    <insert id="ing">
+    <!--<select id="historylist">
         INSERT INTO exercise_history(his_id, his_name, his_wgt, his_set, his_totalVolume, his_status)
         VALUES (#{his_id}, #{his_name},#{his_wgt},#{his_set}, #{his_totalVolume}, "...ing")
-    </insert>
+    </select>-->
 
-<!--
-    <select id="exerList" resultType="kr.co.namu.book.ExerciseVO">
-        select * from user_exercise WHERE exer_id = #{exer_id} and exer_status = "start"
+
+    <update id="historylist">
+        UPDATE user_exercise SET exer_status = "...ing",exer_start = NOW() where exer_id =#{exer_id} AND exer_status ="start"
+    </update>
+
+
+    <select id="exerstatus" resultType="kr.co.namu.book.ExerciseVO">
+        SELECT * FROM user_exercise WHERE exer_id = #{exer_id} AND exer_status = "...ing"
     </select>
--->
+
+
+    <update id="exercheck">
+        UPDATE user_exercise SET exer_status = "done",exer_end = NOW() where exer_no = #{exer_no}
+    </update>
+
+
+    <select id="exerhisall" resultType="kr.co.namu.book.ExerciseVO">
+        SELECT * FROM user_exercise WHERE exer_id = #{exer_id} AND exer_status = "done"
+    </select>
+
+    <!--
+        <select id="historylist" resultType="kr.co.namu.book.HistoryVO">
+            select * from exercise_history WHERE his_id = #{his_id} and exer_status = "start"
+        </select>
+    -->
+
 </mapper>
 

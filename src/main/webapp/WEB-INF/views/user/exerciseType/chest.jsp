@@ -19,9 +19,11 @@
     <title>Title</title>
 
     <style>
+
         .hidden_exer{
             display: none;
         }
+
     </style>
 
 </head>
@@ -51,16 +53,16 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container"> <%--이미지 바꾸기--%>
-                        <img src="/resources/choi_machine/img/exercise/chest/C_b_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/chest/C_b_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/chest/C_b_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/chest/C_b_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
                         <details>
                             <summary class="fw-bold">
                                 덤벨 벤치 프레스
-                            </summary>
-                            <p>
+                            </summary><br>
+                            <p class="text-start">
                                 가슴을 열며 어깨가 들리지 않도록 고정한 후 아치형 허리를 유지한 상태로 시작합니다.<br><br>
                                 팔꿈치가 어깨보다 낮은 상태를 유지한 채로 팔이 지면과 수직이 되도록 천천히 내려옵니다 들어올릴 때에도 수직으로 올라옵니다.</p>
                             </p>
@@ -78,13 +80,12 @@
 
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="move_img btn btn-sm btn-outline-secondary" onclick="javascript:exer_How(0)">운동보기</button>
+                                <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(0)">운동법</button>
                             </div>
 
-                            <small class="text-muted">9 mins</small>
 
                             <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary" onclick="javascript:exer_Start(0)">운동시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(0)">시작</button>
                             </div>
                         </div>
 
@@ -110,7 +111,7 @@
                                     <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary" value="완료" onclick="valid_Check(0)"> <%--파라미터 숫자 바꾸기--%>
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(0)"> <%--파라미터 숫자 바꾸기--%>
 
                             </div>
 
@@ -128,16 +129,17 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container">
-                        <img src="/resources/choi_machine/img/exercise/chest/C_b_f_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/chest/C_b_f_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/chest/C_b_f_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/chest/C_b_f_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
                         <details>
                             <summary class="fw-bold">
                                 덤벨 벤치 플라이
-                            </summary>
-                            <p>가슴을 열며 어깨가 들리지 않도록 고정한 후 아치형 허리를 유지한 상태로 시작합니다<br><br>
+                            </summary><br>
+                            <p class="text-start">
+                                가슴을 열며 어깨가 들리지 않도록 고정한 후 아치형 허리를 유지한 상태로 시작합니다<br><br>
 
                                 손바닥이 서로 마주보도록 덤벨을 잡아 허벅지에 올린 후 무릎으로 덤벨을 받치며 자연스럽게 누운 후 다리를 내리고 가슴위로 양 팔을 밀어 덤벨을 서로 붙여줍니다<br>
 
@@ -157,13 +159,11 @@
 
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="move_img btn btn-sm btn-outline-secondary" onclick="javascript:exer_How(1)">운동보기</button>
+                                <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(1)">운동법</button>
                             </div>
 
-                            <small class="text-muted">9 mins</small>
-
                             <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary" onclick="javascript:exer_Start(1)">운동시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(1)">시작</button>
                             </div>
 
                         </div>
@@ -190,7 +190,7 @@
                                     <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary" value="완료" onclick="valid_Check(1)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(1)">
 
                             </div>
 
@@ -209,16 +209,16 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container"> <%--이미지 바꾸기--%>
-                        <img src="/resources/choi_machine/img/exercise/chest/C_b_p_o_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/chest/C_b_p_o_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/chest/C_b_p_o_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/chest/C_b_p_o_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
                         <details>
                             <summary class="fw-bold">
                                 벤트 암 덤벨 풀오버
-                            </summary>
-                            <p>
+                            </summary><br>
+                            <p class="text-start">
                                 발을 바닥에 평평하게 유지한 후 허리를 벤치에 붙인 상태로 시작합니다<br><br>
                                 양손으로 덤벨을 잡을 때 손바닥과 손가락으로 다이아몬드 모양을 만든 상태로
                                 팔이 몸과 일직선이 될 때까지, 팔꿈치가 약 90도가 될 때까지 구부리며 덤벨을 머리 위로 천천히 내립니다 잠시 멈춘 후 덤벨을 처음의 위치로 당겨줍니다
@@ -237,13 +237,13 @@
 
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="move_img btn btn-sm btn-outline-secondary" onclick="javascript:exer_How(2)">운동보기</button>
+                                <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(2)">운동법</button>
                             </div>
 
-                            <small class="text-muted">9 mins</small>
+
 
                             <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary" onclick="javascript:exer_Start(2)">운동시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(2)">시작</button>
                             </div>
                         </div>
 
@@ -269,7 +269,7 @@
                                     <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary" value="완료" onclick="valid_Check(2)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(2)">
 
                             </div>
 
@@ -290,16 +290,16 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container"> <%--이미지 바꾸기--%>
-                        <img src="/resources/choi_machine/img/exercise/chest/C_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/chest/C_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/chest/C_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/chest/C_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
                         <details>
                             <summary class="fw-bold">
                                 푸쉬업
-                            </summary>
-                            <p>
+                            </summary><br>
+                            <p class="text-start">
                                 손을 바깥으로 돌린 상태로 손의 간격이 어깨너비보다 좁아지지 않게 유의하며 어깨 밑에 손목을 위치시킵니다 양 발이 벌어지지 않도록 발을 붙여준 상태로 시작합니다<br><br>
                                 양쪽 어깨가 멀어지도록, 등이 넓어지는 모양을 유지하며 내려갑니다.
                                 이때 손목과 팔꿈치는 서로 수직을 이룹니다.
@@ -313,45 +313,44 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                        <p>양 발을 붙이고 복근에 적당한 긴장감을 넣어 머리부터 발끝까지 막대가 된 것처럼 긴장을 유지합니다.</p>
+                        <p>머리부터 발끝까지 막대가 된 것처럼 긴장을 유지합니다.</p>
 
                         <hr>
 
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="move_img btn btn-sm btn-outline-secondary" onclick="javascript:exer_How(3)">운동보기</button>
+                                <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(3)">운동법</button>
                             </div>
 
-                            <small class="text-muted">9 mins</small>
 
                             <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary" onclick="javascript:exer_Start(3)">운동시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(3)">시작</button>
                             </div>
                         </div>
 
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                         <%--name으로 exer_wgt와 exer_set 추가--%>
 
-                        <form action="<c:url value='/user/member/exerciseType/chest' />" name="exercise_type" method="post" id="valid_CheckForm3">
+                        <form action="<c:url value='/user/member/exerciseType/chest/b' />" name="exercise_type" method="post" id="valid_CheckFormB0">
 
                             <div class="hidden_exer mt-3">
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">운동 명</span> <%--운동명 value 바꾸기--%>
-                                    <input type="text" name="exer_name" class="form-control" value="푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <input type="text" name="exer_name_b" class="form-control" value="푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <span class="input-group-text">시간(초)</span>
+                                    <input type="number" name="exer_sec_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">세트 수</span>
-                                    <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
+                                    <input type="number" name="exer_set_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary" value="완료" onclick="valid_Check(3)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check_B(0)">
 
                             </div>
 
@@ -369,16 +368,17 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container">
-                        <img src="/resources/choi_machine/img/exercise/chest/C_d_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/chest/C_d_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/chest/C_d_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/chest/C_d_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
                         <details>
                             <summary class="fw-bold">
                                 디클라인 푸쉬업
-                            </summary>
-                            <p>푸쉬업 자세에서 30도 ~ 45도 정도를 유지할 수 있으며 발을 편안하게 올릴 수 있는 반고정된 물체에 발을 올려놓은 상태로 시작합니다<br><br>
+                            </summary><br>
+                            <p class="text-start">
+                                푸쉬업 자세에서 30도 ~ 45도 정도를 유지할 수 있으며 발을 편안하게 올릴 수 있는 반고정된 물체에 발을 올려놓은 상태로 시작합니다<br><br>
                                 시선을 앞쪽으로 향한채로 푸쉬업과 동일하게 운동을 진행합니다
                             </p>
                         </details>
@@ -389,19 +389,18 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
-                        <p>처음에는 얕은 높이의 받침대를 사용하여 자세를 익힌 후 높이를 높이도록 합니다</p>
+                        <p>자세를 익힌 후 점차 높이를 높이도록 합니다</p>
 
                         <hr>
 
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="move_img btn btn-sm btn-outline-secondary" onclick="javascript:exer_How(4)">운동보기</button>
+                                <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(4)">운동법</button>
                             </div>
 
-                            <small class="text-muted">9 mins</small>
 
                             <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary" onclick="javascript:exer_Start(4)">운동시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(4)">시작</button>
                             </div>
 
                         </div>
@@ -409,25 +408,25 @@
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                         <%--name으로 exer_wgt와 exer_set 추가--%>
 
-                        <form action="<c:url value='/user/member/exerciseType/chest' />" name="exercise_type" method="post" id="valid_CheckForm4">
+                        <form action="<c:url value='/user/member/exerciseType/chest/b' />" name="exercise_type" method="post" id="valid_CheckFormB1">
 
                             <div class="hidden_exer mt-3">
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">운동 명</span>
-                                    <input type="text" name="exer_name" class="form-control" value="디클라인 푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <input type="text" name="exer_name_b" class="form-control" value="디클라인 푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <span class="input-group-text">시간(초)</span>
+                                    <input type="number" name="exer_sec_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">세트 수</span>
-                                    <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
+                                    <input type="number" name="exer_set_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
-                                <input type="button" class="btn btn-sm btn-outline-secondary" value="완료" onclick="valid_Check(4)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check_B(1)">
 
                             </div>
 
@@ -443,6 +442,7 @@
         </div>
     </div>
 </div>
+
 
 <%
 } else {
@@ -466,6 +466,8 @@
 %>
 
 <jsp:include page="../js_jsp/valid_check.jsp" />
+
+<jsp:include page="../js_jsp/valid_check_b.jsp" />
 
 <jsp:include page="../js_jsp/exercise_List_start_exer.jsp" />
 

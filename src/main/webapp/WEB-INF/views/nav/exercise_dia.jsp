@@ -1,5 +1,4 @@
 <%@page import="kr.co.namu.user.member.UserMemberVO"%>
-<%@ page import="kr.co.namu.book.ExerciseVO" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -42,41 +41,61 @@
 <div class="container mt-5">
 
     <h1 class="text-center mb-4">고른 운동 리스트</h1>
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
+    <div class="row text-center">
+        <div class="col-md-12">
 
-            <form action="<c:url value='/user/member/exerciseDiaConfirm'/> " name="exercise_dia" method="post">
+            <form action="<c:url value='/user/member/hitoryConfirm'/> " name="exercise_dia" method="post">
 
-                <c:forEach items="${exerciseVOs}" var="vo">
+                <table class="table table-dark table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col" class="fs-3">운동 명</th>
+                        <th scope="col" class="fs-3">무게 (kg)</th>
+                        <th scope="col" class="fs-3">세트 수</th>
+                        <th scope="col" class="fs-3">상태</th>
+                        <th scope="col" colspan="2" class="fs-3">총 볼륨 (kg)</th>
+                    </tr>
+                    </thead>
 
-                    <hr>
+                    <c:forEach items="${exerciseVOs}" var="vo">
 
-                    <div class="mt-3">
+                        <tbody>
+                        <tr>
+                            <td class="fs-3">${vo.exer_name}</td>
+                            <td class="fs-3">${vo.exer_wgt}</td>
+                            <td class="fs-3">${vo.exer_set}</td>
+                            <td class="fs-2 text-primary">${vo.exer_status}</td>
+                            <td class="fs-3">${vo.exer_totalVolume}</td>
 
-                        <div class="input-group input-group-sm mb-3 row-cols-md-4 inform">
-                            <span class="input-group-text" id="inputGroup-sizing-sm1">운동 명</span>
-                            <input type="text" name="exer_name" value="${vo.exer_name}" class="form-control" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
-                        </div>
+                                <td>
+                                    <c:url value='/user/member/exerDeleteOne' var='detail_url'>
+                                        <c:param name='exer_no' value='${vo.exer_no}'/>
+                                    </c:url>
 
-                        <div class="input-group input-group-sm mb-3 row-cols-md-4 inform">
-                            <span class="input-group-text" id="inputGroup-sizing-sm2">무게 (kg)</span>
-                            <input type="number" name="exer_wgt" value="${vo.exer_wgt}" class="form-control" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
-                        </div>
+                                        <button type="button" class="btn btn-primary p-3" onclick="location.href='${detail_url}'">
+                                            취소
+                                        </button>
+                                </td>
 
-                        <div class="input-group input-group-sm mb-3 row-cols-md-4 inform">
-                            <span class="input-group-text" id="inputGroup-sizing-sm3">세트 수</span>
-                            <input type="number" name="exer_set" value="${vo.exer_set}" class="form-control" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
-                        </div>
+                        </tr>
+                        </tbody>
 
-                    </div>
+                    </c:forEach>
 
-                    <hr>
+                    <tfoot>
 
-                </c:forEach>
+                    <tr>
+                        <td colspan="4" class="fs-3">총 볼륨 합계</td>
+                        <td colspan="2" class="fs-3">${totalVolume}</td>
+                    </tr>
+
+                    </tfoot>
+
+                </table>
 
             <!-- Submit Button -->
             <div class="text-center mt-4">
-                <button type="button" class="btn btn-primary" id="submit-btn" onclick="goWork()">운동 시작</button>
+                <input type="submit" class="btn btn-primary px-5 py-3" id="submit-btn" value="운동 시작">
             </div>
 
             </form>
@@ -86,32 +105,7 @@
     </div>
 
 
-        <script>
-
-            function goWork(){
-            window.location.href = "<c:url value='/user/member/exerciseDiaConfirm' />";
-        }
-
-    // Submit 버튼 클릭 시 동작
-    document.getElementById('submit-btn').addEventListener('click', function () {
-
-        var startTime = document.getElementById('start-time').value;
-        var endTime = document.getElementById('end-time').value;
-
-        // 선택한 날짜와 시간 정보를 콘솔에 출력
-
-        console.log("Start Time: " + startTime);
-        console.log("End Time: " + endTime);
-
-        // 여기서 선택한 날짜와 시간 정보를 서버로 전송하여 처리할 수 있습니다.
-    });
-
-</script>
-
-
 <%--<jsp:include page="../user/js_jsp/exercise_dia_calender.jsp" />--%>
-
-
 
 <%
 } else {	// 로그인이 되어있지 않을 때
