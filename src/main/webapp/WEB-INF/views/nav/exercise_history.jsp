@@ -29,7 +29,7 @@
             <thead>
                 <tr>
                     <th scope="col" class="fs-3">운동 명</th>
-                    <th scope="col" class="fs-3">무게 (kg)</th>
+                    <th scope="col" class="fs-3">무게/갯수</th>
                     <th colspan="2" scope="col" class="fs-3">상태</th>
                 </tr>
             </thead>
@@ -50,19 +50,17 @@
                         </div>
                     </td>
 
-                    <td class="fs-3 text-center">
-                        <c:forEach begin="1" end="${vo.exer_set}" varStatus="loop">
-                            ${vo.exer_wgt}
-                            <input type="number" style="width: 90px" min="1" value="${vo.exer_wgt}" class="ms-5 fs-3"><br>
-                        </c:forEach>
+                    <td class="fs-3">
+                            ${vo.exer_wgt_or_cnt}
+
                     </td>
 
-                    <td class="fs-2 text-center text-warning">${vo.exer_status}</td>
+                    <td class="fs-2 text-warning">${vo.exer_status}</td>
 
                     <td>
                         <c:url value='/user/member/exerCheck' var='detail_url'>
                             <c:param name='exer_no' value='${vo.exer_no}'/>
-                            <c:param name='exer_wgt' value='${vo.exer_wgt}'/>
+                            <c:param name='exer_wgt' value='${vo.exer_wgt_or_cnt}'/>
                         </c:url>
 
                         <c:if test="${vo.exer_status == '...ing'}">

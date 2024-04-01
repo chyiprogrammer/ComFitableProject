@@ -45,7 +45,7 @@
             <div class="col">
                 <div class="card shadow-sm">
 
-                            <div class="image_container"> <%--이미지 바꾸기--%>
+                            <div class="image_container" onclick="javascript:exer_How(0)"> <%--이미지 바꾸기--%>
                                 <img src="/resources/choi_machine/img/exercise/chest/C_b_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                                 <img src="/resources/choi_machine/img/exercise/chest/C_b_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                             </div>
@@ -71,19 +71,14 @@
 
                         <hr>
 
-                        <div class="d-flex justify-content-between align-items-center">
+                        <div>
                             <div class="btn-group">
-                                <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(0)">운동법</button>
-                            </div>
-
-
-                            <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(0)">시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(0)">시작</button>
                             </div>
                         </div>
 
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                        <%--name으로 exer_wgt와 exer_set 추가--%>
+                        <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                         <form action="<c:url value='/user/member/exerciseType/Main_Confirm' />" name="exercise_type" method="post" id="valid_CheckForm0"> <%--아이디 끝 숫자 바꾸기--%>
 
@@ -95,8 +90,8 @@
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <span class="input-group-text">무게/갯수</span>
+                                    <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
@@ -121,7 +116,7 @@
                 <div class="col">
                     <div class="card shadow-sm">
 
-                        <div class="image_container">
+                        <div class="image_container" onclick="javascript:exer_How(1)">
                             <img src="/resources/choi_machine/img/exercise/chest/C_b_f_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                             <img src="/resources/choi_machine/img/exercise/chest/C_b_f_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                         </div>
@@ -150,20 +145,15 @@
 
                             <hr>
 
-                            <div class="d-flex justify-content-between align-items-center">
+                            <div>
                                 <div class="btn-group">
-                                    <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(1)">운동법</button>
-                                </div>
-
-
-                                <div class="btn-group">
-                                    <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(1)">시작</button>
+                                    <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(1)">시작</button>
                                 </div>
 
                             </div>
 
                             <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                            <%--name으로 exer_wgt와 exer_set 추가--%>
+                            <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                             <form action="<c:url value='/user/member/exerciseType/Main_Confirm' />" name="exercise_type" method="post" id="valid_CheckForm1">
 
@@ -175,8 +165,8 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
-                                        <span class="input-group-text">무게</span>
-                                        <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <span class="input-group-text">무게/갯수</span>
+                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
@@ -202,7 +192,7 @@
                 <div class="col">
                     <div class="card shadow-sm">
 
-                        <div class="image_container"> <%--이미지 바꾸기--%>
+                        <div class="image_container" onclick="javascript:exer_How(2)"> <%--이미지 바꾸기--%>
                             <img src="/resources/choi_machine/img/exercise/chest/C_b_p_o_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                             <img src="/resources/choi_machine/img/exercise/chest/C_b_p_o_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                         </div>
@@ -229,20 +219,14 @@
 
                             <hr>
 
-                            <div class="d-flex justify-content-between align-items-center">
+                            <div>
                                 <div class="btn-group">
-                                    <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(2)">운동법</button>
-                                </div>
-
-                                
-
-                                <div class="btn-group">
-                                    <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(2)">시작</button>
+                                    <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(2)">시작</button>
                                 </div>
                             </div>
 
                             <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                            <%--name으로 exer_wgt와 exer_set 추가--%>
+                            <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                             <form action="<c:url value='/user/member/exerciseType/Main_Confirm' />" name="exercise_type" method="post" id="valid_CheckForm2">
 
@@ -254,8 +238,8 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
-                                        <span class="input-group-text">무게</span>
-                                        <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <span class="input-group-text">무게/갯수</span>
+                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
@@ -283,7 +267,7 @@
                 <div class="col">
                     <div class="card shadow-sm">
 
-                        <div class="image_container"> <%--이미지 바꾸기--%>
+                        <div class="image_container" onclick="javascript:exer_How(3)"> <%--이미지 바꾸기--%>
                             <img src="/resources/choi_machine/img/exercise/chest/C_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                             <img src="/resources/choi_machine/img/exercise/chest/C_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                         </div>
@@ -311,20 +295,14 @@
 
                             <hr>
 
-                            <div class="d-flex justify-content-between align-items-center">
+                            <div>
                                 <div class="btn-group">
-                                    <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(3)">운동법</button>
-                                </div>
-
-                                
-
-                                <div class="btn-group">
-                                    <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(3)">시작</button>
+                                    <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(3)">시작</button>
                                 </div>
                             </div>
 
                             <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                            <%--name으로 exer_wgt와 exer_set 추가--%>
+                            <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                             <form action="<c:url value='/user/member/exerciseType/chest' />" name="exercise_type" method="post" id="valid_CheckForm3">
 
@@ -332,12 +310,12 @@
 
                                     <div class="input-group input-group-sm mb-3">
                                         <span class="input-group-text">운동 명</span> <%--운동명 value 바꾸기--%>
-                                        <input type="text" name="exer_name_b" class="form-control" value="푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <input type="text" name="exer_name" class="form-control" value="푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
-                                        <span class="input-group-text">무게</span>
-                                        <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <span class="input-group-text">무게/갯수</span>
+                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
@@ -363,7 +341,7 @@
                 <div class="col">
                     <div class="card shadow-sm">
 
-                        <div class="image_container">
+                        <div class="image_container" onclick="javascript:exer_How(4)">
                             <img src="/resources/choi_machine/img/exercise/chest/C_d_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                             <img src="/resources/choi_machine/img/exercise/chest/C_d_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                         </div>
@@ -389,21 +367,15 @@
 
                             <hr>
 
-                            <div class="d-flex justify-content-between align-items-center">
+                            <div>
                                 <div class="btn-group">
-                                    <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(4)">운동법</button>
-                                </div>
-
-                                
-
-                                <div class="btn-group">
-                                    <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(4)">시작</button>
+                                    <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(4)">시작</button>
                                 </div>
 
                             </div>
 
                             <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                            <%--name으로 exer_wgt와 exer_set 추가--%>
+                            <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                             <form action="<c:url value='/user/member/exerciseType/chest/b' />" name="exercise_type" method="post" id="valid_CheckForm4">
 
@@ -411,12 +383,12 @@
 
                                     <div class="input-group input-group-sm mb-3">
                                         <span class="input-group-text">운동 명</span>
-                                        <input type="text" name="exer_name_b" class="form-control" value="디클라인 푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <input type="text" name="exer_name" class="form-control" value="디클라인 푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
-                                        <span class="input-group-text">무게</span>
-                                        <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <span class="input-group-text">무게/갯수</span>
+                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
@@ -445,7 +417,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container"> <%--이미지 바꾸기--%>
+                <div class="image_container" onclick="javascript:exer_How(5)"> <%--이미지 바꾸기--%>
                     <img src="/resources/choi_machine/img/exercise/shoulder/S_d_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/shoulder/S_d_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -474,20 +446,14 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(5)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(5)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(5)">시작</button>
                         </div>
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/shoulder' />" name="exercise_type" method="post" id="valid_CheckForm5"> <%--아이디 끝 숫자 바꾸기--%>
 
@@ -499,8 +465,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -525,7 +491,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container">
+                <div class="image_container" onclick="javascript:exer_How(6)">
                     <img src="/resources/choi_machine/img/exercise/arm/A_d_e_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/arm/A_d_e_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -553,21 +519,15 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(6)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(6)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(6)">시작</button>
                         </div>
 
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/shoulder' />" name="exercise_type" method="post" id="valid_CheckForm6">
 
@@ -579,8 +539,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -606,7 +566,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container"> <%--이미지 바꾸기--%>
+                <div class="image_container" onclick="javascript:exer_How(7)"> <%--이미지 바꾸기--%>
                     <img src="/resources/choi_machine/img/exercise/shoulder/S_d_s_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/shoulder/S_d_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -633,20 +593,14 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(7)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(7)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(7)">시작</button>
                         </div>
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/shoulder' />" name="exercise_type" method="post" id="valid_CheckForm7">
 
@@ -658,8 +612,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -687,7 +641,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container"> <%--이미지 바꾸기--%>
+                <div class="image_container" onclick="javascript:exer_How(8)"> <%--이미지 바꾸기--%>
                     <img src="/resources/choi_machine/img/exercise/shoulder/S_s_b_r_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/shoulder/S_s_b_r_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -714,20 +668,14 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(8)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(8)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(8)">시작</button>
                         </div>
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/shoulder' />" name="exercise_type" method="post" id="valid_CheckForm8">
 
@@ -739,8 +687,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -765,7 +713,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container">
+                <div class="image_container" onclick="javascript:exer_How(9)">
                     <img src="/resources/choi_machine/img/exercise/shoulder/S_p_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/shoulder/S_p_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -792,21 +740,15 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(9)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(9)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(9)">시작</button>
                         </div>
 
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/shoulder' />" name="exercise_type" method="post" id="valid_CheckForm9">
 
@@ -814,12 +756,12 @@
 
                             <div class="input-group input-group-sm mb-3">
                                 <span class="input-group-text">운동 명</span>
-                                <input type="text" name="exer_name_b" class="form-control" value="파이크 푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <input type="text" name="exer_name" class="form-control" value="파이크 푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -848,7 +790,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container"> <%--이미지 바꾸기--%>
+                <div class="image_container" onclick="javascript:exer_How(10)"> <%--이미지 바꾸기--%>
                     <img src="/resources/choi_machine/img/exercise/core/C_m_c_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/core/C_m_c_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -875,20 +817,14 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(10)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(10)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(10)">시작</button>
                         </div>
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/core' />" name="exercise_type" method="post" id="valid_CheckForm10"> <%--아이디 끝 숫자 바꾸기--%>
 
@@ -900,8 +836,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -926,7 +862,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container">
+                <div class="image_container" onclick="javascript:exer_How(11)">
                     <img src="/resources/choi_machine/img/exercise/core/C_s_u_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/core/C_s_u_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -953,21 +889,15 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(11)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(11)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(11)">시작</button>
                         </div>
 
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/core' />" name="exercise_type" method="post" id="valid_CheckForm11">
 
@@ -979,8 +909,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1006,7 +936,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container"> <%--이미지 바꾸기--%>
+                <div class="image_container" onclick="javascript:exer_How(12)"> <%--이미지 바꾸기--%>
                     <img src="/resources/choi_machine/img/exercise/core/C_c_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/core/C_c_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -1034,20 +964,14 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(12)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(12)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(12)">시작</button>
                         </div>
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/core' />" name="exercise_type" method="post" id="valid_CheckForm12">
 
@@ -1059,8 +983,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1088,7 +1012,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container"> <%--이미지 바꾸기--%>
+                <div class="image_container" onclick="javascript:exer_How(13)"> <%--이미지 바꾸기--%>
                     <img src="/resources/choi_machine/img/exercise/core/C_t_c_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/core/C_t_c_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -1115,20 +1039,14 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(13)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(13)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(13)">시작</button>
                         </div>
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/core' />" name="exercise_type" method="post" id="valid_CheckForm13">
 
@@ -1140,8 +1058,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1166,19 +1084,19 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container">
-                    <img src="/resources/choi_machine/img/exercise/core/C_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/core/C_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <div class="image_container" onclick="javascript:exer_How(14)">
+                    <img src="/resources/choi_machine/img/exercise/core/C_l_r_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/core/C_l_r_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
                     <details>
                         <summary class="fw-bold">
-                            플랭크
+                            레그레이즈
                         </summary><br>
                         <p class="text-start">
-                            엎드린 자세에서 팔뚝으로 중심을 잡고, 다리는 약간 벌린상태로 일자를 유지한 상태에서 시작합니다.<br><br>
-                            복부와 엉덩이에 힘을 주고 머리부터 발 끝까지 일직선으로 유지하며 버텨줍니다.
+                            배꼽에 힘을 주어 등을 바닥에 완전히 밀착한 상태로 시작합니다.<br><br>
+                            허리가 뜨는지 체크하며 두 다리를 그대로 올립니다.
                         </p>
                     </details>
 
@@ -1189,26 +1107,20 @@
                     <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
                     <p>
-                        엉덩이와 날개뼈, 복부 근육을 동시에 수축하도록 합니다
+                        발꿈치를 바닥에 닿지 않게 합니다.
                     </p>
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(14)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(14)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(14)">시작</button>
                         </div>
 
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/core' />" name="exercise_type" method="post" id="valid_CheckForm14">
 
@@ -1216,12 +1128,12 @@
 
                             <div class="input-group input-group-sm mb-3">
                                 <span class="input-group-text">운동 명</span>
-                                <input type="text" name="exer_name" class="form-control" value="플랭크" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <input type="text" name="exer_name" class="form-control" value="레그레이즈" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1249,7 +1161,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container"> <%--이미지 바꾸기--%>
+                <div class="image_container" onclick="javascript:exer_How(15)"> <%--이미지 바꾸기--%>
                     <img src="/resources/choi_machine/img/exercise/arm/A_d_c_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/arm/A_d_c_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -1277,20 +1189,14 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(15)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(15)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(15)">시작</button>
                         </div>
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/arm' />" name="exercise_type" method="post" id="valid_CheckForm15"> <%--아이디 끝 숫자 바꾸기--%>
 
@@ -1302,8 +1208,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1328,7 +1234,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container">
+                <div class="image_container" onclick="javascript:exer_How(16)">
                     <img src="/resources/choi_machine/img/exercise/arm/A_d_e_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/arm/A_d_e_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -1357,21 +1263,15 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(16)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(16)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(16)">시작</button>
                         </div>
 
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/arm' />" name="exercise_type" method="post" id="valid_CheckForm16">
 
@@ -1383,8 +1283,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1410,7 +1310,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container"> <%--이미지 바꾸기--%>
+                <div class="image_container" onclick="javascript:exer_How(17)"> <%--이미지 바꾸기--%>
                     <img src="/resources/choi_machine/img/exercise/arm/A_d_k_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/arm/A_d_k_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -1439,20 +1339,14 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(17)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(17)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(17)">시작</button>
                         </div>
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/arm' />" name="exercise_type" method="post" id="valid_CheckForm17">
 
@@ -1464,8 +1358,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1493,7 +1387,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container"> <%--이미지 바꾸기--%>
+                <div class="image_container" onclick="javascript:exer_How(18)"> <%--이미지 바꾸기--%>
                     <img src="/resources/choi_machine/img/exercise/arm/A_s_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/arm/A_s_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -1521,20 +1415,14 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(18)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(18)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(18)">시작</button>
                         </div>
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/arm' />" name="exercise_type" method="post" id="valid_CheckForm18">
 
@@ -1546,8 +1434,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1572,7 +1460,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container">
+                <div class="image_container" onclick="javascript:exer_How(19)">
                     <img src="/resources/choi_machine/img/exercise/arm/A_d_r_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/arm/A_d_r_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -1600,21 +1488,15 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(19)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(19)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(19)">시작</button>
                         </div>
 
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/arm' />" name="exercise_type" method="post" id="valid_CheckForm19">
 
@@ -1626,8 +1508,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1656,7 +1538,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container"> <%--이미지 바꾸기--%>
+                <div class="image_container" onclick="javascript:exer_How(20)"> <%--이미지 바꾸기--%>
                     <img src="/resources/choi_machine/img/exercise/low/L_d_r_l_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/low/L_d_r_l_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -1684,20 +1566,14 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(20)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(20)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(20)">시작</button>
                         </div>
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/low' />" name="exercise_type" method="post" id="valid_CheckForm20"> <%--아이디 끝 숫자 바꾸기--%>
 
@@ -1709,8 +1585,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1735,7 +1611,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container">
+                <div class="image_container" onclick="javascript:exer_How(21)">
                     <img src="/resources/choi_machine/img/exercise/low/L_d_s_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/low/L_d_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -1762,21 +1638,15 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(21)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(21)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(21)">시작</button>
                         </div>
 
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/low' />" name="exercise_type" method="post" id="valid_CheckForm21">
 
@@ -1788,8 +1658,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1815,7 +1685,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container"> <%--이미지 바꾸기--%>
+                <div class="image_container" onclick="javascript:exer_How(22)"> <%--이미지 바꾸기--%>
                     <img src="/resources/choi_machine/img/exercise/low/L_d_s_s_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/low/L_d_s_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -1843,20 +1713,14 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(22)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(22)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(22)">시작</button>
                         </div>
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/low' />" name="exercise_type" method="post" id="valid_CheckForm22">
 
@@ -1868,8 +1732,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1897,7 +1761,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container"> <%--이미지 바꾸기--%>
+                <div class="image_container" onclick="javascript:exer_How(23)"> <%--이미지 바꾸기--%>
                     <img src="/resources/choi_machine/img/exercise/low/L_p_s_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/low/L_p_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -1924,20 +1788,14 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(23)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(23)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(23)">시작</button>
                         </div>
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/low' />" name="exercise_type" method="post" id="valid_CheckForm23">
 
@@ -1949,8 +1807,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1975,7 +1833,7 @@
         <div class="col">
             <div class="card shadow-sm">
 
-                <div class="image_container">
+                <div class="image_container" onclick="javascript:exer_How(24)">
                     <img src="/resources/choi_machine/img/exercise/low/L_d_s_u_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <img src="/resources/choi_machine/img/exercise/low/L_d_s_u_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
@@ -2004,21 +1862,15 @@
 
                     <hr>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div>
                         <div class="btn-group">
-                            <button type="button" class="move_img btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_How(24)">운동법</button>
-                        </div>
-
-                        
-
-                        <div class="btn-group">
-                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-4 py-3" onclick="javascript:exer_Start(24)">시작</button>
+                            <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(24)">시작</button>
                         </div>
 
                     </div>
 
                     <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
-                    <%--name으로 exer_wgt와 exer_set 추가--%>
+                    <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
                     <form action="<c:url value='/user/member/exerciseType/low' />" name="exercise_type" method="post" id="valid_CheckForm24">
 
@@ -2030,8 +1882,8 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게</span>
-                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게/갯수</span>
+                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">

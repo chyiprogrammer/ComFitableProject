@@ -41,7 +41,7 @@
         <tbody>
             <tr>
                 <td class="fs-3">${vo.exer_name}</td>
-                <td class="fs-3">${vo.exer_wgt}</td>
+                <td class="fs-3">${vo.exer_wgt_or_cnt}</td>
                 <td class="fs-3">${vo.exer_set}</td>
                 <td class="fs-2 text-success">${vo.exer_status}</td>
             </tr>

@@ -50,10 +50,10 @@
                     <thead>
                     <tr>
                         <th scope="col" class="fs-3">운동 명</th>
-                        <th scope="col" class="fs-3">무게 (kg)</th>
+                        <th scope="col" class="fs-3">무게/갯수</th>
                         <th scope="col" class="fs-3">세트 수</th>
                         <th scope="col" class="fs-3">상태</th>
-                        <th scope="col" colspan="2" class="fs-3">총 볼륨 (kg)</th>
+                        <th scope="col" colspan="2" class="fs-3">총 볼륨</th>
                     </tr>
                     </thead>
 
@@ -62,7 +62,7 @@
                         <tbody>
                         <tr>
                             <td class="fs-3">${vo.exer_name}</td>
-                            <td class="fs-3">${vo.exer_wgt}</td>
+                            <td class="fs-3">${vo.exer_wgt_or_cnt}</td>
                             <td class="fs-3">${vo.exer_set}</td>
                             <td class="fs-2 text-primary">${vo.exer_status}</td>
                             <td class="fs-3">${vo.exer_totalVolume}</td>
