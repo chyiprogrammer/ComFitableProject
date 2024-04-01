@@ -89,7 +89,7 @@
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                         <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
-                        <form action="<c:url value='/user/member/exerciseType/chest' />" name="exercise_type" method="post" id="valid_CheckForm0">
+                        <form action="<c:url value='/user/member/exerciseType/Body' />" name="exercise_type" method="post" id="valid_CheckForm0">
 
                             <div class="hidden_exer mt-3">
 
@@ -99,8 +99,13 @@
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
+                                    <span class="input-group-text">무게</span>
+                                    <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                </div>
+
+                                <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">갯수</span>
-                                    <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
@@ -160,7 +165,7 @@
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                         <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
-                        <form action="<c:url value='/user/member/exerciseType/chest' />" name="exercise_type" method="post" id="valid_CheckForm1">
+                        <form action="<c:url value='/user/member/exerciseType/Body' />" name="exercise_type" method="post" id="valid_CheckForm1">
 
                             <div class="hidden_exer mt-3">
 
@@ -170,15 +175,20 @@
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">갯수</span>
-                                    <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <span class="input-group-text">무게</span>
+                                    <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                </div>
 
+                                <div class="input-group input-group-sm mb-3">
+                                    <span class="input-group-text">갯수</span>
+                                    <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">세트 수</span>
                                     <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
+
                                 <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(1)">
 
                             </div>
@@ -234,7 +244,7 @@
                             <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                             <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
-                            <form action="<c:url value='/user/member/exerciseType/shoulder' />" name="exercise_type" method="post" id="valid_CheckForm2">
+                            <form action="<c:url value='/user/member/exerciseType/Body' />" name="exercise_type" method="post" id="valid_CheckForm2">
 
                                 <div class="hidden_exer mt-3">
 
@@ -244,14 +254,20 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
+                                        <span class="input-group-text">무게</span>
+                                        <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    </div>
+
+                                    <div class="input-group input-group-sm mb-3">
                                         <span class="input-group-text">갯수</span>
-                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
                                         <span class="input-group-text">세트 수</span>
                                         <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                     </div>
+
                                     <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(2)">
 
                                 </div>
@@ -306,7 +322,7 @@
                             <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                             <%--name으로 exer_sec와 exer_set 추가--%>
 
-                            <form action="<c:url value='/user/member/exerciseType/core' />" name="exercise_type" method="post" id="valid_CheckForm3"> <%--아이디 끝 숫자 바꾸기--%>
+                            <form action="<c:url value='/user/member/exerciseType/Body' />" name="exercise_type" method="post" id="valid_CheckForm3"> <%--아이디 끝 숫자 바꾸기--%>
 
                                 <div class="hidden_exer mt-3">
 
@@ -316,8 +332,13 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
+                                        <span class="input-group-text">무게</span>
+                                        <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    </div>
+
+                                    <div class="input-group input-group-sm mb-3">
                                         <span class="input-group-text">갯수</span>
-                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
@@ -379,7 +400,7 @@
                             <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                             <%--name으로 exer_sec와 exer_set 추가--%>
 
-                            <form action="<c:url value='/user/member/exerciseType/core' />" name="exercise_type" method="post" id="valid_CheckForm4">
+                            <form action="<c:url value='/user/member/exerciseType/Body' />" name="exercise_type" method="post" id="valid_CheckForm4">
 
                                 <div class="hidden_exer mt-3">
 
@@ -389,8 +410,13 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
+                                        <span class="input-group-text">무게</span>
+                                        <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    </div>
+
+                                    <div class="input-group input-group-sm mb-3">
                                         <span class="input-group-text">갯수</span>
-                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
@@ -453,7 +479,7 @@
                             <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                             <%--name으로 exer_sec와 exer_set 추가--%>
 
-                            <form action="<c:url value='/user/member/exerciseType/core' />" name="exercise_type" method="post" id="valid_CheckForm5">
+                            <form action="<c:url value='/user/member/exerciseType/Body' />" name="exercise_type" method="post" id="valid_CheckForm5">
 
                                 <div class="hidden_exer mt-3">
 
@@ -463,8 +489,13 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
+                                        <span class="input-group-text">무게</span>
+                                        <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    </div>
+
+                                    <div class="input-group input-group-sm mb-3">
                                         <span class="input-group-text">갯수</span>
-                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
@@ -528,7 +559,7 @@
                             <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                             <%--name으로 exer_sec와 exer_set 추가--%>
 
-                            <form action="<c:url value='/user/member/exerciseType/core' />" name="exercise_type" method="post" id="valid_CheckForm6">
+                            <form action="<c:url value='/user/member/exerciseType/Body' />" name="exercise_type" method="post" id="valid_CheckForm6">
 
                                 <div class="hidden_exer mt-3">
 
@@ -538,8 +569,13 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
+                                        <span class="input-group-text">무게</span>
+                                        <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    </div>
+
+                                    <div class="input-group input-group-sm mb-3">
                                         <span class="input-group-text">갯수</span>
-                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
@@ -602,7 +638,7 @@
                             <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                             <%--name으로 exer_sec와 exer_set 추가--%>
 
-                            <form action="<c:url value='/user/member/exerciseType/core' />" name="exercise_type" method="post" id="valid_CheckForm7">
+                            <form action="<c:url value='/user/member/exerciseType/Body' />" name="exercise_type" method="post" id="valid_CheckForm7">
 
                                 <div class="hidden_exer mt-3">
 
@@ -612,14 +648,20 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
+                                        <span class="input-group-text">무게</span>
+                                        <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    </div>
+
+                                    <div class="input-group input-group-sm mb-3">
                                         <span class="input-group-text">갯수</span>
-                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
                                         <span class="input-group-text">세트 수</span>
                                         <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                     </div>
+
 
                                     <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(7)">
 
@@ -676,7 +718,7 @@
                             <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                             <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
-                            <form action="<c:url value='/user/member/exerciseType/arm' />" name="exercise_type" method="post" id="valid_CheckForm8">
+                            <form action="<c:url value='/user/member/exerciseType/Body' />" name="exercise_type" method="post" id="valid_CheckForm8">
 
                                 <div class="hidden_exer mt-3">
 
@@ -686,8 +728,13 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
+                                        <span class="input-group-text">무게</span>
+                                        <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    </div>
+
+                                    <div class="input-group input-group-sm mb-3">
                                         <span class="input-group-text">갯수</span>
-                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
@@ -748,7 +795,7 @@
                             <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                             <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
-                            <form action="<c:url value='/user/member/exerciseType/low' />" name="exercise_type" method="post" id="valid_CheckForm9">
+                            <form action="<c:url value='/user/member/exerciseType/Body' />" name="exercise_type" method="post" id="valid_CheckForm9">
 
                                 <div class="hidden_exer mt-3">
 
@@ -758,8 +805,13 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
+                                        <span class="input-group-text">무게</span>
+                                        <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    </div>
+
+                                    <div class="input-group input-group-sm mb-3">
                                         <span class="input-group-text">갯수</span>
-                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
@@ -805,12 +857,12 @@
     }
 %>
 
-<jsp:include page="../user/js_jsp/valid_check.jsp" />
+<jsp:include page="../js_jsp/valid_check.jsp" />
 
 
-<jsp:include page="../user/js_jsp/exercise_List_start_exer.jsp" />
+<jsp:include page="../js_jsp/exercise_List_start_exer.jsp" />
 
-<jsp:include page="../user/js_jsp/exercise_List_img_Move.jsp" />
+<jsp:include page="../js_jsp/exercise_List_img_Move.jsp" />
 
 </body>
 </html>

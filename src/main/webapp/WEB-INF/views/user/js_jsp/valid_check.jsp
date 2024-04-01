@@ -12,17 +12,21 @@
 
             function valid_Check(no) {
 
-                var inputValue = document.getElementsByName('exer_wgt_or_cnt')[no].value;
-                var inputValue2 = document.getElementsByName('exer_set')[no].value;
+                var inputValue = document.getElementsByName('exer_wgt')[no].value; // 무게
+                var inputValue1 = document.getElementsByName('exer_cnt')[no].value; // 갯수
+                var inputValue2 = document.getElementsByName('exer_set')[no].value; // 세트 수
 
-                if(inputValue ==="" && inputValue2 ===""){
+                if(inputValue ==="" && inputValue1 ==="" && inputValue2 ===""){
                     alert("입력된 값이 없습니다.")
                     return;
-                }else if (inputValue != "" && inputValue2 === "") {
-                    alert("세트 수를 입력해주세요.");
+                }else if (inputValue === "" && inputValue1 != "" && inputValue2 != "") {
+                    alert("무게를 입력해주세요.");
                     return;
-                }else if(inputValue === "" && inputValue2 !=""){
-                    alert("무게 혹은 갯수를 입력해주세요.")
+                }else if(inputValue != "" && inputValue1 === "" && inputValue2 != ""){
+                    alert("갯수를 입력해주세요.")
+                    return;
+                }else if (inputValue != "" && inputValue1 != "" && inputValue2 === "") {
+                    alert("세트 수를 입력해주세요.");
                     return;
                 }else if(inputValue && inputValue2 <0){
                     alert("음수는 입력하실 수 없습니다.")

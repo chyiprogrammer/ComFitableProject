@@ -38,41 +38,41 @@
 %>
 
 
-<div class="container mt-5">
+    <h1 class="text-center mt-4 mb-4">고른 운동 리스트</h1>
 
-    <h1 class="text-center mb-4">고른 운동 리스트</h1>
     <div class="row text-center">
-        <div class="col-md-12">
+        <div>
 
             <form action="<c:url value='/user/member/hitoryConfirm'/> " name="exercise_dia" method="post">
 
                 <table class="table table-dark table-bordered table-hover">
+
                     <thead>
-                    <tr>
-                        <th scope="col" class="fs-3">운동 명</th>
-                        <th scope="col" class="fs-3">무게/갯수</th>
-                        <th scope="col" class="fs-3">세트 수</th>
-                        <th scope="col" class="fs-3">상태</th>
-                        <th scope="col" colspan="2" class="fs-3">총 볼륨</th>
-                    </tr>
+                        <tr>
+                            <th scope="col" class="fs-2">운동 명</th>
+                            <th scope="col" class="fs-2">무게/갯수</th>
+                            <th scope="col" class="fs-2">세트 수</th>
+                            <th scope="col" class="fs-2">상태</th>
+                            <th scope="col" colspan="2" class="fs-2">총 볼륨</th>
+                        </tr>
                     </thead>
 
                     <c:forEach items="${exerciseVOs}" var="vo">
 
                         <tbody>
                         <tr>
-                            <td class="fs-3">${vo.exer_name}</td>
-                            <td class="fs-3">${vo.exer_wgt_or_cnt}</td>
-                            <td class="fs-3">${vo.exer_set}</td>
-                            <td class="fs-2 text-primary">${vo.exer_status}</td>
-                            <td class="fs-3">${vo.exer_totalVolume}</td>
+                            <td class="fs-2">${vo.exer_name}</td>
+                            <td class="fs-2">${vo.exer_wgt}</td>
+                            <td class="fs-2">${vo.exer_set}</td>
+                            <td class="fs-1 text-primary">${vo.exer_status}</td>
+                            <td class="fs-2 p-3">${vo.exer_totalVolume}</td>
 
-                                <td>
+                                <td class="text-center">
                                     <c:url value='/user/member/exerDeleteOne' var='detail_url'>
                                         <c:param name='exer_no' value='${vo.exer_no}'/>
                                     </c:url>
 
-                                        <button type="button" class="btn btn-primary p-3" onclick="location.href='${detail_url}'">
+                                        <button type="button" class="btn btn-primary px-5 py-4" onclick="location.href='${detail_url}'">
                                             취소
                                         </button>
                                 </td>
@@ -85,8 +85,8 @@
                     <tfoot>
 
                     <tr>
-                        <td colspan="4" class="fs-3">총 볼륨 합계</td>
-                        <td colspan="2" class="fs-3">${totalVolume}</td>
+                        <td colspan="4" class="fs-2">총 볼륨 합계</td>
+                        <td colspan="2" class="fs-1">${totalVolume}</td>
                     </tr>
 
                     </tfoot>
@@ -95,13 +95,12 @@
 
             <!-- Submit Button -->
             <div class="text-center mt-4">
-                <input type="submit" class="btn btn-primary px-5 py-3" id="submit-btn" value="운동 시작">
+                <input type="submit" class="btn btn-primary p-5" id="submit-btn" value="운동 시작">
             </div>
 
             </form>
 
-    </div>
-    </div>
+        </div>
     </div>
 
 

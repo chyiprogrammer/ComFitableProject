@@ -34,10 +34,10 @@
 
     <thead>
         <tr>
-            <th scope="col" class="fs-3">운동 명</th>
-            <th scope="col" class="fs-3">무게 (kg)</th>
-            <th scope="col" class="fs-3">세트 수</th>
-            <th colspan="2" scope="col" class="fs-3">상태</th>
+            <th scope="col" class="fs-2">운동 명</th>
+            <th scope="col" class="fs-2">무게 (kg)</th>
+            <th scope="col" class="fs-2">세트 수</th>
+            <th colspan="2" scope="col" class="fs-2">상태</th>
         </tr>
     </thead>
 
@@ -45,10 +45,10 @@
 
         <tbody>
             <tr>
-                <td class="fs-3">${vo.exer_name}</td>
-                <td class="fs-3">${vo.exer_wgt_or_cnt}</td>
-                <td class="fs-3">${vo.exer_set}</td>
-                <td class="fs-2 text-success">${vo.exer_status}</td>
+                <td class="fs-2">${vo.exer_name}</td>
+                <td class="fs-2">${vo.exer_wgt_or_cnt}</td>
+                <td class="fs-2">${vo.exer_set}</td>
+                <td class="fs-1 text-success">${vo.exer_status}</td>
             </tr>
         </tbody>
 

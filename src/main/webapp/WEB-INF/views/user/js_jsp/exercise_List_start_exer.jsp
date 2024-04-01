@@ -13,13 +13,11 @@
         var exer_Start = document.getElementsByClassName("hidden_exer")[no];
 
         if(exer_Start.style.display == "block"){
-
             exer_Start.style.display = "none";
-
-        }else
-
+        }else {
             exer_Start.style.display = "block";
+        }
 
-    }
+        }
 
 </script>

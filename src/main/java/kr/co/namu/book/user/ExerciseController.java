@@ -44,14 +44,29 @@ public class ExerciseController {
     }
     // 운동 부위에 따라 url 따로
 
-    @RequestMapping("/exerciseType/Body")
+    @RequestMapping("/exerciseType/Body_yet")
     public String exerciseTypeBody(Model model){
 
         model.addAttribute("list", 1);
         System.out.println("맨몸으로 이동만");
 
-        return "/nav/exercise_type_body";
+        return "user/exerciseType/body";
 
+    }
+
+    @RequestMapping("/exerciseType/Body")
+    public String exerciseTypeBody(ExerciseVO exerciseVO, HttpSession session, Model model) {
+
+        model.addAttribute("list", 1); // 이걸 붙여줘야 다시 선택 가능함 만들때마다 꼭 붙여주기
+
+        UserMemberVO userMemberVO = (UserMemberVO) session.getAttribute("loginedUserMemberVo");
+        exerciseVO.setExer_id(userMemberVO.getU_m_id());
+
+        service.exercise_insert(exerciseVO);
+
+        System.out.println("맨몸운동 값 데이터베이스로");
+
+        return "user/exerciseType/body";
     }
     
         @RequestMapping("/exerciseType/chest_yet")
@@ -192,6 +207,8 @@ public class ExerciseController {
 
     @RequestMapping("/exerciseDia")
     public String exerciseDia(ExerciseVO exerciseVO, HttpSession session, Model model){
+
+        model.addAttribute("list", 1); // 이걸 붙여줘야 다시 선택 가능함 만들때마다 꼭 붙여주기
 
         System.out.println("[ExerciseController:exerciseDia()]");
 
