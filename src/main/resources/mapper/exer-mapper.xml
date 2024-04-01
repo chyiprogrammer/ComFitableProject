@@ -10,8 +10,8 @@
     </insert>
 
     <insert id="bodyExer">
-        INSERT INTO user_exercise_b(exer_id_b, exer_name_b, exer_sec_b, exer_set_b, exer_totalTime_b, exer_status_b)
-        VALUES (#{exer_id_b}, #{exer_name_b}, #{exer_sec_b}, #{exer_set_b}, #{exer_totalTime_b}, "start")
+        INSERT INTO user_exercise_b(exer_id_b, exer_name_b, exer_sec_b, exer_cnt_b, exer_set_b, exer_totalTime_b, exer_totalCount_b, exer_status_b)
+        VALUES (#{exer_id_b}, #{exer_name_b}, #{exer_sec_b},#{exer_cnt_b}, #{exer_set_b}, #{exer_totalTime_b}, #{exer_totalCount_b}, "start")
     </insert>
 
     <select id="exerList" resultType="kr.co.namu.book.ExerciseVO">

@@ -12,7 +12,7 @@
 
   function valid_Check_B(no) {
 
-    var inputValue = document.getElementsByName('exer_sec_b')[no].value;
+    var inputValue = document.getElementsByName('exer_cnt_b')[no].value;
     var inputValue2 = document.getElementsByName('exer_set_b')[no].value;
 
     if(inputValue ==="" && inputValue2 ===""){
