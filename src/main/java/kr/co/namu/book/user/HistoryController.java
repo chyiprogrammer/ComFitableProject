@@ -71,6 +71,7 @@ public class HistoryController {
         exerciseVO.setExer_id(userMemberVO.getU_m_id());
 
         int checkVOs = service.exer_check(exerciseVO);
+
         if(checkVOs > 0){
             nextPage = "redirect:/user/member/exerStatus";
         }else{

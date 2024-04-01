@@ -10,6 +10,8 @@ public interface ExerciseService { // 내가 필요한건 운동 일지에 등�
 
     List<ExerciseVO> exercise_list(ExerciseVO exerciseVO); // 운동 리스트 보기
 
+    int exercise_deleteOne(ExerciseVO exerciseVO); // 운동 리스트에서 골라서 삭제
+
 }
 
     /*

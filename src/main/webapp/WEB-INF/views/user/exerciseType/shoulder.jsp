@@ -59,8 +59,8 @@
                         <details>
                             <summary class="fw-bold">
                                 덤벨 숄더 프레스
-                            </summary><br>
-                            <p class="text-start">
+                            </summary>
+                            <p>
                                 팔을 옆으로 벌려 덤벨을 머리의 중간 지점 쯤 오게 한 후 시작합니다 .<br><br>
 
                                 어깨가 솟지 않도록 유의하며 팔만 들어줍니다<br>
@@ -137,9 +137,8 @@
                         <details>
                             <summary class="fw-bold">
                                 덤벨 프론트 레이즈
-                            </summary><br>
-                            <p class="text-start">
-                                다리를 어깨넓이 정도로 벌려 자연스럽게 서고,
+                            </summary>
+                            <p>다리를 어깨넓이 정도로 벌려 자연스럽게 서고,
                                 팔꿈치를 살짝 구부린 후 허벅지 앞쪽에 둔 상태로 시작합니다.<br><br>
 
                                 팔을 앞으로 올려주고 올라가는 속도보다 천천히 내려옵니다<br>
@@ -217,8 +216,8 @@
                         <details>
                             <summary class="fw-bold">
                                 덤벨 사이드 레터럴 레이즈
-                            </summary><br>
-                            <p class="text-start">
+                            </summary>
+                            <p>
                                 덤벨을 양손으로 들고 다리를 자연스럽게 벌린 상태로 시작합니다<br><br>
 
                                 어깨를 내린다는 느낌을 유지한 채 양 팔을 옆으로 들어올리고 올라가는 속도보다 천천히 내려옵니다
@@ -296,8 +295,8 @@
                         <details>
                             <summary class="fw-bold">
                                 시티드 벤트오버 레터럴 레이즈
-                            </summary><br>
-                            <p class="text-start">
+                            </summary>
+                            <p>
                                 덤벨을 양손에 들고 벤치 혹은 등받이가 없는 의자에 앉아 두발을 가까이 둔 후 허리를 약간 굽힌 상태로 시작합니다<br><br>
 
                                 팔꿈치로 움직여 올린다는 느낌으로 덤벨을 어깨보다 약간 낮은 위치까지 들어올리고 올라가는 속도보다 천천히 내려옵니다.</p>
@@ -338,7 +337,7 @@
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <input type="number" name="exer_wgt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
@@ -372,9 +371,8 @@
                         <details>
                             <summary class="fw-bold">
                                 파이크 푸쉬업
-                            </summary><br>
-                            <p class="text-start">
-                                푸쉬업 자세에서 양손의 간격이 어깨보다 약간 넓도록 벌린 상태로 다리를 손 방향을 향해 걷듯이 이동시킵니다<br>
+                            </summary>
+                            <p>푸쉬업 자세에서 양손의 간격이 어깨보다 약간 넓도록 벌린 상태로 다리를 손 방향을 향해 걷듯이 이동시킵니다<br>
                                 골반을 높게 들어올린 상태가되면 시작합니다<br><br>
                                 발 뒤꿈치를 살짝 들어올려 무게중심을 상체로 옮긴 후 어깨와 손목이 수직을 이루는 상태로 천천히 내려갑니다
                             </p>
@@ -404,25 +402,30 @@
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                         <%--name으로 exer_wgt와 exer_set 추가--%>
 
-                        <form action="<c:url value='/user/member/exerciseType/shoulder' />" name="exercise_type" method="post" id="valid_CheckForm4">
+                        <form action="<c:url value='/user/member/exerciseType/shoulder/b' />" name="exercise_type" method="post" id="valid_CheckFormB0">
 
                             <div class="hidden_exer mt-3">
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">운동 명</span>
-                                    <input type="text" name="exer_name" class="form-control" value="파이크 푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <input type="text" name="exer_name_b" class="form-control" value="파이크 푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
+<<<<<<< HEAD
+                                    <span class="input-group-text">시간(초)</span>
+                                    <input type="number" name="exer_sec_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+=======
                                     <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+>>>>>>> parent of 80ed4ee (전체적인 다듬기 작업 중)
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">세트 수</span>
-                                    <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
+                                    <input type="number" name="exer_set_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
-                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(4)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check_B(0)">
 
                             </div>
 
@@ -461,6 +464,8 @@
 %>
 
 <jsp:include page="../js_jsp/valid_check.jsp" />
+<jsp:include page="../js_jsp/valid_check_b.jsp" />
+
 
 <jsp:include page="../js_jsp/exercise_List_start_exer.jsp" />
 

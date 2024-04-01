@@ -19,9 +19,11 @@
     <title>Title</title>
 
     <style>
+
         .hidden_exer{
             display: none;
         }
+
     </style>
 
 </head>
@@ -59,8 +61,8 @@
                         <details>
                             <summary class="fw-bold">
                                 덤벨 벤치 프레스
-                            </summary><br>
-                            <p class="text-start">
+                            </summary>
+                            <p>
                                 가슴을 열며 어깨가 들리지 않도록 고정한 후 아치형 허리를 유지한 상태로 시작합니다.<br><br>
                                 팔꿈치가 어깨보다 낮은 상태를 유지한 채로 팔이 지면과 수직이 되도록 천천히 내려옵니다 들어올릴 때에도 수직으로 올라옵니다.</p>
                             </p>
@@ -135,9 +137,8 @@
                         <details>
                             <summary class="fw-bold">
                                 덤벨 벤치 플라이
-                            </summary><br>
-                            <p class="text-start">
-                                가슴을 열며 어깨가 들리지 않도록 고정한 후 아치형 허리를 유지한 상태로 시작합니다<br><br>
+                            </summary>
+                            <p>가슴을 열며 어깨가 들리지 않도록 고정한 후 아치형 허리를 유지한 상태로 시작합니다<br><br>
 
                                 손바닥이 서로 마주보도록 덤벨을 잡아 허벅지에 올린 후 무릎으로 덤벨을 받치며 자연스럽게 누운 후 다리를 내리고 가슴위로 양 팔을 밀어 덤벨을 서로 붙여줍니다<br>
 
@@ -215,8 +216,8 @@
                         <details>
                             <summary class="fw-bold">
                                 벤트 암 덤벨 풀오버
-                            </summary><br>
-                            <p class="text-start">
+                            </summary>
+                            <p>
                                 발을 바닥에 평평하게 유지한 후 허리를 벤치에 붙인 상태로 시작합니다<br><br>
                                 양손으로 덤벨을 잡을 때 손바닥과 손가락으로 다이아몬드 모양을 만든 상태로
                                 팔이 몸과 일직선이 될 때까지, 팔꿈치가 약 90도가 될 때까지 구부리며 덤벨을 머리 위로 천천히 내립니다 잠시 멈춘 후 덤벨을 처음의 위치로 당겨줍니다
@@ -296,8 +297,8 @@
                         <details>
                             <summary class="fw-bold">
                                 푸쉬업
-                            </summary><br>
-                            <p class="text-start">
+                            </summary>
+                            <p>
                                 손을 바깥으로 돌린 상태로 손의 간격이 어깨너비보다 좁아지지 않게 유의하며 어깨 밑에 손목을 위치시킵니다 양 발이 벌어지지 않도록 발을 붙여준 상태로 시작합니다<br><br>
                                 양쪽 어깨가 멀어지도록, 등이 넓어지는 모양을 유지하며 내려갑니다.
                                 이때 손목과 팔꿈치는 서로 수직을 이룹니다.
@@ -329,26 +330,31 @@
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                         <%--name으로 exer_wgt와 exer_set 추가--%>
 
-                        <form action="<c:url value='/user/member/exerciseType/chest' />" name="exercise_type" method="post" id="valid_CheckForm3">
+                        <form action="<c:url value='/user/member/exerciseType/chest/b' />" name="exercise_type" method="post" id="valid_CheckFormB0">
 
                             <div class="hidden_exer mt-3">
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">운동 명</span> <%--운동명 value 바꾸기--%>
-                                    <input type="text" name="exer_name" class="form-control" value="푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <input type="text" name="exer_name_b" class="form-control" value="푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
+<<<<<<< HEAD
+                                    <span class="input-group-text">시간(초)</span>
+                                    <input type="number" name="exer_sec_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+=======
                                     <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    <input type="number" name="exer_wgt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+>>>>>>> parent of 80ed4ee (전체적인 다듬기 작업 중)
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">세트 수</span>
-                                    <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
+                                    <input type="number" name="exer_set_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(3)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check_B(0)">
 
                             </div>
 
@@ -374,9 +380,8 @@
                         <details>
                             <summary class="fw-bold">
                                 디클라인 푸쉬업
-                            </summary><br>
-                            <p class="text-start">
-                                푸쉬업 자세에서 30도 ~ 45도 정도를 유지할 수 있으며 발을 편안하게 올릴 수 있는 반고정된 물체에 발을 올려놓은 상태로 시작합니다<br><br>
+                            </summary>
+                            <p>푸쉬업 자세에서 30도 ~ 45도 정도를 유지할 수 있으며 발을 편안하게 올릴 수 있는 반고정된 물체에 발을 올려놓은 상태로 시작합니다<br><br>
                                 시선을 앞쪽으로 향한채로 푸쉬업과 동일하게 운동을 진행합니다
                             </p>
                         </details>
@@ -406,25 +411,30 @@
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                         <%--name으로 exer_wgt와 exer_set 추가--%>
 
-                        <form action="<c:url value='/user/member/exerciseType/chest' />" name="exercise_type" method="post" id="valid_CheckForm4">
+                        <form action="<c:url value='/user/member/exerciseType/chest/b' />" name="exercise_type" method="post" id="valid_CheckFormB1">
 
                             <div class="hidden_exer mt-3">
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">운동 명</span>
-                                    <input type="text" name="exer_name" class="form-control" value="디클라인 푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <input type="text" name="exer_name_b" class="form-control" value="디클라인 푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
+<<<<<<< HEAD
+                                    <span class="input-group-text">시간(초)</span>
+                                    <input type="number" name="exer_sec_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+=======
                                     <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+>>>>>>> parent of 80ed4ee (전체적인 다듬기 작업 중)
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">세트 수</span>
-                                    <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
+                                    <input type="number" name="exer_set_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
-                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(4)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check_B(1)">
 
                             </div>
 
@@ -440,6 +450,7 @@
         </div>
     </div>
 </div>
+
 
 <%
 } else {
@@ -463,6 +474,8 @@
 %>
 
 <jsp:include page="../js_jsp/valid_check.jsp" />
+
+<jsp:include page="../js_jsp/valid_check_b.jsp" />
 
 <jsp:include page="../js_jsp/exercise_List_start_exer.jsp" />
 
