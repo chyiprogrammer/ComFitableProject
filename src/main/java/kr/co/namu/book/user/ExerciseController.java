@@ -42,9 +42,17 @@ public class ExerciseController {
 
         return "nav/exercise_type";
     }
-
-
     // 운동 부위에 따라 url 따로
+
+    @RequestMapping("/exerciseType/Body")
+    public String exerciseTypeBody(Model model){
+
+        model.addAttribute("list", 1);
+        System.out.println("맨몸으로 이동만");
+
+        return "/nav/exercise_type_body";
+
+    }
     
         @RequestMapping("/exerciseType/chest_yet")
         public String exerciseTypeChest_yet(Model model){
@@ -178,6 +186,8 @@ public class ExerciseController {
     } // shoulder
 
     // 운동 부위에 따른 url 끝
+
+
 
 
     @RequestMapping("/exerciseDia")

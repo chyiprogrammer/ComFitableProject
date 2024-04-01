@@ -43,7 +43,7 @@
 
 <div class="album py-5 bg-light">
     <div class="container">
-
+        <p class="fs-3 text-primary">이미지를 클릭하시면 대략적인 운동 자세를 보여드립니다.</p>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="health_map">
 
             <div class="col">
@@ -411,6 +411,7 @@
 
                 </div>
             </div>
+            <!--5번 끝-->
 
         </div>
     </div>

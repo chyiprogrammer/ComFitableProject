@@ -57,9 +57,10 @@
 							</ul>
 
 						</li>
+
 					</c:if>
 
-					<li class="nav-item text-center p-3"><a href="#" class="nav-link fw-bold fs-2">맨몸 운동</a></li>
+					<li class="nav-item text-center p-3"><a href="<c:url value='/user/member/exerciseType/Body' />" class="nav-link fw-bold fs-2">맨몸 운동</a></li>
 					<li class="nav-item text-center p-3"><a href="<c:url value='/user/member/exerciseDia' />" class="nav-link fw-bold fs-2">오늘 할 운동</a></li>
 					<li class="nav-item text-center p-3"><a href="<c:url value='/user/member/exerStatus' />" class="nav-link fw-bold fs-2">운동 현황</a></li>
 					<li class="nav-item text-center p-3"><a href="<c:url value='/user/member/exerHisAll' />" class="nav-link fw-bold fs-2">전체 현황</a></li>
@@ -70,6 +71,7 @@
 		</div>
 
 	</nav>
+
 
 
 	<%

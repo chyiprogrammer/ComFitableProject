@@ -20,10 +20,15 @@
 
 <jsp:include page="../user/include/nav.jsp" />
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+
+
 <%
     UserMemberVO loginedUserMemberVo = (UserMemberVO) session.getAttribute("loginedUserMemberVo");
     if (loginedUserMemberVo != null) {	//로그인이 되어있을 때
 %>
+
+<canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
 <table class="table table-dark table-bordered table-hover">
 
@@ -60,6 +65,61 @@
 <%
     }
 %>
+
+<script>
+    (function () {
+        'use strict'
+
+
+
+        // Graphs
+        var ctx = document.getElementById('myChart')
+        // eslint-disable-next-line no-unused-vars
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [
+                    '일요일',
+                    '월요일',
+                    '화요일',
+                    '수요일',
+                    '목요일',
+                    '금요일',
+                    '토요일'
+                ],
+                datasets: [{
+                    data: [
+                        2000,
+                        2500,
+                        1800,
+                        3000,
+                        2800,
+                        2400,
+                        2800
+                    ],
+                    lineTension: 0,
+                    backgroundColor: 'transparent',
+                    borderColor: '#007bff',
+                    borderWidth: 4,
+                    pointBackgroundColor: '#007bff'
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: false
+                        }
+                    }]
+                },
+                legend: {
+                    display: false
+                }
+            }
+        })
+    })()
+</script>
+
 
 
 </body>

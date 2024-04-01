@@ -25,6 +25,7 @@
     if (loginedUserMemberVo != null) {	//로그인이 되어있을 때
 %>
 
+
     <table class="table table-dark table-bordered table-hover">
             <thead>
                 <tr>
@@ -120,7 +121,6 @@
 <%
     }
 %>
-
 
 </body>
 </html>

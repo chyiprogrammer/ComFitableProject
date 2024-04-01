@@ -45,10 +45,11 @@
 
 <div class="album py-5 bg-light">
     <div class="container">
-
+        <p class="fs-3 text-primary">이미지를 클릭하시면 대략적인 운동 자세를 보여드립니다.</p>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="health_map">
 
             <%--1번 [image-container 클래스를 가진 div 박스에 움직이고싶은 이미지를 두고 버튼의 class에 move-img를 넣어준다] --%>
+
             <div class="col">
                 <div class="card shadow-sm">
 
