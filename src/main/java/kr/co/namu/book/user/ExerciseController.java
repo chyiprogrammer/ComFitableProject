@@ -1,7 +1,6 @@
 package kr.co.namu.book.user;
 
 import kr.co.namu.book.ExerciseVO;
-import kr.co.namu.book.B_ExerciseVO;
 import kr.co.namu.user.member.UserMemberVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +18,6 @@ import java.util.List;
 public class ExerciseController {
 
     @Autowired private ExerciseServiceImpl service;
-    @Autowired private B_ExerciseServiceImpl b_service;
 
     @RequestMapping("/exerciseType/Main") // 메인 페이지로 가는 jsp
     public String exerciseType(Model model){
@@ -74,20 +72,6 @@ public class ExerciseController {
     } // chest
 
 
-        @RequestMapping("/exerciseType/chest/b")
-        public String exerciseTypeChestB(B_ExerciseVO B_exerciseVO, HttpSession session, Model model){
-
-        model.addAttribute("list", 1); // 이걸 붙여줘야 다시 선택 가능함 만들때마다 꼭 붙여주기
-
-        UserMemberVO userMemberVO = (UserMemberVO) session.getAttribute("loginedUserMemberVo");
-        B_exerciseVO.setExer_id_b(userMemberVO.getU_m_id());
-
-        b_service.b_exercise_insert(B_exerciseVO);
-
-        return  "user/exerciseType/chest";
-
-        }
-
 
     @RequestMapping("/exerciseType/arm_yet")
     public String exerciseTypeArm_yet(Model model){
@@ -113,21 +97,6 @@ public class ExerciseController {
 
         return "user/exerciseType/arm";
     } // arm
-
-    @RequestMapping("/exerciseType/arm/b")
-    public String exerciseTypeArmB(B_ExerciseVO B_exerciseVO, HttpSession session, Model model){
-
-        model.addAttribute("list", 1); // 이걸 붙여줘야 다시 선택 가능함 만들때마다 꼭 붙여주기
-
-        UserMemberVO userMemberVO = (UserMemberVO) session.getAttribute("loginedUserMemberVo");
-        B_exerciseVO.setExer_id_b(userMemberVO.getU_m_id());
-
-        b_service.b_exercise_insert(B_exerciseVO);
-
-        return  "user/exerciseType/arm";
-
-    }
-
 
 
     @RequestMapping("/exerciseType/core_yet")
@@ -181,21 +150,6 @@ public class ExerciseController {
         return "user/exerciseType/low";
     } // low
 
-    @RequestMapping("/exerciseType/low/b")
-    public String exerciseTypeLowB(B_ExerciseVO B_exerciseVO, HttpSession session, Model model){
-
-        model.addAttribute("list", 1); // 이걸 붙여줘야 다시 선택 가능함 만들때마다 꼭 붙여주기
-
-        UserMemberVO userMemberVO = (UserMemberVO) session.getAttribute("loginedUserMemberVo");
-        B_exerciseVO.setExer_id_b(userMemberVO.getU_m_id());
-
-        b_service.b_exercise_insert(B_exerciseVO);
-
-        return  "user/exerciseType/low";
-
-    }
-
-
 
     @RequestMapping("/exerciseType/shoulder_yet")
     public String exerciseTypeShoulder_yet(Model model){
@@ -223,48 +177,7 @@ public class ExerciseController {
         return "user/exerciseType/shoulder";
     } // shoulder
 
-    @RequestMapping("/exerciseType/shoulder/b")
-    public String exerciseTypeShoulderB(B_ExerciseVO B_exerciseVO, HttpSession session, Model model){
-
-        model.addAttribute("list", 1); // 이걸 붙여줘야 다시 선택 가능함 만들때마다 꼭 붙여주기
-
-        UserMemberVO userMemberVO = (UserMemberVO) session.getAttribute("loginedUserMemberVo");
-        B_exerciseVO.setExer_id_b(userMemberVO.getU_m_id());
-
-        b_service.b_exercise_insert(B_exerciseVO);
-
-        return  "user/exerciseType/shoulder";
-
-    }
-
-
-
     // 운동 부위에 따른 url 끝
-
-    @RequestMapping("/exerBody")
-    public String exerBody(B_ExerciseVO B_exerciseVO, HttpSession session, Model model){
-        UserMemberVO userMemberVO = (UserMemberVO) session.getAttribute("loginedUserMemberVo");
-        B_exerciseVO.setExer_id_b(userMemberVO.getU_m_id());
-
-        List<B_ExerciseVO> B_exerciseVOs = b_service.b_exercise_list(B_exerciseVO);
-
-        int totalTime = 0;
-        for(B_ExerciseVO B_exerVO : B_exerciseVOs){
-            totalTime += B_exerVO.getExer_totalTime_b();
-        }
-
-        model.addAttribute("B_exerciseVOs",B_exerciseVOs);
-        model.addAttribute("totalTime_b", totalTime);
-
-
-        if(B_exerciseVOs.isEmpty()){
-            return "nav/exercise_none";
-        }
-
-        return "nav/exercise_body";
-
-    }
-
 
 
     @RequestMapping("/exerciseDia")

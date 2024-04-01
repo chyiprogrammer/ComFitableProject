@@ -332,7 +332,7 @@
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                         <%--name으로 exer_wgt와 exer_set 추가--%>
 
-                        <form action="<c:url value='/user/member/exerciseType/arm/b' />" name="exercise_type" method="post" id="valid_CheckFormB0">
+                        <form action="<c:url value='/user/member/exerciseType/arm' />" name="exercise_type" method="post" id="valid_CheckForm3">
 
                             <div class="hidden_exer mt-3">
 
@@ -356,7 +356,7 @@
                                     <input type="number" name="exer_set_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check_B(0)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(3)">
 
                             </div>
 
@@ -472,7 +472,6 @@
 %>
 
 <jsp:include page="../js_jsp/valid_check.jsp" />
-<jsp:include page="../js_jsp/valid_check_b.jsp" />
 
 
 <jsp:include page="../js_jsp/exercise_List_start_exer.jsp" />

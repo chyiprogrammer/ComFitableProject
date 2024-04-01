@@ -90,7 +90,7 @@
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                         <%--name으로 exer_sec_b와 exer_set_b 추가--%>
 
-                        <form action="<c:url value='/user/member/exerciseType/core/b' />" name="exercise_type" method="post" id="valid_CheckFormB0"> <%--아이디 끝 숫자 바꾸기--%>
+                        <form action="<c:url value='/user/member/exerciseType/core' />" name="exercise_type" method="post" id="valid_CheckForm0"> <%--아이디 끝 숫자 바꾸기--%>
 
                             <div class="hidden_exer mt-3">
 
@@ -100,21 +100,16 @@
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-<<<<<<< HEAD
-                                    <span class="input-group-text">시간(초)</span>
-                                    <input type="number" name="exer_sec_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
-=======
                                     <span class="input-group-text">무게</span>
                                     <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
->>>>>>> parent of 80ed4ee (전체적인 다듬기 작업 중)
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">세트 수</span>
-                                    <input type="number" name="exer_set_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
+                                    <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check_B(0)"> <%--파라미터 숫자 바꾸기--%>
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(0)"> <%--파라미터 숫자 바꾸기--%>
 
                             </div>
 
@@ -173,7 +168,7 @@
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                         <%--name으로 exer_sec_b와 exer_set_b 추가--%>
 
-                        <form action="<c:url value='/user/member/exerciseType/core/b' />" name="exercise_type" method="post" id="valid_CheckFormB1">
+                        <form action="<c:url value='/user/member/exerciseType/core' />" name="exercise_type" method="post" id="valid_CheckForm1">
 
                             <div class="hidden_exer mt-3">
 
@@ -183,21 +178,16 @@
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-<<<<<<< HEAD
-                                    <span class="input-group-text">시간(초)</span>
-                                    <input type="number" name="exer_sec_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" >
-=======
                                     <span class="input-group-text">무게</span>
                                     <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
->>>>>>> parent of 80ed4ee (전체적인 다듬기 작업 중)
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">세트 수</span>
-                                    <input type="number" name="exer_set_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
+                                    <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check_B(1)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(1)">
 
                             </div>
 
@@ -257,7 +247,7 @@
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                         <%--name으로 exer_sec_b와 exer_set_b 추가--%>
 
-                        <form action="<c:url value='/user/member/exerciseType/core/b' />" name="exercise_type" method="post" id="valid_CheckFormB2">
+                        <form action="<c:url value='/user/member/exerciseType/core' />" name="exercise_type" method="post" id="valid_CheckForm2">
 
                             <div class="hidden_exer mt-3">
 
@@ -267,21 +257,16 @@
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-<<<<<<< HEAD
-                                    <span class="input-group-text">시간(초)</span>
-                                    <input type="number" name="exer_sec_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
-=======
                                     <span class="input-group-text">무게</span>
                                     <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
->>>>>>> parent of 80ed4ee (전체적인 다듬기 작업 중)
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">세트 수</span>
-                                    <input type="number" name="exer_set_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
+                                    <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check_B(2)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(2)">
 
                             </div>
 
@@ -342,7 +327,7 @@
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                         <%--name으로 exer_sec_b와 exer_set_b 추가--%>
 
-                        <form action="<c:url value='/user/member/exerciseType/core/b' />" name="exercise_type" method="post" id="valid_CheckFormB3">
+                        <form action="<c:url value='/user/member/exerciseType/core' />" name="exercise_type" method="post" id="valid_CheckForm3">
 
                             <div class="hidden_exer mt-3">
 
@@ -352,21 +337,16 @@
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-<<<<<<< HEAD
-                                    <span class="input-group-text">시간(초)</span>
-                                    <input type="number" name="exer_sec_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
-=======
                                     <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
->>>>>>> parent of 80ed4ee (전체적인 다듬기 작업 중)
+                                    <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">세트 수</span>
-                                    <input type="number" name="exer_set_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
+                                    <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check_B(3)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(3)">
 
                             </div>
 
@@ -426,7 +406,7 @@
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                         <%--name으로 exer_sec_b와 exer_set_b 추가--%>
 
-                        <form action="<c:url value='/user/member/exerciseType/core/b' />" name="exercise_type" method="post" id="valid_CheckFormB4">
+                        <form action="<c:url value='/user/member/exerciseType/core' />" name="exercise_type" method="post" id="valid_CheckForm4">
 
                             <div class="hidden_exer mt-3">
 
@@ -436,21 +416,16 @@
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-<<<<<<< HEAD
-                                    <span class="input-group-text">갯수</span>
-                                    <input type="number" name="exer_cnt_b" class="form-control"  min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
-=======
                                     <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
->>>>>>> parent of 80ed4ee (전체적인 다듬기 작업 중)
+                                    <input type="number" name="exer_wgt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">세트 수</span>
-                                    <input type="number" name="exer_set_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
+                                    <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check_B(4)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(4)">
 
                             </div>
 
@@ -488,7 +463,6 @@
 %>
 
 <jsp:include page="../js_jsp/valid_check.jsp" />
-<jsp:include page="../js_jsp/valid_check_b.jsp" />
 
 
 <jsp:include page="../js_jsp/exercise_List_start_exer.jsp" />
