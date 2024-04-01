@@ -24,6 +24,8 @@
                 }else if(inputValue === "" && inputValue2 !=""){
                     alert("무게를 입력해주세요.")
                     return;
+                }else if(inputValue && inputValue2 <0){
+                    alert("음수는 입력하실 수 없습니다.")
                 }
                 document.getElementById("valid_CheckForm"+no).submit();
             }

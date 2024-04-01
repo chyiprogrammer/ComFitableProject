@@ -23,4 +23,9 @@ public class ExerciseDAO implements ExerciseService{
         return sql.selectList("exer.mapper.exerList",exerciseVO);
     }
 
+    @Override
+    public int exercise_deleteOne(ExerciseVO exerciseVO) {
+        return sql.delete("exer.mapper.exerDeleteOne",exerciseVO);
+    }
+
 }

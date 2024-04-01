@@ -11,6 +11,7 @@
 <jsp:include page="../include/title.jsp" />
 --%>
 
+
 </head>
 
 <jsp:include page="../include/header.jsp" />
@@ -34,8 +35,8 @@
 
 			<div class="container">
 				<div class="carousel-caption text-start">
-					<h1 class="text-white">Example headline.</h1>
-					<p class="text-white">Some representative placeholder content for the first slide of the carousel.</p>
+					<h1 class="text-white">덤벨만 있으면 어디서나 쉽게.</h1>
+					<p class="text-white">어렵게 생각하시지 않으셔도 됩니다. 처음부터 잘하는 사람은 어디에도 없습니다.</p>
 				</div>
 			</div>
 
@@ -48,8 +49,8 @@
 
 			<div class="container">
 				<div class="carousel-caption">
-					<h1 class="text-white">Another example headline.</h1>
-					<p class="text-white">Some representative placeholder content for the second slide of the carousel.</p>
+					<h1 class="text-white">덤벨 없이도 가능합니다.</h1>
+					<p class="text-white">차근차근 눈으로 먼저 운동을 익히셔도 좋습니다. 올바른 자세는 운동의 핵심입니다.</p>
 				</div>
 			</div>
 		</div>
@@ -61,8 +62,8 @@
 
 			<div class="container">
 				<div class="carousel-caption text-end">
-					<h1 class="text-white">One more for good measure.</h1>
-					<p class="text-white">Some representative placeholder content for the third slide of this carousel.</p>
+					<h1 class="text-white">당신은 할 수 있습니다.</h1>
+					<p class="text-white">여러분과 같은 "사람"이 만든 운동입니다. 여러분도 충분히 할 수 있습니다.</p>
 				</div>
 			</div>
 		</div>
@@ -122,8 +123,16 @@
 
 	<div class="row featurette">
 		<div class="col-md-7">
-			<h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-			<p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+			<h3 class="featurette-heading">물이 어떻게 흐르든 강물은 결국 바다로 향한다.
+				<br><br>
+				<span class="text-muted" style="line-height: 1.5">우리도 어떤 어려움이든 마음을 다잡고 꾸준히<br>
+					노력하면 결국 우리의 목표를 이룰 수 있습니다.</span></h3>
+			<br>
+			<p class="lead" style="line-height: 1.6">인간은 <span class="text-success fw-bold">성취감</span>을 통해 가장 많이 성장합니다.
+				<br>
+				성취감은 우리에게 <span class="text-success fw-bold">목표</span>를 설정하고 이루기 위해 노력하고
+			성공했을 때 느끼는 <span class="text-success fw-bold">만족감</span>이며, 이는 우리에게 자신감과 자아존중감을 부여합니다.
+			</p>
 		</div>
 		<div class="col-md-5">
 			<img src="/resources/choi_machine/img/main_feat1.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -138,8 +147,14 @@
 
 	<div class="row featurette">
 		<div class="col-md-7 order-md-2">
-			<h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-			<p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+			<h3 class="featurette-heading">바람이 어떻든 비행은 새의 마음에서 비롯된다.
+				<br><br>
+				<span class="text-muted" style="line-height: 1.5">우리는 내면의 힘을 통해 충분히 우리가 원하는 <br> 방식으로 살아갈 수 있습니다.</span></h3>
+			<br><br>
+			<p class="lead" style="line-height: 1.6">
+				자기를 잘 알고 <span class="text-success fw-bold">자신의 가치</span>를 이해하는 것은 내면의 힘을 키우는 데에 중요한 요소입니다.<br>
+				또한, 내면의 힘은 우리의 감정을 조절하고 <span class="text-success fw-bold">긍정적인 마인드셋</span>을 <br>유지하는 데에도 도움을 줍니다.<br>
+			</p>
 		</div>
 		<div class="col-md-5 order-md-1">
 			<img src="/resources/choi_machine/img/main_feat2.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -154,8 +169,16 @@
 
 	<div class="row featurette">
 		<div class="col-md-7">
-			<h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-			<p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+			<h2 class="featurette-heading">달리기는 항상 끝이 있다.
+				<br><br>
+				<span class="text-muted" style="line-height: 1.5">우리는 방법에 상관없이 걷거나 뛰며 <br> 끝을 향해 차근차근 다가가기만 하면 됩니다.</span></h2>
+			<br><br>
+			<p class="lead" style="line-height: 1.6">
+				모든 것에는 단계가 있다는 것을 잊지 말아야 합니다.<br>
+				<span class="text-success fw-bold">희망</span>하는 목표를 향해 조금씩 나아가는 것은
+				<br>
+				차근차근 노력하여 <span class="text-success fw-bold">성취를 향해</span> 걸어가는 것입니다.
+			</p>
 		</div>
 		<div class="col-md-5">
 			<img src="/resources/choi_machine/img/main_feat3.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">

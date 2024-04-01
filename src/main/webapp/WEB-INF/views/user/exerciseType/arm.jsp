@@ -59,8 +59,8 @@
                         <details>
                             <summary class="fw-bold">
                                 덤벨 컬
-                            </summary>
-                            <p>
+                            </summary><br>
+                            <p class="text-start">
                                 손바닥이 위로 가도록 덤벨을 양손으로 잡은 후 가슴을 열고 팔꿈치를 옆구리에 자연스럽게 붙인 상태로 시작합니다.<br><br>
 
                                 팔꿈치를 그대로 고정시키고 팔꿈치가 몸통 뒤로 가지 않도록 유의하며 들어올립니다<br>
@@ -137,8 +137,9 @@
                         <details>
                             <summary class="fw-bold">
                                 얼터네이팅 덤벨 컬
-                            </summary>
-                            <p>손바닥이 마주보게 덤벨을 양손으로 잡은 후
+                            </summary><br>
+                            <p class="text-start">
+                                손바닥이 마주보게 덤벨을 양손으로 잡은 후
                                 가슴을 열고 팔꿈치를 옆구리에 자연스럽게 붙인 상태로 시작합니다.<br><br>
 
                                 팔꿈치를 그대로 고정시키고 팔꿈치가 몸통 뒤로 가지 않도록 유의하며 들어올립니다<br>
@@ -217,8 +218,8 @@
                         <details>
                             <summary class="fw-bold">
                                 덤벨 킥백
-                            </summary>
-                            <p>
+                            </summary><br>
+                            <p class="text-start">
                                 상체는 완전히 숙인 상태에서 고개만 살짝 들어주고
                                 자극을 줄 팔은 상체와 일직선이 되게 만들고 팔꿈치만 고정시켜 줍니다<br>
                                 팔과 반대방향의 다리는 굽혀서 벤치 혹은 의자에 올린 상태로 시작합니다<br><br>
@@ -299,8 +300,8 @@
                         <details>
                             <summary class="fw-bold">
                                 사이드 푸쉬업
-                            </summary>
-                            <p>
+                            </summary><br>
+                            <p class="text-start">
                                 자극을 줄 팔은 푸쉬업 자세에서 옆으로 눕기만하듯 팔꿈치만 꺾고,
                                 반대쪽 팔은 자연스럽게 접어 외복사근에 놓습니다<br>
                                 다리는 무릎까지 몸통과 같은 방향으로하고 정강이만 뒤로 접은 상태로 시작합니다.<br><br>
@@ -332,26 +333,26 @@
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                         <%--name으로 exer_wgt와 exer_set 추가--%>
 
-                        <form action="<c:url value='/user/member/exerciseType/arm' />" name="exercise_type" method="post" id="valid_CheckForm3">
+                        <form action="<c:url value='/user/member/exerciseType/arm/b' />" name="exercise_type" method="post" id="valid_CheckFormB0">
 
                             <div class="hidden_exer mt-3">
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">운동 명</span> <%--운동명 value 바꾸기--%>
-                                    <input type="text" name="exer_name" class="form-control" value="사이드 푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <input type="text" name="exer_name_b" class="form-control" value="사이드 푸쉬업" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <span class="input-group-text">시간(초)</span>
+                                    <input type="number" name="exer_sec_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">세트 수</span>
-                                    <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
+                                    <input type="number" name="exer_set_b" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(3)">
+                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check_B(0)">
 
                             </div>
 
@@ -377,8 +378,9 @@
                         <details>
                             <summary class="fw-bold">
                                 덤벨 리버스 리스트 컬
-                            </summary>
-                            <p>무릎을 꿇은 상태로 손바닥이 아래를 향하도록 덤벨을 양손으로 잡고,
+                            </summary><br>
+                            <p class="text-start">
+                                무릎을 꿇은 상태로 손바닥이 아래를 향하도록 덤벨을 양손으로 잡고,
                                 팔을 어깨너비로 벌린 후
                                 벤치 혹은 의자에 전완근을 올려놓은 상태로 시작합니다.<br><br>
                                 최대한 천천히 손목을 구부려서 올렸다가 천천히 내려옵니다
@@ -467,6 +469,8 @@
 %>
 
 <jsp:include page="../js_jsp/valid_check.jsp" />
+<jsp:include page="../js_jsp/valid_check_b.jsp" />
+
 
 <jsp:include page="../js_jsp/exercise_List_start_exer.jsp" />
 

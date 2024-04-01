@@ -16,7 +16,7 @@
 
 	<div class="text-center text-md-end">
 
-		<button type="button" class="btn btn-warning me-2 p-4">
+		<button type="button" class="btn btn-warning me-5 p-4">
 			<a href="<c:url value='/user/member/logoutConfirm' />" class="text-decoration-none">로그아웃</a>
 		</button>
 
@@ -59,7 +59,7 @@
 						</li>
 					</c:if>
 
-					<li class="nav-item text-center p-3"><a href="#" class="nav-link fw-bold fs-2">기구 목록</a></li>
+					<li class="nav-item text-center p-3"><a href="#" class="nav-link fw-bold fs-2">맨몸 운동</a></li>
 					<li class="nav-item text-center p-3"><a href="<c:url value='/user/member/exerciseDia' />" class="nav-link fw-bold fs-2">오늘 할 운동</a></li>
 					<li class="nav-item text-center p-3"><a href="<c:url value='/user/member/exerStatus' />" class="nav-link fw-bold fs-2">운동 현황</a></li>
 					<li class="nav-item text-center p-3"><a href="<c:url value='/user/member/exerHisAll' />" class="nav-link fw-bold fs-2">전체 현황</a></li>

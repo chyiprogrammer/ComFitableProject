@@ -86,7 +86,7 @@ END;
 DELIMITER ;
 
 select * from user_exercise;
-delete from user_exercise where exer_id="doodleg";
+delete from user_exercise where exer_id="doodleg1";
 drop table user_exercise;
 
 alter table user_exercise drop column exer_end;
@@ -120,26 +120,48 @@ CREATE TABLE hope_book(
 
 select * from hope_book;
 
-CREATE TABLE exercise_history(
-                                 his_no		INT AUTO_INCREMENT,
-                                 his_id		VARCHAR(20),
-                                 his_name	VARCHAR(50),
-                                 his_wgt	INT		NOT NULL,
-                                 his_set	INT		NOT NULL,
-                                 his_totalVolume INT,
-                                 his_date 	datetime,
-                                 his_status VARCHAR(20),
-                                 PRIMARY KEY(his_no),
-                                 FOREIGN KEY (his_id) REFERENCES user_member(u_m_id)
+
+CREATE TABLE user_exercise_b(
+                                exer_no_b			INT AUTO_INCREMENT,
+                                exer_id_b			VARCHAR(20),
+                                exer_name_b			VARCHAR(50),
+                                exer_sec_b			INT		NOT NULL,
+                                exer_set_b			INT		NOT NULL,
+                                exer_totalTime_b 	INT,
+                                exer_date_b 		datetime default current_timestamp,
+                                exer_start_b 		datetime default current_timestamp,
+                                exer_end_b 			datetime default current_timestamp,
+                                exer_status_b 		VARCHAR(20),
+                                PRIMARY KEY(exer_no_b),
+                                FOREIGN KEY (exer_id_b) REFERENCES user_member(u_m_id)
 );
 
-select * from exercise_history;
-drop table exercise_history;
+DELIMITER //
+
+CREATE TRIGGER calculate_totalTime
+    BEFORE INSERT ON user_exercise_b
+    FOR EACH ROW
+BEGIN
+    DECLARE totalTime INT;
+    SET totalTime = NEW.exer_sec_b * NEW.exer_set_b;
+    SET NEW.exer_totalTime_b = totalTime;
+END;
+//
+DELIMITER ;
+
+
+select * from user_exercise_b;
+drop table user_exercise_b;
+
 
 SELECT exer_status FROM user_exercise WHERE exer_id = "doodleg" AND exer_status = "start";
+
 UPDATE user_exercise SET exer_status = "start" where exer_id ="doodleg" AND exer_status ="...ing";
 
 SELECT * FROM user_exercise WHERE exer_id = "doodleg" AND exer_status = "...ing";
 
+SELECT * FROM user_exercise WHERE exer_id = "doodleg" AND exer_status = "done";
+
+delete From user_exercise where exer_id = "doodleg" AND exer_status = "done";
 
 
