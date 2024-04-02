@@ -154,7 +154,7 @@ public class HistoryController {
         // 최대 판매량도 추가
         ChartVO maxChart = new ChartVO();
         maxChart.setChart_date("max");
-        maxChart.setChart_value(max + 20);
+        maxChart.setChart_value(max + max/3);
         chartList.add(maxChart);
 
         return chartList;

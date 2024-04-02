@@ -12,6 +12,30 @@
 
 <html>
 <head>
+
+    <style>
+        #timer {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        #startButton {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #startButton:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+    </style>
+
     <title>운동 현황</title>
 </head>
 <body>
@@ -67,45 +91,47 @@
 
     </table>
 
-<%--
-<div class="text-center mt-4">
-    <button type="button" class="btn btn-primary" id="submit-btn">운동 완료</button>
-</div>
---%>
+        <div id="timer" class="text-center">01:00
+            <button id="startButton">쉬는 시간</button>
+        </div>
+<script>
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        var isTimerRunning = true;
 
-<%--<script>
-    var statusChecks = document.querySelectorAll('.form-check-input');
 
-    statusChecks.forEach(function(n) {
-        n.addEventListener('click', function() {
-            if (this.checked == true) {
-                var checkNum = this.checked;
-                checkNum = 1;
-                // 체크되어 있을 때 실행할 코드
-                console.log(checkNum+"번째가 체크되어 있습니다.");
-            } else {
-                checkNum = 1;
-                // 체크되어 있지 않을 때 실행할 코드
-                console.log(checkNum+"번째가 체크되어 있지 않습니다.");
+        var intervalId = setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                clearInterval(intervalId);
+                isTimerRunning = false;
+                timer = duration;
+                display.textContent = "다시 시작!";
+                document.getElementById('startButton').disabled = false;
             }
-        });
+        }, 1000);
+
+        document.getElementById('startButton').disabled = true;
+    }
+
+    document.getElementById('startButton').addEventListener('click', function () {
+        var oneMinute = 60,
+            display = document.querySelector('#timer');
+        startTimer(oneMinute, display);
     });
-</script>--%>
+</script>
 
 
 <%
 } else {	// 로그인이 되어있지 않을 때
 %>
-
-<%--<script>
-    // 페이지 로드 시 실행되는 함수
-    window.onload = function() {
-        // 사용자에게 경고 메시지를 보여줌
-        alert('로그인이 필요한 서비스입니다');
-        // 로그인 페이지로 이동
-        window.location.href = "<c:url value='/user/member/loginForm' />";
-    };
-</script>--%>
 
 
 <%

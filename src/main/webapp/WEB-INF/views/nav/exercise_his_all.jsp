@@ -36,36 +36,97 @@
 
 
 <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-
+<%--
 <table class="table table-dark table-bordered table-hover">
 
     <thead>
         <tr>
-            <th scope="col" class="fs-2">운동 명</th>
-            <th scope="col" class="fs-2">무게 (kg)</th>
-            <th scope="col" class="fs-2">갯수</th>
-            <th scope="col" class="fs-2">세트 수</th>
-            <th colspan="2" scope="col" class="fs-2">상태</th>
+            <th scope="col" class="fs-2">날짜</th>
+
         </tr>
     </thead>
 
+
+   <c:set var="previousDate" value="" />
     <c:forEach items="${history}" var="vo">
-
-        <tbody>
+        <c:if test="${!vo.exer_end.substring(0,10).equals(previousDate)}">
+            <tbody>
             <tr>
-                <td class="fs-2">${vo.exer_name}</td>
-                <td class="fs-2">${vo.exer_wgt}</td>
-                <td class="fs-2">${vo.exer_cnt}</td>
-                <td class="fs-2">${vo.exer_set}</td>
-                <td class="fs-1 text-success">${vo.exer_status}</td>
+                <td>
+                    <details>
+                        <summary class="fw-bold fs-2">
+                                ${vo.exer_end.substring(0,10)}
+                        </summary>
+                        <p>
+                            <c:forEach items="${history}" var="exercise">
+                            <c:if test="${exercise.exer_end.substring(0,10).equals(vo.exer_end.substring(0,10))}">
+                        <div>
+                            <span class="fs-2">${exercise.exer_name}</span>
+                            <span class="fs-2">${exercise.exer_wgt}</span>
+                            <span class="fs-2">${exercise.exer_cnt}</span>
+                            <span class="fs-2">${exercise.exer_set}</span>
+                            <span class="fs-1 text-success">${exercise.exer_status}</span>
+                        </div>
+                        </c:if>
+                        </c:forEach>
+                        </p>
+                    </details>
+                </td>
             </tr>
-        </tbody>
-
+            </tbody>
+        </c:if>
+        <c:set var="previousDate" value="${vo.exer_end.substring(0,10)}" />
     </c:forEach>
 
 
-</table>
+</table>--%>
 
+<c:set var="previousDate" value="" />
+
+<table class="table table-dark table-striped">
+    <c:forEach items="${history}" var="vo">
+        <c:if test="${!vo.exer_end.substring(0,10).equals(previousDate)}">
+            <tbody>
+            <tr>
+                <td>
+                    <details>
+                        <summary class="fw-bold fs-1 p-3">
+                                ${vo.exer_end.substring(0,10)}
+                        </summary>
+                        <div>
+                            <table class="table table-dark table-striped">
+                                <thead class="text-white fs-2">
+                                <tr>
+                                    <th>운동 이름</th>
+                                    <th>무게</th>
+                                    <th>횟수</th>
+                                    <th>세트</th>
+                                    <th>상태</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <c:forEach items="${history}" var="exercise">
+                                    <c:if test="${exercise.exer_end.substring(0,10).equals(vo.exer_end.substring(0,10))}">
+                                        <tr class="text-white fs-2">
+                                            <td>${exercise.exer_name}</td>
+                                            <td>${exercise.exer_wgt}</td>
+                                            <td>${exercise.exer_cnt}</td>
+                                            <td>${exercise.exer_set}</td>
+                                            <td class="text-success">${exercise.exer_status}</td>
+                                        </tr>
+                                    </c:if>
+                                </c:forEach>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                </td>
+            </tr>
+            </tbody>
+        </c:if>
+        <c:set var="previousDate" value="${vo.exer_end.substring(0,10)}" />
+    </c:forEach>
+</table>
 
 <%
 } else {	// 로그인이 되어있지 않을 때
@@ -131,7 +192,7 @@
                     data: {
                         labels: labels,
                         datasets: [{
-                            label: "Sessions",
+                            label: "총 볼륨",
                             lineTension: 0.3,
                             backgroundColor: "rgba(2,117,216,0.2)",
                             borderColor: "rgba(2,117,216,1)",
