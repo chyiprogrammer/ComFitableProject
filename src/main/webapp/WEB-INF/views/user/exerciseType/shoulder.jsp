@@ -22,6 +22,10 @@
         .hidden_exer{
             display: none;
         }
+        
+        .point{
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -42,8 +46,28 @@
 </script>
 
 <div class="album py-5 bg-light">
-    <div class="container">
+
         <p class="fs-3 text-primary">이미지를 클릭하시면 대략적인 운동 자세를 보여드립니다.</p>
+    <hr>
+        <button type="button" class="btn btn-primary">
+            <a href="<c:url value='/user/member/exerciseType/shoulder/rutin' />" class="text-decoration-none fs-2 text-white">추천 루틴으로 진행(어깨)</a>
+        </button>
+
+    <hr>
+    <br>
+    <details>
+        <summary class="fw-bold fs-2">
+            루틴 확인
+        </summary>
+        <p class="text-center fs-4">
+            덤벨 프론트 레이즈 / 4kg / 15개 / 3세트<br>
+            덤벨 사이드 레터럴 레이즈 / 4kg / 15개 / 3세트<br>
+            시티드 벤트오버 레터럴 레이즈 / 4kg / 15개 / 3세트 <br>
+        </p>
+    </details>
+    <br>
+    <hr>
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="health_map">
 
             <%--1번 [image-container 클래스를 가진 div 박스에 움직이고싶은 이미지를 두고 버튼의 class에 move-img를 넣어준다] --%>
@@ -51,16 +75,16 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container" onclick="javascript:exer_How(0)"> <%--이미지 바꾸기--%>
-                        <img src="/resources/choi_machine/img/exercise/shoulder/S_d_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/shoulder/S_d_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/shoulder/S_d_p_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/shoulder/S_d_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
                         <details>
                             <summary class="fw-bold">
                                 덤벨 숄더 프레스
-                            </summary>
-                            <p>
+                            </summary><br>
+                            <p class="text-start">
                                 팔을 옆으로 벌려 덤벨을 머리의 중간 지점 쯤 오게 한 후 시작합니다 .<br><br>
 
                                 어깨가 솟지 않도록 유의하며 팔만 들어줍니다<br>
@@ -74,7 +98,7 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                        <p>들어 올리는 동작에서 팔을 쭉 피지 않도록 합니다.</p>
+                        <p>덤벨을 들어 올리는 동작에서 팔을 쭉 피지 않도록 유의하며 진행합니다.</p>
 
                         <hr>
 
@@ -129,16 +153,17 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container" onclick="javascript:exer_How(1)">
-                        <img src="/resources/choi_machine/img/exercise/shoulder/S_d_f_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/shoulder/S_d_f_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/shoulder/S_d_f_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/shoulder/S_d_f_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
                         <details>
                             <summary class="fw-bold">
                                 덤벨 프론트 레이즈
-                            </summary>
-                            <p>다리를 어깨넓이 정도로 벌려 자연스럽게 서고,
+                            </summary><br>
+                            <p class="text-start">
+                                다리를 어깨넓이 정도로 벌려 자연스럽게 서고,
                                 팔꿈치를 살짝 구부린 후 허벅지 앞쪽에 둔 상태로 시작합니다.<br><br>
 
                                 팔을 앞으로 올려주고 올라가는 속도보다 천천히 내려옵니다<br>
@@ -151,7 +176,7 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
-                        <p>팔꿈치를 많이 올리지 않도록 합니다.</p>
+                        <p>팔을 올리 때 팔꿈치 윗부분이 보이지 않으면 팔의 개입이 있으니 조금 내립니다.</p>
 
                         <hr>
 
@@ -208,16 +233,16 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container"  onclick="javascript:exer_How(2)"> <%--이미지 바꾸기--%>
-                        <img src="/resources/choi_machine/img/exercise/shoulder/S_d_s_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/shoulder/S_d_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/shoulder/S_d_s_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/shoulder/S_d_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
                         <details>
                             <summary class="fw-bold">
                                 덤벨 사이드 레터럴 레이즈
-                            </summary>
-                            <p>
+                            </summary><br>
+                            <p class="text-start">
                                 덤벨을 양손으로 들고 다리를 자연스럽게 벌린 상태로 시작합니다<br><br>
 
                                 어깨를 내린다는 느낌을 유지한 채 양 팔을 옆으로 들어올리고 올라가는 속도보다 천천히 내려옵니다
@@ -230,7 +255,7 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                        <p>팔을 높이 올리지 않도록 합니다.</p>
+                        <p> 손이 높이 올라가게되면 승모근의 개입이 있을 수 있으니 팔을 높이 올리지 않도록 합니다.</p>
 
                         <hr>
 
@@ -288,16 +313,16 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container" onclick="javascript:exer_How(3)"> <%--이미지 바꾸기--%>
-                        <img src="/resources/choi_machine/img/exercise/shoulder/S_s_b_r_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/shoulder/S_s_b_r_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/shoulder/S_s_b_r_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/shoulder/S_s_b_r_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
                         <details>
                             <summary class="fw-bold">
                                 시티드 벤트오버 레터럴 레이즈
-                            </summary>
-                            <p>
+                            </summary><br>
+                            <p class="text-start">
                                 덤벨을 양손에 들고 벤치 혹은 등받이가 없는 의자에 앉아 두발을 가까이 둔 후 허리를 약간 굽힌 상태로 시작합니다<br><br>
 
                                 팔꿈치로 움직여 올린다는 느낌으로 덤벨을 어깨보다 약간 낮은 위치까지 들어올리고 올라가는 속도보다 천천히 내려옵니다.</p>
@@ -310,7 +335,7 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                        <p>덤벨의 뒷면이 앞면보다 올라오게 하면 좋습니다.</p>
+                        <p>손목을 기울여 덤벨의 뒷면이 앞면보다 올라오게 하면 근성장에 도움이됩니다.</p>
 
                         <hr>
 
@@ -365,16 +390,17 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container" onclick="javascript:exer_How(4)">
-                        <img src="/resources/choi_machine/img/exercise/shoulder/S_p_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/shoulder/S_p_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/shoulder/S_p_p_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/shoulder/S_p_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
                         <details>
                             <summary class="fw-bold">
                                 파이크 푸쉬업
-                            </summary>
-                            <p>푸쉬업 자세에서 양손의 간격이 어깨보다 약간 넓도록 벌린 상태로 다리를 손 방향을 향해 걷듯이 이동시킵니다<br>
+                            </summary><br>
+                            <p class="text-start">
+                                푸쉬업 자세에서 양손의 간격이 어깨보다 약간 넓도록 벌린 상태로 다리를 손 방향을 향해 걷듯이 이동시킵니다<br>
                                 골반을 높게 들어올린 상태가되면 시작합니다<br><br>
                                 발 뒤꿈치를 살짝 들어올려 무게중심을 상체로 옮긴 후 어깨와 손목이 수직을 이루는 상태로 천천히 내려갑니다
                             </p>
@@ -410,8 +436,8 @@
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <span class="input-group-text point" onclick="toggleReadOnly(1)">무게</span>
+                                    <input type="number" name="exer_wgt" id="1_in" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
@@ -436,9 +462,8 @@
                 </div>
             </div>
             <%--5번 끝--%>
-
         </div>
-    </div>
+
 </div>
 
 <%
@@ -464,6 +489,7 @@
 
 <jsp:include page="../js_jsp/valid_check.jsp" />
 
+<jsp:include page="../js_jsp/moreWgt.jsp" />
 
 <jsp:include page="../js_jsp/exercise_List_start_exer.jsp" />
 

@@ -7,17 +7,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<script>
 
+<script>
     function exer_Start(no){
         var exer_Start = document.getElementsByClassName("hidden_exer")[no];
 
-        if(exer_Start.style.display == "block"){
-            exer_Start.style.display = "none";
-        }else {
+        if(exer_Start.style.display === "block"){
+            exer_Start.style.display = "";
+        } else {
             exer_Start.style.display = "block";
         }
-
-        }
-
+    }
 </script>

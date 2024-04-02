@@ -28,4 +28,8 @@ public class ExerciseDAO implements ExerciseService{
         return sql.delete("exer.mapper.exerDeleteOne",exerciseVO);
     }
 
+    @Override
+    public int exercise_deleteAll(ExerciseVO exerciseVO) {
+        return sql.delete("exer.mapper.exerDeleteAll", exerciseVO);
+    }
 }

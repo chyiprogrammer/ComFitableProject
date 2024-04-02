@@ -29,6 +29,11 @@
         SELECT * FROM user_exercise WHERE exer_id = #{exer_id} AND exer_status = "done"
     </select>
 
+    <select id="chartSee" resultType="kr.co.namu.book.ExerciseVO">
+        SELECT * FROM user_exercise
+        WHERE exer_status = "done" AND DATE(exer_end) BETWEEN #{start} AND #{end} order by exer_end desc;
+    </select>
+
     <!--
         <select id="historylist" resultType="kr.co.namu.book.HistoryVO">
             select * from exercise_history WHERE his_id = #{his_id} and exer_status = "start"

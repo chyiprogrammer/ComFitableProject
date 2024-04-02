@@ -22,6 +22,10 @@
         .hidden_exer{
             display: none;
         }
+        
+        .point{
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -37,8 +41,9 @@
 %>
 
 <div class="album py-5 bg-light">
-    <div class="container">
+
         <p class="fs-3 text-primary">이미지를 클릭하시면 대략적인 운동 자세를 보여드립니다.</p>
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="health_map">
     <%--가슴운동 시작--%>
             <%--1번 [image-container 클래스를 가진 div 박스에 움직이고싶은 이미지를 두고 버튼의 class에 move-img를 넣어준다] --%>
@@ -46,8 +51,8 @@
                 <div class="card shadow-sm">
 
                             <div class="image_container" onclick="javascript:exer_How(0)"> <%--이미지 바꾸기--%>
-                                <img src="/resources/choi_machine/img/exercise/chest/C_b_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <img src="/resources/choi_machine/img/exercise/chest/C_b_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <img src="/resources/choi_machine/img/exercise/chest/C_b_p_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <img src="/resources/choi_machine/img/exercise/chest/C_b_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                             </div>
 
                     <div class="card-body">
@@ -90,14 +95,20 @@
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">무게/갯수</span>
-                                    <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    <span class="input-group-text">무게</span>
+                                    <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                </div>
+
+                                <div class="input-group input-group-sm mb-3">
+                                    <span class="input-group-text">갯수</span>
+                                    <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text">세트 수</span>
                                     <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
+
 
                                 <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(0)"> <%--파라미터 숫자 바꾸기--%>
 
@@ -117,8 +128,8 @@
                     <div class="card shadow-sm">
 
                         <div class="image_container" onclick="javascript:exer_How(1)">
-                            <img src="/resources/choi_machine/img/exercise/chest/C_b_f_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <img src="/resources/choi_machine/img/exercise/chest/C_b_f_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <img src="/resources/choi_machine/img/exercise/chest/C_b_f_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <img src="/resources/choi_machine/img/exercise/chest/C_b_f_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                         </div>
 
                         <div class="card-body">
@@ -165,8 +176,13 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
-                                        <span class="input-group-text">무게/갯수</span>
-                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <span class="input-group-text">무게</span>
+                                        <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    </div>
+
+                                    <div class="input-group input-group-sm mb-3">
+                                        <span class="input-group-text">갯수</span>
+                                        <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
@@ -193,8 +209,8 @@
                     <div class="card shadow-sm">
 
                         <div class="image_container" onclick="javascript:exer_How(2)"> <%--이미지 바꾸기--%>
-                            <img src="/resources/choi_machine/img/exercise/chest/C_b_p_o_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <img src="/resources/choi_machine/img/exercise/chest/C_b_p_o_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <img src="/resources/choi_machine/img/exercise/chest/C_b_p_o_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <img src="/resources/choi_machine/img/exercise/chest/C_b_p_o_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                         </div>
 
                         <div class="card-body">
@@ -238,8 +254,13 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
-                                        <span class="input-group-text">무게/갯수</span>
-                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <span class="input-group-text">무게</span>
+                                        <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                    </div>
+
+                                    <div class="input-group input-group-sm mb-3">
+                                        <span class="input-group-text">갯수</span>
+                                        <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
@@ -268,8 +289,8 @@
                     <div class="card shadow-sm">
 
                         <div class="image_container" onclick="javascript:exer_How(3)"> <%--이미지 바꾸기--%>
-                            <img src="/resources/choi_machine/img/exercise/chest/C_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <img src="/resources/choi_machine/img/exercise/chest/C_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <img src="/resources/choi_machine/img/exercise/chest/C_p_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <img src="/resources/choi_machine/img/exercise/chest/C_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                         </div>
 
                         <div class="card-body">
@@ -291,7 +312,7 @@
                             <hr>
                             <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                            <p>양 발을 붙이고 복근에 적당한 긴장감을 넣어 머리부터 발끝까지 막대가 된 것처럼 긴장을 유지합니다.</p>
+                            <p>발을 붙이고 복근에 긴장감을 넣어 머리부터 발끝까지 일자가 된 것처럼 유지합니다.</p>
 
                             <hr>
 
@@ -314,14 +335,20 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
-                                        <span class="input-group-text">무게/갯수</span>
-                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <span class="input-group-text point" onclick="toggleReadOnly(0)">무게</span>
+                                        <input type="number" name="exer_wgt" id="0_in" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    </div>
+
+                                    <div class="input-group input-group-sm mb-3">
+                                        <span class="input-group-text">갯수</span>
+                                        <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
                                         <span class="input-group-text">세트 수</span>
                                         <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                     </div>
+
 
 
                                     <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(3)">
@@ -342,8 +369,8 @@
                     <div class="card shadow-sm">
 
                         <div class="image_container" onclick="javascript:exer_How(4)">
-                            <img src="/resources/choi_machine/img/exercise/chest/C_d_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <img src="/resources/choi_machine/img/exercise/chest/C_d_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <img src="/resources/choi_machine/img/exercise/chest/C_d_p_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <img src="/resources/choi_machine/img/exercise/chest/C_d_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                         </div>
 
                         <div class="card-body">
@@ -377,7 +404,7 @@
                             <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                             <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
-                            <form action="<c:url value='/user/member/exerciseType/chest/b' />" name="exercise_type" method="post" id="valid_CheckForm4">
+                            <form action="<c:url value='/user/member/exerciseType/chest' />" name="exercise_type" method="post" id="valid_CheckForm4">
 
                                 <div class="hidden_exer mt-3">
 
@@ -387,14 +414,20 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
-                                        <span class="input-group-text">무게/갯수</span>
-                                        <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                        <span class="input-group-text point" onclick="toggleReadOnly(1)">무게</span>
+                                        <input type="number" name="exer_wgt" id="1_in" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    </div>
+
+                                    <div class="input-group input-group-sm mb-3">
+                                        <span class="input-group-text">갯수</span>
+                                        <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
                                         <span class="input-group-text">세트 수</span>
                                         <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                     </div>
+
 
                                     <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(4)">
 
@@ -418,8 +451,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(5)"> <%--이미지 바꾸기--%>
-                    <img src="/resources/choi_machine/img/exercise/shoulder/S_d_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/shoulder/S_d_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/shoulder/S_d_p_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/shoulder/S_d_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -442,7 +475,7 @@
                     <hr>
                     <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                    <p>들어 올리는 동작에서 팔을 쭉 피지 않도록 합니다.</p>
+                    <p>덤벨을 들어 올리는 동작에서 팔을 쭉 피지 않도록 유의하며 진행합니다.</p>
 
                     <hr>
 
@@ -465,14 +498,20 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
                                 <span class="input-group-text">세트 수</span>
                                 <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                             </div>
+
 
                             <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(5)"> <%--파라미터 숫자 바꾸기--%>
 
@@ -492,8 +531,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(6)">
-                    <img src="/resources/choi_machine/img/exercise/arm/A_d_e_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/arm/A_d_e_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/shoulder/S_d_f_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/shoulder/S_d_f_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -515,7 +554,7 @@
                     <hr>
                     <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
-                    <p>팔을 올리 때 팔꿈치 윗부분이 가려져 보이지 않을경우 팔의 개입이 강한것이니 조금 내리도록 합니다.</p>
+                    <p>팔을 올리 때 팔꿈치 윗부분이 보이지 않으면 팔의 개입이 있으니 조금 내립니다.</p>
 
                     <hr>
 
@@ -539,14 +578,20 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
                                 <span class="input-group-text">세트 수</span>
                                 <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                             </div>
+
 
                             <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(6)">
 
@@ -567,8 +612,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(7)"> <%--이미지 바꾸기--%>
-                    <img src="/resources/choi_machine/img/exercise/shoulder/S_d_s_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/shoulder/S_d_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/shoulder/S_d_s_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/shoulder/S_d_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -612,14 +657,20 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
                                 <span class="input-group-text">세트 수</span>
                                 <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                             </div>
+
 
                             <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(7)">
 
@@ -642,8 +693,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(8)"> <%--이미지 바꾸기--%>
-                    <img src="/resources/choi_machine/img/exercise/shoulder/S_s_b_r_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/shoulder/S_s_b_r_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/shoulder/S_s_b_r_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/shoulder/S_s_b_r_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -687,14 +738,20 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
                                 <span class="input-group-text">세트 수</span>
                                 <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                             </div>
+
 
                             <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(8)">
 
@@ -714,8 +771,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(9)">
-                    <img src="/resources/choi_machine/img/exercise/shoulder/S_p_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/shoulder/S_p_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/shoulder/S_p_p_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/shoulder/S_p_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -760,14 +817,20 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text point" onclick="toggleReadOnly(2)">무게</span>
+                                <input type="number" name="exer_wgt" id="2_in" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
                                 <span class="input-group-text">세트 수</span>
                                 <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                             </div>
+
 
                             <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(9)">
 
@@ -791,8 +854,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(10)"> <%--이미지 바꾸기--%>
-                    <img src="/resources/choi_machine/img/exercise/core/C_m_c_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/core/C_m_c_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/core/C_m_c_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/core/C_m_c_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -813,7 +876,7 @@
                     <hr>
                     <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                    <p>몸통을 흔들지 않도록 신경쓰며 진행합니다.</p>
+                    <p>최대한 몸통을 고정시켜 흔들리지 않도록 유의하며 운동을 진행합니다.</p>
 
                     <hr>
 
@@ -836,14 +899,20 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
                                 <span class="input-group-text">세트 수</span>
                                 <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                             </div>
+
 
                             <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(10)"> <%--파라미터 숫자 바꾸기--%>
 
@@ -863,8 +932,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(11)">
-                    <img src="/resources/choi_machine/img/exercise/core/C_s_u_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/core/C_s_u_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/core/C_s_u_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/core/C_s_u_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -885,7 +954,7 @@
                     <hr>
                     <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
-                    <p>허리에 부담을 줄이려면 다리를 편 상태로 진행합니다.</p>
+                    <p>허리에 부담을 줄 수 있으니 허리에 부담을 줄이려면 다리를 편 상태로 진행합니다.</p>
 
                     <hr>
 
@@ -909,8 +978,13 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -937,8 +1011,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(12)"> <%--이미지 바꾸기--%>
-                    <img src="/resources/choi_machine/img/exercise/core/C_c_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/core/C_c_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/core/C_c_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/core/C_c_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -960,7 +1034,7 @@
                     <hr>
                     <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                    <p>적은 횟수를 자주 반복하는것이 유리합니다.</p>
+                    <p>상체를 완전히 들어내지 않고, 적은 횟수를 자주 반복하는것이 근 성장에 유리합니다.</p>
 
                     <hr>
 
@@ -983,8 +1057,13 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1013,8 +1092,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(13)"> <%--이미지 바꾸기--%>
-                    <img src="/resources/choi_machine/img/exercise/core/C_t_c_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/core/C_t_c_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/core/C_t_c_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/core/C_t_c_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -1058,8 +1137,13 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1085,14 +1169,14 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(14)">
-                    <img src="/resources/choi_machine/img/exercise/core/C_l_r_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/core/C_l_r_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/core/C_l_r_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/core/C_l_r_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
                     <details>
                         <summary class="fw-bold">
-                            레그레이즈
+                            레그 레이즈
                         </summary><br>
                         <p class="text-start">
                             배꼽에 힘을 주어 등을 바닥에 완전히 밀착한 상태로 시작합니다.<br><br>
@@ -1107,7 +1191,7 @@
                     <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
                     <p>
-                        발꿈치를 바닥에 닿지 않게 합니다.
+                        천천히 동작을 반복하며 발꿈치를 바닥에 닿지 않게 유의하며 진행합니다.
                     </p>
 
                     <hr>
@@ -1132,14 +1216,20 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt"class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
                                 <span class="input-group-text">세트 수</span>
                                 <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                             </div>
+
                             <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(14)">
 
                         </div>
@@ -1162,8 +1252,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(15)"> <%--이미지 바꾸기--%>
-                    <img src="/resources/choi_machine/img/exercise/arm/A_d_c_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/arm/A_d_c_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/arm/A_d_c_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/arm/A_d_c_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -1185,7 +1275,7 @@
                     <hr>
                     <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                    <p>팔을 내리는 동작에서 몸이 따라 내려오지 않도록 유의하고, 팔을 쭉 피지 않도록 하는것이 좋습니다.</p>
+                    <p>팔을 내리며 몸이 따라 내려오지 않도록 유의하고, 팔을 쭉 피지 않도록 합니다.</p>
 
                     <hr>
 
@@ -1208,8 +1298,13 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1235,8 +1330,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(16)">
-                    <img src="/resources/choi_machine/img/exercise/arm/A_d_e_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/arm/A_d_e_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/arm/A_d_e_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/arm/A_d_e_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -1259,7 +1354,7 @@
                     <hr>
                     <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
-                    <p>팔을 내리는 동작에서 몸이 따라 내려오지 않도록 유의하고, 팔을 쭉 피지 않도록 하는것이 좋습니다.</p>
+                    <p>팔을 내리며 몸이 따라 내려오지 않도록 유의하고, 팔을 쭉 피지 않도록 합니다.</p>
 
                     <hr>
 
@@ -1283,8 +1378,13 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1311,8 +1411,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(17)"> <%--이미지 바꾸기--%>
-                    <img src="/resources/choi_machine/img/exercise/arm/A_d_k_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/arm/A_d_k_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/arm/A_d_k_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/arm/A_d_k_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -1335,7 +1435,7 @@
                     <hr>
                     <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                    <p>팔을 펴고 나서 잠깐 정지해 수축을 최대로 거는것이 좋습니다.</p>
+                    <p>팔을 천천히 펴고 난 후에 잠깐 정지해 수축을 최대로 거는것이 좋습니다.</p>
 
                     <hr>
 
@@ -1358,8 +1458,13 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1388,8 +1493,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(18)"> <%--이미지 바꾸기--%>
-                    <img src="/resources/choi_machine/img/exercise/arm/A_s_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/arm/A_s_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/arm/A_s_p_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/arm/A_s_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -1434,8 +1539,13 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1461,8 +1571,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(19)">
-                    <img src="/resources/choi_machine/img/exercise/arm/A_d_r_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/arm/A_d_r_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/arm/A_d_r_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/arm/A_d_r_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -1508,14 +1618,20 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
                                 <span class="input-group-text">세트 수</span>
                                 <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                             </div>
+
                             <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(19)">
 
                         </div>
@@ -1539,8 +1655,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(20)"> <%--이미지 바꾸기--%>
-                    <img src="/resources/choi_machine/img/exercise/low/L_d_r_l_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/low/L_d_r_l_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/low/L_d_r_l_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/low/L_d_r_l_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -1562,7 +1678,7 @@
                     <hr>
                     <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                    <p>체중은 앞발의 뒤꿈치에 두도록 합니다.</p>
+                    <p>동작을 천천히 진행하며 체중은 앞발의 뒤꿈치에 두도록 하는것이 근 성장에 유리합니다.</p>
 
                     <hr>
 
@@ -1585,8 +1701,13 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1612,8 +1733,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(21)">
-                    <img src="/resources/choi_machine/img/exercise/low/L_d_s_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/low/L_d_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/low/L_d_s_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/low/L_d_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -1634,7 +1755,7 @@
                     <hr>
                     <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
-                    <p>내려갈 때 상체가 앞으로 숙여지지 않도록합니다.</p>
+                    <p>내려갈 때 천천히 하며, 상체가 앞으로 숙여지지 않도록 유의하며 진행합니다.</p>
 
                     <hr>
 
@@ -1658,8 +1779,13 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1686,8 +1812,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(22)"> <%--이미지 바꾸기--%>
-                    <img src="/resources/choi_machine/img/exercise/low/L_d_s_s_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/low/L_d_s_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/low/L_d_s_s_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/low/L_d_s_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -1709,7 +1835,7 @@
                     <hr>
                     <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                    <p>코어가 위아래로만 움직일 수 있도록 합니다.</p>
+                    <p>동작에 집중하여 코어가 천천히 위아래로만 움직일 수 있도록 합니다.</p>
 
                     <hr>
 
@@ -1732,8 +1858,13 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1762,8 +1893,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(23)"> <%--이미지 바꾸기--%>
-                    <img src="/resources/choi_machine/img/exercise/low/L_p_s_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/low/L_p_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/low/L_p_s_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/low/L_p_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -1807,8 +1938,13 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" -label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text point" onclick="toggleReadOnly(9)">무게</span>
+                                <input type="number" name="exer_wgt" id="9_in" class="form-control" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -1834,8 +1970,8 @@
             <div class="card shadow-sm">
 
                 <div class="image_container" onclick="javascript:exer_How(24)">
-                    <img src="/resources/choi_machine/img/exercise/low/L_d_s_u_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <img src="/resources/choi_machine/img/exercise/low/L_d_s_u_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/low/L_d_s_u_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <img src="/resources/choi_machine/img/exercise/low/L_d_s_u_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 </div>
 
                 <div class="card-body">
@@ -1858,7 +1994,7 @@
                     <hr>
                     <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
-                    <p>몸을 구부리거나 앞으로 기울이지 않도록 합니다.</p>
+                    <p>몸을 구부리거나 앞으로 기울이지 않도록 유의하며 운동을 진행합니다.</p>
 
                     <hr>
 
@@ -1882,14 +2018,20 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text">무게/갯수</span>
-                                <input type="number" name="exer_wgt_or_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                                <span class="input-group-text">무게</span>
+                                <input type="number" name="exer_wgt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text">갯수</span>
+                                <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
                                 <span class="input-group-text">세트 수</span>
                                 <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                             </div>
+
                             <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(24)">
 
                         </div>
@@ -1907,7 +2049,7 @@
 
 
         </div>
-    </div>
+
 </div>
 
 <%
@@ -1931,6 +2073,7 @@
 
 <jsp:include page="../user/js_jsp/valid_check.jsp" />
 
+<jsp:include page="../user/js_jsp/moreWgt.jsp" />
 
 <jsp:include page="../user/js_jsp/exercise_List_start_exer.jsp" />
 

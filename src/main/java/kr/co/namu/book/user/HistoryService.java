@@ -10,6 +10,8 @@ public interface HistoryService {
 
     int history_list(ExerciseVO exerciseVO);
 
+    List<ExerciseVO> history_chart(ExerciseVO exerciseVO);
+
     List<ExerciseVO> exer_status(ExerciseVO exerciseVO);
 
     int exer_check(ExerciseVO exerciseVO);

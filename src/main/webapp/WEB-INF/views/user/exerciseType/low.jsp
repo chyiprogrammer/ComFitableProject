@@ -22,6 +22,10 @@
         .hidden_exer{
             display: none;
         }
+        
+        .point{
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -42,8 +46,28 @@
 </script>
 
 <div class="album py-5 bg-light">
-    <div class="container">
+
         <p class="fs-3 text-primary">이미지를 클릭하시면 대략적인 운동 자세를 보여드립니다.</p>
+    <hr>
+        <button type="button" class="btn btn-primary">
+            <a href="<c:url value='/user/member/exerciseType/low/rutin' />" class="text-decoration-none fs-2 text-white">추천 루틴으로 진행(하체)</a>
+        </button>
+
+    <hr>
+    <br>
+    <details>
+        <summary class="fw-bold fs-2">
+            루틴 확인
+        </summary>
+        <p class="text-center fs-4">
+            덤벨 스쿼트 / 8kg / 12개 / 3세트<br>
+            덤벨 스플릿 스쿼트 / 8kg / 15개 / 2세트<br>
+            덤벨 리어런지 / 8kg / 15개 / 2세트 <br>
+        </p>
+    </details>
+    <br>
+    <hr>
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="health_map">
 
             <%--1번 [image-container 클래스를 가진 div 박스에 움직이고싶은 이미지를 두고 버튼의 class에 move-img를 넣어준다] --%>
@@ -51,8 +75,8 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container" onclick="javascript:exer_How(0)"> <%--이미지 바꾸기--%>
-                        <img src="/resources/choi_machine/img/exercise/low/L_d_r_l_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/low/L_d_r_l_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/low/L_d_r_l_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/low/L_d_r_l_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
@@ -74,7 +98,7 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                        <p>체중은 앞발의 뒤꿈치에 두도록 합니다.</p>
+                        <p>동작을 진행하되 체중은 앞발의 뒤꿈치에 두도록 하는것이 근 성장에 유리합니다.</p>
 
                         <hr>
 
@@ -129,8 +153,8 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container" onclick="javascript:exer_How(1)">
-                        <img src="/resources/choi_machine/img/exercise/low/L_d_s_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/low/L_d_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/low/L_d_s_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/low/L_d_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
@@ -151,7 +175,7 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
-                        <p>내려갈 때 상체가 앞으로 숙여지지 않도록합니다.</p>
+                        <p>내려갈 때 천천히 하며, 상체가 앞으로 숙여지지 않도록 유의하며 진행합니다.</p>
 
                         <hr>
 
@@ -208,8 +232,8 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container" onclick="javascript:exer_How(2)"> <%--이미지 바꾸기--%>
-                        <img src="/resources/choi_machine/img/exercise/low/L_d_s_s_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/low/L_d_s_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/low/L_d_s_s_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/low/L_d_s_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
@@ -231,7 +255,7 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                        <p>코어가 위아래로만 움직일 수 있도록 합니다.</p>
+                        <p>동작에 집중하여 코어가 천천히 위아래로만 움직일 수 있도록 합니다.</p>
 
                         <hr>
 
@@ -289,8 +313,8 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container"  onclick="javascript:exer_How(3)"> <%--이미지 바꾸기--%>
-                        <img src="/resources/choi_machine/img/exercise/low/L_p_s_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/low/L_p_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/low/L_p_s_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/low/L_p_s_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
@@ -334,8 +358,8 @@
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    <span class="input-group-text point" onclick="toggleReadOnly(1)">무게</span>
+                                    <input type="number" name="exer_wgt" id="1_in" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
@@ -366,8 +390,8 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container" onclick="javascript:exer_How(4)">
-                        <img src="/resources/choi_machine/img/exercise/low/L_d_s_u_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/low/L_d_s_u_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/low/L_d_s_u_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/low/L_d_s_u_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
@@ -390,7 +414,7 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
-                        <p>몸을 구부리거나 앞으로 기울이지 않도록 합니다.</p>
+                        <p>몸을 구부리거나 앞으로 기울이지 않도록 유의하며 운동을 진행합니다.</p>
 
                         <hr>
 
@@ -439,9 +463,10 @@
 
                 </div>
             </div>
+            <!--5번째 마지막-->
 
         </div>
-    </div>
+
 </div>
 
 <%
@@ -467,6 +492,7 @@
 
 <jsp:include page="../js_jsp/valid_check.jsp" />
 
+<jsp:include page="../js_jsp/moreWgt.jsp" />
 
 <jsp:include page="../js_jsp/exercise_List_start_exer.jsp" />
 

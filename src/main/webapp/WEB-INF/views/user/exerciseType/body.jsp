@@ -23,6 +23,10 @@
         .hidden_exer{
             display: none;
         }
+        
+        .point{
+            cursor: pointer;
+        }
 
     </style>
 
@@ -44,9 +48,32 @@
 </script>
 
 <div class="album py-5 bg-light">
-    <div class="container">
+
         <p class="fs-3 text-primary">이미지를 클릭하시면 대략적인 운동 자세를 보여드립니다.</p>
+    <hr>
+        <button type="button" class="btn btn-primary">
+            <a href="<c:url value='/user/member/exerciseType/body/rutin' />" class="text-decoration-none fs-2 text-white">추천 루틴으로 진행(맨몸)</a>
+        </button>
+
+    <hr>
+    <br>
+    <details>
+        <summary class="fw-bold fs-2">
+            루틴 확인
+        </summary>
+        <p class="text-center fs-4">
+            푸쉬업 / 무게 없음 / 15개 / 2세트<br>
+            파이크 푸쉬업 / 무게 없음 / 15개 / 2세트<br>
+            윗몸 일으키기 / 무게 없음 / 15개 / 2세트 <br>
+            레그 레이즈 / 무게 없음 / 20개 / 2세트 <br>
+            마운틴 클라이머 / 무게 없음 / 30개 / 2세트 <br>
+        </p>
+    </details>
+    <br>
+    <hr>
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="health_map">
+
 
             <%--1번 [image-container 클래스를 가진 div 박스에 움직이고싶은 이미지를 두고 버튼의 class에 move-img를 넣어준다] --%>
             <div class="col">
@@ -76,7 +103,7 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                        <p>머리부터 발끝까지 막대가 된 것처럼 긴장을 유지합니다.</p>
+                        <p>발을 붙이고 복근에 긴장감을 넣어 머리부터 발끝까지 일자가 된 것처럼 유지합니다.</p>
 
                         <hr>
 
@@ -99,8 +126,8 @@
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    <span class="input-group-text point" onclick="toggleReadOnly(1)">무게</span>
+                                    <input type="number" name="exer_wgt" id="1_in" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
@@ -151,7 +178,7 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
-                        <p>자세를 익힌 후 점차 높이를 높이도록 합니다</p>
+                        <p>처음에는 얕은 높이의 받침대를 사용하여 자세를 익힌 후 높이를 높이도록 합니다</p>
 
                         <hr>
 
@@ -175,8 +202,8 @@
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">무게</span>
-                                    <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                    <span class="input-group-text point" onclick="toggleReadOnly(2)">무게</span>
+                                    <input type="number" name="exer_wgt" id="2_in" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
@@ -254,8 +281,8 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
-                                        <span class="input-group-text">무게</span>
-                                        <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                        <span class="input-group-text point" onclick="toggleReadOnly(3)">무게</span>
+                                        <input type="number" name="exer_wgt" id="3_in" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
@@ -309,7 +336,7 @@
                             <hr>
                             <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                            <p>몸통을 흔들지 않도록 신경쓰며 진행합니다.</p>
+                            <p>최대한 몸통을 고정시켜 흔들리지 않도록 유의하며 운동을 진행합니다.</p>
 
                             <hr>
 
@@ -386,7 +413,7 @@
                             <hr>
                             <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
-                            <p>허리에 부담을 줄이려면 다리를 편 상태로 진행합니다.</p>
+                            <p>허리에 부담을 줄 수 있으니 허리에 부담을 줄이려면 다리를 편 상태로 진행합니다.</p>
 
                             <hr>
 
@@ -466,7 +493,7 @@
                             <hr>
                             <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                            <p>적은 횟수를 자주 반복하는것이 유리합니다.</p>
+                            <p>상체를 완전히 들어내지 않고, 적은 횟수를 자주 반복하는것이 근 성장에 유리합니다.</p>
 
                             <hr>
 
@@ -623,7 +650,7 @@
                             <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
                             <p>
-                                발꿈치를 바닥에 닿지 않게 합니다.
+                                천천히 동작을 반복하며 발꿈치를 바닥에 닿지 않게 유의하며 진행합니다.
                             </p>
 
                             <hr>
@@ -805,8 +832,8 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
-                                        <span class="input-group-text">무게</span>
-                                        <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
+                                        <span class="input-group-text point" onclick="toggleReadOnly(4)">무게</span>
+                                        <input type="number" name="exer_wgt" id="4_in" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
@@ -832,7 +859,6 @@
                 <%--10번 끝--%>
 
         </div>
-    </div>
 </div>
 
 
@@ -859,6 +885,7 @@
 
 <jsp:include page="../js_jsp/valid_check.jsp" />
 
+<jsp:include page="../js_jsp/moreWgt.jsp" />
 
 <jsp:include page="../js_jsp/exercise_List_start_exer.jsp" />
 

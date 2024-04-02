@@ -25,12 +25,16 @@
     if (loginedUserMemberVo != null) {	//로그인이 되어있을 때
 %>
 
+<h1 class="text-center mt-4 mb-4">진행중인 운동 리스트</h1>
+
 
     <table class="table table-dark table-bordered table-hover">
             <thead>
                 <tr>
                     <th scope="col" class="fs-2">운동 명</th>
-                    <th scope="col" class="fs-2">무게/갯수</th>
+                    <th scope="col" class="fs-2">무게 (kg)</th>
+                    <th scope="col" class="fs-2">갯수</th>
+                    <th scope="col" class="fs-2">세트 수</th>
                     <th colspan="2" scope="col" class="fs-2">상태</th>
                 </tr>
             </thead>
@@ -40,12 +44,14 @@
             <tbody>
                 <tr>
                     <td class="fs-2">${vo.exer_name}</td>
-                    <td class="fs-2">${vo.exer_wgt_or_cnt}</td>
+                    <td class="fs-2">${vo.exer_wgt}</td>
+                    <td class="fs-2">${vo.exer_cnt}</td>
+                    <td class="fs-2">${vo.exer_set}</td>
                     <td class="fs-1 text-warning">${vo.exer_status}</td>
                     <td class="text-center">
                         <c:url value='/user/member/exerCheck' var='detail_url'>
                             <c:param name='exer_no' value='${vo.exer_no}'/>
-                            <c:param name='exer_wgt' value='${vo.exer_wgt_or_cnt}'/>
+                            <c:param name='exer_wgt' value='${vo.exer_wgt}'/>
                         </c:url>
 
                         <c:if test="${vo.exer_status == '...ing'}">

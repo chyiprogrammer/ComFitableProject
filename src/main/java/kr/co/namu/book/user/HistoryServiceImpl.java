@@ -22,6 +22,11 @@ public class HistoryServiceImpl implements HistoryService{
     }
 
     @Override
+    public List<ExerciseVO> history_chart(ExerciseVO exerciseVO) {
+        return dao.history_chart(exerciseVO);
+    }
+
+    @Override
     public List<ExerciseVO> exer_status(ExerciseVO exerciseVO) {
         return dao.exer_status(exerciseVO);
     }

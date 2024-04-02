@@ -42,8 +42,27 @@
 </script>
 
 <div class="album py-5 bg-light">
-    <div class="container">
         <p class="fs-3 text-primary">이미지를 클릭하시면 대략적인 운동 자세를 보여드립니다.</p>
+    <hr>
+        <button type="button" class="btn btn-primary">
+            <a href="<c:url value='/user/member/exerciseType/arm/rutin' />" class="text-decoration-none fs-2 text-white">추천 루틴으로 진행(팔)</a>
+        </button>
+
+    <hr>
+    <br>
+    <details>
+        <summary class="fw-bold fs-2">
+            루틴 확인
+        </summary>
+        <p class="text-center fs-4">
+            덤벨 컬 / 8kg / 15개 / 3세트<br>
+            얼터네이팅 덤벨 컬 / 8kg / 15개 / 2세트<br>
+            덤벨 킥백 / 8kg / 15개 / 2세트 <br>
+        </p>
+    </details>
+    <br>
+    <hr>
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="health_map">
 
             <%--1번 [image-container 클래스를 가진 div 박스에 움직이고싶은 이미지를 두고 버튼의 class에 move-img를 넣어준다] --%>
@@ -51,8 +70,8 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container" onclick="javascript:exer_How(0)"> <%--이미지 바꾸기--%>
-                        <img src="/resources/choi_machine/img/exercise/arm/A_d_c_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/arm/A_d_c_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/arm/A_d_c_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/arm/A_d_c_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
@@ -74,7 +93,7 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                        <p>팔을 내리는 동작에서 몸이 따라 내려오지 않도록 유의하고, 팔을 쭉 피지 않도록 하는것이 좋습니다.</p>
+                        <p>팔을 내리며 몸이 따라 내려오지 않도록 유의하고, 팔을 쭉 피지 않도록 합니다.</p>
 
                         <hr>
 
@@ -129,8 +148,8 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container" onclick="javascript:exer_How(1)">
-                        <img src="/resources/choi_machine/img/exercise/arm/A_d_e_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/arm/A_d_e_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/arm/A_d_e_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/arm/A_d_e_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
@@ -152,7 +171,7 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
-                        <p>팔을 내리는 동작에서 몸이 따라 내려오지 않도록 유의하고, 팔을 쭉 피지 않도록 하는것이 좋습니다.</p>
+                        <p>팔을 내리며 몸이 따라 내려오지 않도록 유의하고, 팔을 쭉 피지 않도록 합니다.</p>
 
                         <hr>
 
@@ -209,8 +228,8 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container" onclick="javascript:exer_How(2)"> <%--이미지 바꾸기--%>
-                        <img src="/resources/choi_machine/img/exercise/arm/A_d_k_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/arm/A_d_k_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/arm/A_d_k_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/arm/A_d_k_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
@@ -233,7 +252,7 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
 
-                        <p>팔을 펴고 나서 잠깐 정지해 수축을 최대로 거는것이 좋습니다.</p>
+                        <p>팔을 천천히 펴고 난 후에 잠깐 정지해 수축을 최대로 거는것이 좋습니다.</p>
 
                         <hr>
 
@@ -290,8 +309,8 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container" onclick="javascript:exer_How(3)"> <%--이미지 바꾸기--%>
-                        <img src="/resources/choi_machine/img/exercise/arm/A_s_p_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/arm/A_s_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/arm/A_s_p_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/arm/A_s_p_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
@@ -368,8 +387,8 @@
                 <div class="card shadow-sm">
 
                     <div class="image_container" onclick="javascript:exer_How(4)">
-                        <img src="/resources/choi_machine/img/exercise/arm/A_d_r_1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <img src="/resources/choi_machine/img/exercise/arm/A_d_r_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/arm/A_d_r_1.jpg" class="bd-placeholder-img card-img-top" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src="/resources/choi_machine/img/exercise/arm/A_d_r_2.jpg" class="bd-placeholder-img card-img-top" style="display: none" width="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     </div>
 
                     <div class="card-body">
@@ -390,7 +409,7 @@
                         <hr>
                         <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
 
-                        <p>손목을 구부려 올려 최대 지점에 올라가면 잠깐 정지해 수축을 최대로 거는것이 좋습니다.</p>
+                        <p>손목을 구부려 올려 최대 지점에 올라가면 정지해 수축을 가져가는 것이 좋습니다.</p>
 
                         <hr>
 
@@ -441,8 +460,9 @@
             </div>
             <%--5번 끝--%>
 
+
         </div>
-    </div>
+
 </div>
 
 <%

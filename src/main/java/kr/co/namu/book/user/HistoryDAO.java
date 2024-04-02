@@ -23,6 +23,11 @@ public class HistoryDAO implements HistoryService{
     }
 
     @Override
+    public List<ExerciseVO> history_chart(ExerciseVO exerciseVO) {
+        return sql.selectList("history.mapper.chartSee", exerciseVO);
+    }
+
+    @Override
     public List<ExerciseVO> exer_status(ExerciseVO exerciseVO) {
         return sql.selectList("history.mapper.exerstatus", exerciseVO);
     }

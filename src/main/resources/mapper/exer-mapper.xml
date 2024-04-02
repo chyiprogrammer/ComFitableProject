@@ -17,6 +17,9 @@
         delete from user_exercise WHERE exer_no = #{exer_no} AND exer_status = "start"
     </delete>
 
+    <delete id="exerDeleteAll">
+        delete from user_exercise WHERE exer_id = #{exer_id} AND exer_status = "start"
+    </delete>
 
 </mapper>
 

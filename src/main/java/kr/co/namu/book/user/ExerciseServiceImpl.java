@@ -27,6 +27,14 @@ public class ExerciseServiceImpl implements ExerciseService{
         return dao.exercise_deleteOne(exerciseVO);
     }
 
+    @Override
+    public int exercise_deleteAll(ExerciseVO exerciseVO) {
+        return dao.exercise_deleteAll(exerciseVO);
+    }
+
+
+
+
 
 
 /*

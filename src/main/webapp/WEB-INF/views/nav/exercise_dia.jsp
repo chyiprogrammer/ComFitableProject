@@ -50,10 +50,11 @@
                     <thead>
                         <tr>
                             <th scope="col" class="fs-2">운동 명</th>
-                            <th scope="col" class="fs-2">무게/갯수</th>
+                            <th scope="col" class="fs-2">무게 (kg)</th>
+                            <th scope="col" class="fs-2">갯수</th>
                             <th scope="col" class="fs-2">세트 수</th>
                             <th scope="col" class="fs-2">상태</th>
-                            <th scope="col" colspan="2" class="fs-2">총 볼륨</th>
+                            <th scope="col" colspan="3" class="fs-2">총 볼륨</th>
                         </tr>
                     </thead>
 
@@ -63,11 +64,13 @@
                         <tr>
                             <td class="fs-2">${vo.exer_name}</td>
                             <td class="fs-2">${vo.exer_wgt}</td>
+                            <td class="fs-2">${vo.exer_cnt}</td>
                             <td class="fs-2">${vo.exer_set}</td>
                             <td class="fs-1 text-primary">${vo.exer_status}</td>
-                            <td class="fs-2 p-3">${vo.exer_totalVolume}</td>
+                            <td class="fs-2 p-3" colspan="2">${vo.exer_totalVolume}</td>
 
                                 <td class="text-center">
+
                                     <c:url value='/user/member/exerDeleteOne' var='detail_url'>
                                         <c:param name='exer_no' value='${vo.exer_no}'/>
                                     </c:url>
@@ -85,8 +88,19 @@
                     <tfoot>
 
                     <tr>
-                        <td colspan="4" class="fs-2">총 볼륨 합계</td>
+                        <td colspan="5" class="fs-2">총 볼륨 합계</td>
                         <td colspan="2" class="fs-1">${totalVolume}</td>
+                        <td class="text-center">
+
+                            <c:url value='/user/member/exerDeleteAll' var='detail_url'>
+                                <c:param name='exer_id' value='${vo.exer_id}'/>
+                            </c:url>
+
+                            <button type="button" class="btn btn-primary px-5 py-4" onclick="location.href='${detail_url}'">
+                                전체 취소
+                            </button>
+                        </td>
+
                     </tr>
 
                     </tfoot>
