@@ -76,7 +76,7 @@
 
                     <div class="card-body">
                         <details>
-                            <summary class="fw-bold">
+                            <summary class="fw-bold fs-2">
                                 마운틴 클라이머
                             </summary><br>
                             <p class="text-start">
@@ -88,9 +88,9 @@
 
                         <hr>
 
-                        <span class="badge rounded-pill bg-primary w-auto">코어/상하 복부</span> <%--발달부위 바꾸기--%>
+                        <span class="badge rounded-pill bg-primary w-auto fs-4">코어/상하 복부</span> <%--발달부위 바꾸기--%>
                         <hr>
-                        <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
+                        <span class="badge rounded-pill bg-warning text-dark mb-2 fs-5">TIP !</span> <%--팁 바꾸기--%>
 
                         <p>최대한 몸통을 고정시켜 흔들리지 않도록 유의하며 운동을 진행합니다.</p>
 
@@ -98,7 +98,7 @@
 
                         <div>
                             <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(0)">시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-primary text-white px-5 py-3 fs-3 fs-3" onclick="javascript:exer_Start(0)">시작</button>
                             </div>
                         </div>
 
@@ -110,26 +110,26 @@
                             <div class="hidden_exer mt-3">
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">운동 명</span> <%--운동명 value 바꾸기--%>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">운동 명</span> <%--운동명 value 바꾸기--%>
                                     <input type="text" name="exer_name" class="form-control" value="마운틴 클라이머" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">무게</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">무게</span>
                                     <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">갯수</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">반복 수</span>
                                     <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">세트 수</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">세트 수</span>
                                     <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(0)"> <%--파라미터 숫자 바꾸기--%>
+                                <input type="button" class="btn btn-sm btn-primary text-white px-5 py-3 fs-3 fs-3" value="완료" onclick="valid_Check(0)"> <%--파라미터 숫자 바꾸기--%>
 
                             </div>
 
@@ -153,7 +153,7 @@
 
                     <div class="card-body">
                         <details>
-                            <summary class="fw-bold">
+                            <summary class="fw-bold fs-2">
                                 윗몸 일으키기
                             </summary><br>
                             <p class="text-start">
@@ -165,9 +165,9 @@
 
                         <hr>
 
-                        <span class="badge rounded-pill bg-primary w-auto">코어/하 복부</span>
+                        <span class="badge rounded-pill bg-primary w-auto fs-4">코어/하 복부</span>
                         <hr>
-                        <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
+                        <span class="badge rounded-pill bg-warning text-dark mb-2 fs-5">TIP !</span>
 
                         <p>허리에 부담을 줄 수 있으니 허리에 부담을 줄이려면 다리를 편 상태로 진행합니다.</p>
 
@@ -175,7 +175,7 @@
 
                         <div>
                             <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(1)">시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-primary text-white px-5 py-3 fs-3 fs-3" onclick="javascript:exer_Start(1)">시작</button>
                             </div>
 
                         </div>
@@ -188,26 +188,26 @@
                             <div class="hidden_exer mt-3">
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">운동 명</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">운동 명</span>
                                     <input type="text" name="exer_name" class="form-control" value="윗몸 일으키기" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">무게</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">무게</span>
                                     <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">갯수</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">반복 수</span>
                                     <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">세트 수</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">세트 수</span>
                                     <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(1)">
+                                <input type="button" class="btn btn-sm btn-primary text-white px-5 py-3 fs-3 fs-3" value="완료" onclick="valid_Check(1)">
 
                             </div>
 
@@ -232,7 +232,7 @@
 
                     <div class="card-body">
                         <details>
-                            <summary class="fw-bold">
+                            <summary class="fw-bold fs-2">
                                 크런치
                             </summary><br>
                             <p class="text-start">
@@ -245,9 +245,9 @@
 
                         <hr>
 
-                        <span class="badge rounded-pill bg-primary w-auto">코어/상 복부</span> <%--발달부위 바꾸기--%>
+                        <span class="badge rounded-pill bg-primary w-auto fs-4">코어/상 복부</span> <%--발달부위 바꾸기--%>
                         <hr>
-                        <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
+                        <span class="badge rounded-pill bg-warning text-dark mb-2 fs-5">TIP !</span> <%--팁 바꾸기--%>
 
                         <p>상체를 완전히 들어내지 않고, 적은 횟수를 자주 반복하는것이 근 성장에 유리합니다.</p>
 
@@ -255,7 +255,7 @@
 
                         <div>
                             <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(2)">시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-primary text-white px-5 py-3 fs-3 fs-3" onclick="javascript:exer_Start(2)">시작</button>
                             </div>
                         </div>
 
@@ -267,26 +267,26 @@
                             <div class="hidden_exer mt-3">
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">운동 명</span> <%--운동명 value 바꾸기--%>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">운동 명</span> <%--운동명 value 바꾸기--%>
                                     <input type="text" name="exer_name" class="form-control" value="크런치" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">무게</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">무게</span>
                                     <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">갯수</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">반복 수</span>
                                     <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">세트 수</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">세트 수</span>
                                     <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(2)">
+                                <input type="button" class="btn btn-sm btn-primary text-white px-5 py-3 fs-3 fs-3" value="완료" onclick="valid_Check(2)">
 
                             </div>
 
@@ -313,7 +313,7 @@
 
                     <div class="card-body">
                         <details>
-                            <summary class="fw-bold">
+                            <summary class="fw-bold fs-2">
                                 트위스트 크런치
                             </summary><br>
                             <p class="text-start">
@@ -325,9 +325,9 @@
 
                         <hr>
 
-                        <span class="badge rounded-pill bg-primary w-auto">코어/하 복부</span> <%--발달부위 바꾸기--%>
+                        <span class="badge rounded-pill bg-primary w-auto fs-4">코어/하 복부</span> <%--발달부위 바꾸기--%>
                         <hr>
-                        <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span> <%--팁 바꾸기--%>
+                        <span class="badge rounded-pill bg-warning text-dark mb-2 fs-5">TIP !</span> <%--팁 바꾸기--%>
 
                         <p>내려올 때 등이 굽거나 머리가 땅에 닿지 않도록 하는것이 좋습니다.</p>
 
@@ -335,7 +335,7 @@
 
                         <div>
                             <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(3)">시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-primary text-white px-5 py-3 fs-3 fs-3" onclick="javascript:exer_Start(3)">시작</button>
                             </div>
                         </div>
 
@@ -347,26 +347,26 @@
                             <div class="hidden_exer mt-3">
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">운동 명</span> <%--운동명 value 바꾸기--%>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">운동 명</span> <%--운동명 value 바꾸기--%>
                                     <input type="text" name="exer_name" class="form-control" value="트위스트 크런치" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">무게</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">무게</span>
                                     <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">갯수</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">반복 수</span>
                                     <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">세트 수</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">세트 수</span>
                                     <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(3)">
+                                <input type="button" class="btn btn-sm btn-primary text-white px-5 py-3 fs-3 fs-3" value="완료" onclick="valid_Check(3)">
 
                             </div>
 
@@ -390,7 +390,7 @@
 
                     <div class="card-body">
                         <details>
-                            <summary class="fw-bold">
+                            <summary class="fw-bold fs-2">
                                 레그 레이즈
                             </summary><br>
                             <p class="text-start">
@@ -401,9 +401,9 @@
 
                         <hr>
 
-                        <span class="badge rounded-pill bg-primary w-auto">코어/등</span>
+                        <span class="badge rounded-pill bg-primary w-auto fs-4">코어/등</span>
                         <hr>
-                        <span class="badge rounded-pill bg-warning text-dark mb-2">TIP !</span>
+                        <span class="badge rounded-pill bg-warning text-dark mb-2 fs-5">TIP !</span>
 
                         <p>
                             천천히 동작을 반복하며 발꿈치를 바닥에 닿지 않게 유의하며 진행합니다.
@@ -413,7 +413,7 @@
 
                         <div>
                             <div class="btn-group">
-                                <button type="button" class="start_exer btn btn-sm btn-outline-secondary px-5 py-4" onclick="javascript:exer_Start(4)">시작</button>
+                                <button type="button" class="start_exer btn btn-sm btn-primary text-white px-5 py-3 fs-3 fs-3" onclick="javascript:exer_Start(4)">시작</button>
                             </div>
 
                         </div>
@@ -426,26 +426,26 @@
                             <div class="hidden_exer mt-3">
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">운동 명</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">운동 명</span>
                                     <input type="text" name="exer_name" class="form-control" value="레그레이즈" readonly="readonly" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">무게</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">무게</span>
                                     <input type="number" name="exer_wgt" class="form-control" min="1" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">갯수</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">반복 수</span>
                                     <input type="number" name="exer_cnt" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text">세트 수</span>
+                                    <span class="input-group-text p-2 fs-6 fw-bold">세트 수</span>
                                     <input type="number" name="exer_set" class="form-control" min="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm3">
                                 </div>
 
-                                <input type="button" class="btn btn-sm btn-outline-secondary px-5 py-3" value="완료" onclick="valid_Check(4)">
+                                <input type="button" class="btn btn-sm btn-primary text-white px-5 py-3 fs-3 fs-3" value="완료" onclick="valid_Check(4)">
 
                             </div>
 
@@ -482,6 +482,7 @@
 <%
     }
 %>
+<jsp:include page="../js_jsp/alertRutin.jsp" />
 
 <jsp:include page="../js_jsp/valid_check.jsp" />
 

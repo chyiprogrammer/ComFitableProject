@@ -40,6 +40,22 @@ function valid_Check(no) {
         return;
     }
 
+    if (inputValue.includes(".")){
+        alert("무게에 소수점이 포함되어 있습니다.")
+        return;
+    }
+
+    if(inputValue1.includes(".")){
+        alert("반복 수에 소수점이 포함되어 있습니다.")
+        return;
+    }
+
+    if(inputValue2.includes(".")){
+        alert("세트 수에 소수점이 포함되어 있습니다.")
+        return;
+    }
+
+
     document.getElementById("valid_CheckForm" + no).submit();
 }
 

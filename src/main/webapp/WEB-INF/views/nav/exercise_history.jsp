@@ -14,26 +14,24 @@
 <head>
 
     <style>
-        #timer {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        #startButton {
-            padding: 10px 20px;
+        #myButton {
+            padding: 40px 40px;
             font-size: 1.2em;
-            background-color: #4CAF50;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 20px;
             cursor: pointer;
+
         }
 
-        #startButton:disabled {
+        #myButton:disabled {
             background-color: #cccccc;
             cursor: not-allowed;
         }
 
+        #myButton {
+            font-size: 60px; /* 버튼의 텍스트 크기를 80px로 설정합니다. */
+        }
     </style>
 
     <title>운동 현황</title>
@@ -49,9 +47,14 @@
     if (loginedUserMemberVo != null) {	//로그인이 되어있을 때
 %>
 
+
+
 <h1 class="text-center mt-4 mb-4">진행중인 운동 리스트</h1>
-
-
+<hr>
+    <div class="text-center">
+        <button id="myButton" class="btn btn-primary">쉬는 시간</button>
+    </div>
+<hr>
     <table class="table table-dark table-bordered table-hover">
             <thead>
                 <tr>
@@ -91,43 +94,32 @@
 
     </table>
 
-        <div id="timer" class="text-center">01:00
-            <button id="startButton">쉬는 시간</button>
-        </div>
+<br><br>
+
 <script>
-    function startTimer(duration, display) {
-        var timer = duration, minutes, seconds;
-        var isTimerRunning = true;
+    let button = document.getElementById('myButton'); // HTML에서 버튼을 가져옵니다.
+    let timerRunning = false; // 타이머가 실행 중인지 여부를 나타내는 변수를 선언합니다.
 
+    button.addEventListener('click', function() {
+        if (!timerRunning) { // 타이머가 실행 중이 아닌 경우에만 버튼을 클릭할 수 있습니다.
+            timerRunning = true; // 타이머가 실행 중임을 표시합니다.
+            button.disabled = true; // 버튼을 비활성화합니다.
+            let secondsRemaining = 60; // 초기 시간을 60초로 설정합니다.
 
-        var intervalId = setInterval(function () {
-            minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10);
+            let countdownInterval = setInterval(function() {
+                secondsRemaining--; // 남은 시간을 1초씩 감소시킵니다.
+                button.innerText = secondsRemaining + '초'; // 버튼의 텍스트를 업데이트하여 남은 시간을 표시합니다.
 
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-
-            display.textContent = minutes + ":" + seconds;
-
-            if (--timer < 0) {
-                clearInterval(intervalId);
-                isTimerRunning = false;
-                timer = duration;
-                display.textContent = "다시 시작!";
-                document.getElementById('startButton').disabled = false;
-            }
-        }, 1000);
-
-        document.getElementById('startButton').disabled = true;
-    }
-
-    document.getElementById('startButton').addEventListener('click', function () {
-        var oneMinute = 60,
-            display = document.querySelector('#timer');
-        startTimer(oneMinute, display);
+                if (secondsRemaining < 0) { // 남은 시간이 0 이하인 경우
+                    clearInterval(countdownInterval); // 감소 인터벌을 중지합니다.
+                    timerRunning = false; // 타이머가 종료되었음을 표시합니다.
+                    button.disabled = false; // 버튼을 다시 활성화합니다.
+                    button.innerText = '다시 시작'; // 버튼의 텍스트를 초기화합니다.
+                }
+            }, 1000); // 1초마다 남은 시간을 업데이트합니다.
+        }
     });
 </script>
-
 
 <%
 } else {	// 로그인이 되어있지 않을 때

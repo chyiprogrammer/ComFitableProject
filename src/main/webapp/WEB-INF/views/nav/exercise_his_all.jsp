@@ -36,50 +36,6 @@
 
 
 <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-<%--
-<table class="table table-dark table-bordered table-hover">
-
-    <thead>
-        <tr>
-            <th scope="col" class="fs-2">날짜</th>
-
-        </tr>
-    </thead>
-
-
-   <c:set var="previousDate" value="" />
-    <c:forEach items="${history}" var="vo">
-        <c:if test="${!vo.exer_end.substring(0,10).equals(previousDate)}">
-            <tbody>
-            <tr>
-                <td>
-                    <details>
-                        <summary class="fw-bold fs-2">
-                                ${vo.exer_end.substring(0,10)}
-                        </summary>
-                        <p>
-                            <c:forEach items="${history}" var="exercise">
-                            <c:if test="${exercise.exer_end.substring(0,10).equals(vo.exer_end.substring(0,10))}">
-                        <div>
-                            <span class="fs-2">${exercise.exer_name}</span>
-                            <span class="fs-2">${exercise.exer_wgt}</span>
-                            <span class="fs-2">${exercise.exer_cnt}</span>
-                            <span class="fs-2">${exercise.exer_set}</span>
-                            <span class="fs-1 text-success">${exercise.exer_status}</span>
-                        </div>
-                        </c:if>
-                        </c:forEach>
-                        </p>
-                    </details>
-                </td>
-            </tr>
-            </tbody>
-        </c:if>
-        <c:set var="previousDate" value="${vo.exer_end.substring(0,10)}" />
-    </c:forEach>
-
-
-</table>--%>
 
 <c:set var="previousDate" value="" />
 
@@ -207,6 +163,10 @@
                         }],
                     },
                     options: {
+                        tooltips: {
+                            titleFontSize: 20, // 툴팁 제목의 글자 크기를 조절합니다.
+                            bodyFontSize: 20, // 툴팁 내용의 글자 크기를 조절합니다.
+                        },
                         scales: {
                             xAxes: [{
                                 time: {
@@ -216,14 +176,16 @@
                                     display: false
                                 },
                                 ticks: {
-                                    maxTicksLimit: 7
+                                    maxTicksLimit: 7,
+                                    fontSize: 20
                                 }
                             }],
                             yAxes: [{
                                 ticks: {
                                     min: 0,
                                     max: max,
-                                    maxTicksLimit: 5
+                                    maxTicksLimit: 5,
+                                    fontSize: 20
                                 },
                                 gridLines: {
                                     color: "rgba(0, 0, 0, .125)",
