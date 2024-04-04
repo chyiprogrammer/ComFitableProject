@@ -42,12 +42,12 @@
 						<label for="floatingInput">아이디 입력</label>
 					</div>
 
-					<div class="form-floating mb-1">
+					<div class="form-floating mb-1 mt-2">
 						<input type="password" name="u_m_pw" class="form-control" id="floatingInput1" placeholder="bbbbb">
 						<label for="floatingInput1">비밀번호 입력</label>
 					</div>
 
-					<div class="form-floating mb-1">
+					<div class="form-floating mb-1 mb-2">
 						<input type="password" name="u_m_pw_again" class="form-control" id="floatingInput2" placeholder="bbbbb">
 						<label for="floatingInput2">비밀번호 확인</label>
 					</div>
@@ -58,7 +58,7 @@
 					</div>
 
 					<div>
-						<select class="form-select mb-1" name="u_m_gender" id="gender" required>
+						<select class="form-select mt-2 mb-1" name="u_m_gender" id="gender" required>
 							<option value="">성별 선택</option>
 							<option value="M">Man</option>
 							<option value="W">Woman</option>
@@ -68,13 +68,19 @@
 						</div>
 					</div>
 
-					<div class="form-floating mb-1">
-						<input type="email" name="u_m_mail" class="form-control" id="floatingInput5" placeholder="email@example.com">
-						<label for="floatingInput5">이메일 입력</label>
-					</div>
+
+						<div class="form-floating mb-1 mt-2">
+							<input type="email" name="u_m_mail" class="form-control" id="floatingInput5" placeholder="email@example.com">
+							<label for="floatingInput5">이메일 입력</label>
+							<select name="u_m_mailchoose" class="form-select mt-1 mb-2 p-0 text" id="domainSelect">
+								<option value="@naver.com">&nbsp;&nbsp;@naver.com</option>
+								<option value="@gmail.om">&nbsp;&nbsp;@gmail.com</option>
+							</select>
+						</div>
+
 
 					<div class="form-floating">
-						<input type="text" name="u_m_phone" class="form-control" id="floatingInput6" placeholder="010-xxxx-xxxx">
+						<input type="text" name="u_m_phone" maxlength="13" class="form-control" id="floatingInput6" placeholder="010-xxxx-xxxx">
 						<label for="floatingInput6">휴대폰번호 입력</label>
 					</div>
 
@@ -94,6 +100,24 @@
 		
 	</section>
 	</main>
+
+	<script>
+		document.getElementById('floatingInput6').addEventListener('input', function(e) {
+			var input = e.target.value.replace(/\D/g, ''); // 숫자 이외의 문자를 제거합니다.
+			var formattedInput = '';
+
+			// 전화번호 형식에 맞게 숫자를 포맷합니다.
+			for (var i = 0; i < input.length; i++) {
+				if (i === 3 || i === 7) {
+					formattedInput += '-';
+				}
+				formattedInput += input[i];
+			}
+
+			// 포맷된 전화번호를 입력란에 반영합니다.
+			e.target.value = formattedInput;
+		});
+	</script>
 	
 	<jsp:include page="../../include/footer.jsp" />
 	
