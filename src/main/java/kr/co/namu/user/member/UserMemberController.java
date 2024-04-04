@@ -92,7 +92,9 @@ public class UserMemberController {
         System.out.println("[UserMemberController]  modifyAccountConfirm");
 
         String nextPage = "user/member/modify_account_ok";
-
+        System.out.println("modify success");
+        
+        
         int result = userMemberService.modifyAccountConfirm(userMemberVO);
 
         if (result > 0) {
@@ -103,6 +105,7 @@ public class UserMemberController {
             session.setMaxInactiveInterval(60*30);
 
         } else {
+            System.out.println("modify fail");
             nextPage = "user/member/modify_account_ng";
         }
 

@@ -78,7 +78,7 @@
 						<label for="floatingInput6">휴대폰번호 입력</label>
 					</div>
 
-					<input type="button"  class="mt-4" value="회원가입" onclick="createAccountForm();">
+					<input type="button"  class="btn btn-primary mt-4 px-5 py-4 fs-3" value="회원가입" onclick="createAccountForm();">
 
 				</form>
 				
@@ -86,7 +86,7 @@
 			
 			<div class="login mt-4">
 				
-				<a href="<c:url value='/user/member/loginForm' />" class="text-decoration-none">로그인 화면</a>
+				<a href="<c:url value='/user/member/loginForm' />" class="text-decoration-none fs-3">로그인 화면</a>
 				
 			</div>
 		

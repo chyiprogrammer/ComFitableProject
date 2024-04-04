@@ -9,10 +9,6 @@
 
 <jsp:include page="../../include/title.jsp" />
 
-<%--
-<link href="<c:url value='/resources/css/user/login_form.css' />" rel="stylesheet" type="text/css">
---%>
-
 	<link href="/resources/choi_machine/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
 <jsp:include page="../include/login_js.jsp" />

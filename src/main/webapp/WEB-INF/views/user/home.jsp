@@ -5,20 +5,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<%--
-
-<jsp:include page="../include/title.jsp" />
---%>
-
+	<meta charset="UTF-8">
+	<link rel="icon" href="/resources/choi_machine/img/favicon/favicon-96x96.png" type="image/x-icon">
 
 </head>
+<body>
 
 <jsp:include page="../include/header.jsp" />
 <jsp:include page="./include/nav.jsp" />
-
-<body>
-
 
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
 	<div class="carousel-indicators">
@@ -84,40 +78,7 @@
 
 <br>
 
-
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
-
-<div class="container marketing">
-
-	<%--<!-- Three columns of text below the carousel -->
-	<div class="row">
-		<div class="col-lg-4">
-			<svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-			<h2>Heading</h2>
-			<p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-			<p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-		</div><!-- /.col-lg-4 -->
-		<div class="col-lg-4">
-			<svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-			<h2>Heading</h2>
-			<p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-			<p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-		</div><!-- /.col-lg-4 -->
-		<div class="col-lg-4">
-			<svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-			<h2>Heading</h2>
-			<p>And lastly this, the third column of representative placeholder content.</p>
-			<p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-		</div><!-- /.col-lg-4 -->
-	</div><!-- /.row -->--%>
-
-
-	<!-- START THE FEATURETTES -->
+<!-- /START THE FEATURETTES -->
 
 	<hr class="featurette-divider">
 
@@ -133,7 +94,7 @@
 		</div>
 		<div class="col-md-5">
 			<img src="/resources/choi_machine/img/main_feat1.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-				<title>Placeholder</title>
+				<title>ComFitable</title>
 				<rect width="100%" height="100%" fill="#eee"/>
 			</img>
 
@@ -154,7 +115,7 @@
 		</div>
 		<div class="col-md-5">
 			<img src="/resources/choi_machine/img/main_feat2.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-				<title>Placeholder</title>
+				<title>ComFitable</title>
 				<rect width="100%" height="100%" fill="#eee"/>
 			</img>
 
@@ -177,7 +138,7 @@
 		</div>
 		<div class="col-md-5">
 			<img src="/resources/choi_machine/img/main_feat3.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-				<title>Placeholder</title>
+				<title>ComFitable</title>
 				<rect width="100%" height="100%" fill="#eee"/>
 			</img>
 
@@ -188,10 +149,9 @@
 
 	<!-- /END THE FEATURETTES -->
 
-</div><!-- /.container -->
+
 
 	<jsp:include page="../include/footer.jsp" />
-
 
 </body>
 </html>

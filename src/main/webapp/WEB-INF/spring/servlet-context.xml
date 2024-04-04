@@ -28,18 +28,9 @@
      <!-- David : Login Check : 인터셉터 prehandler로 controller 실행 전 먼저 login 체크 후 리다이렉트함. -->
     <interceptors>
         <interceptor>
-            <mapping path="/book/user/rentalBookConfirm"/>
-            <mapping path="/book/user/enterBookshelf"/>
-            <mapping path="/book/user/listupRentalBookHistory"/>
-            <mapping path="/book/user/requestHopeBookForm"/>
-            <mapping path="/book/user/listupRequestHopeBook"/>
 
             <mapping path="/user/member/modifyAccountForm/"/>
             <mapping path="/user/member/modifyAccountConfirm/"/>
-
-            <mapping path="/admin/member/modifyAccountForm/"/>
-            <mapping path="/admin/member/modifyAccountConfirm/"/>
-
 
             <beans:bean
                 class="kr.co.namu.user.member.UserMemberLoginInterceptor"/>

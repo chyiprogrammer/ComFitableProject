@@ -21,13 +21,12 @@
     </insert>
 
     <update id="updateAll">
-        UPDATE user_member SET u_m_name =#{u_m_name}, u_m_gender=#{u_m_gender}, u_m_mail=#{u_m_mail},
-                               u_m_phone=#{u_m_phone}, u_m_mod_date =NOW() WHERE u_m_id = #{u_m_id}
+        UPDATE user_member SET u_m_name=#{u_m_name}, u_m_gender=#{u_m_gender}, u_m_mail=#{u_m_mail},
+                               u_m_phone=#{u_m_phone}, u_m_mod_date =NOW() WHERE u_m_id=#{u_m_id}
     </update>
 
     <select id ="userinfo" resultType="kr.co.namu.user.member.UserMemberVO">
         SELECT * FROM user_member WHERE u_m_no=#{u_m_no}
-
     </select>
 
     <select id="listforpassword" resultType="int">
@@ -43,14 +42,9 @@
 
     <!-- adnmin 에서 가져온것 -->
 
-
-
-
-
-
-
+<!--
     <resultMap id="myResultMap" type="kr.co.namu.admin.AdminMemberVO">
-        <!-- 리스트 타입 반환 -->
+        &lt;!&ndash; 리스트 타입 반환 &ndash;&gt;
     </resultMap>
 
     <select id="list" resultMap="myResultMap">
@@ -65,12 +59,11 @@
         UPDATE admin_member SET a_m_approval = 1 WHERE a_m_no = #{a_m_no}
     </update>
 
-
-
     <select id="listOne" resultMap="myResultMap">
         SELECT * FROM admin_member WHERE a_m_no = #{a_m_no}
 
     </select>
+-->
 
 </mapper>
 

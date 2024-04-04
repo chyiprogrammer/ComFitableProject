@@ -1,19 +1,19 @@
 package kr.co.namu.user;
 
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/user")
+@ComponentScan
+@RequestMapping("/")
 public class UserHomeController {
 
-    @GetMapping({"","/"})
+    @GetMapping({"/"})
     public String home(){
         System.out.println("[UserHomeController] home()");
 
-        String nextPage = "user/home";
-
-        return nextPage;
+        return "user/home";
     }
 }
