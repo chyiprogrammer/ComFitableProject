@@ -111,9 +111,13 @@ public class HistoryController {
 
     @GetMapping("/chartSee")
     @ResponseBody
-    public List<ChartVO> chartSee(@RequestParam("start") String start, @RequestParam("end") String end){
+    public List<ChartVO> chartSee(HttpSession session, @RequestParam("start") String start, @RequestParam("end") String end){
 
         ExerciseVO exerciseVO = new ExerciseVO();
+
+        UserMemberVO userMemberVO = (UserMemberVO) session.getAttribute("loginedUserMemberVo");
+        exerciseVO.setExer_id(userMemberVO.getU_m_id());
+
         exerciseVO.setStart(start);
         exerciseVO.setEnd(end);
 

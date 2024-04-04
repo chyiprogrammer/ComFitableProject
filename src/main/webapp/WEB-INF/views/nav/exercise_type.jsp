@@ -22,7 +22,7 @@
         .hidden_exer{
             display: none;
         }
-        
+
         .point{
             cursor: pointer;
         }
@@ -101,7 +101,7 @@
                         <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                         <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
-                        <form action="<c:url value='/user/member/exerciseType/Main_Confirm' />" name="exercise_type" method="post" id="valid_CheckForm0"> <%--아이디 끝 숫자 바꾸기--%>
+                        <form action="<c:url value='/user/member/exerciseType/chest' />" name="exercise_type" method="post" id="valid_CheckForm0"> <%--아이디 끝 숫자 바꾸기--%>
 
                             <div class="hidden_exer mt-3">
 
@@ -182,7 +182,7 @@
                             <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                             <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
-                            <form action="<c:url value='/user/member/exerciseType/Main_Confirm' />" name="exercise_type" method="post" id="valid_CheckForm1">
+                            <form action="<c:url value='/user/member/exerciseType/chest' />" name="exercise_type" method="post" id="valid_CheckForm1">
 
                                 <div class="hidden_exer mt-3">
 
@@ -260,7 +260,7 @@
                             <%--DB로 보내야하는 부분 / 시작 ! 이라는 멘트와 함께 exercise_dia로 가야함--%>
                             <%--name으로 exer_wgt_or_cnt와 exer_set 추가--%>
 
-                            <form action="<c:url value='/user/member/exerciseType/Main_Confirm' />" name="exercise_type" method="post" id="valid_CheckForm2">
+                            <form action="<c:url value='/user/member/exerciseType/chest' />" name="exercise_type" method="post" id="valid_CheckForm2">
 
                                 <div class="hidden_exer mt-3">
 
@@ -351,7 +351,7 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
-                                        <span class="input-group-text p-2 fs-6 fw-bold" onclick="toggleReadOnly(0)">무게 (클릭 후 조절가능)</span>
+                                        <span class="input-group-text p-2 point fs-6 fw-bold" onclick="toggleReadOnly(0)">무게 (클릭 후 조절가능)</span>
                                         <input type="number" name="exer_wgt" id="0_in" class="form-control fs-6" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                     </div>
 
@@ -430,7 +430,7 @@
                                     </div>
 
                                     <div class="input-group input-group-sm mb-3">
-                                        <span class="input-group-text p-2 fs-6 fw-bold" onclick="toggleReadOnly(1)">무게 (클릭 후 조절가능)</span>
+                                        <span class="input-group-text point p-2 fs-6 fw-bold" onclick="toggleReadOnly(1)">무게 (클릭 후 조절가능)</span>
                                         <input type="number" name="exer_wgt" id="1_in" class="form-control fs-6" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                                     </div>
 
@@ -833,7 +833,7 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text p-2 fs-6 fw-bold" onclick="toggleReadOnly(2)">무게 (클릭 후 조절가능)</span>
+                                <span class="input-group-text p-2 point fs-6 fw-bold" onclick="toggleReadOnly(2)">무게 (클릭 후 조절가능)</span>
                                 <input type="number" name="exer_wgt" id="2_in" class="form-control fs-6" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                             </div>
 
@@ -1954,7 +1954,7 @@
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text p-2 fs-6 fw-bold" onclick="toggleReadOnly(9)">무게 (클릭 후 조절가능)</span>
+                                <span class="input-group-text p-2 point fs-6 fw-bold" onclick="toggleReadOnly(9)">무게 (클릭 후 조절가능)</span>
                                 <input type="number" name="exer_wgt" id="9_in" class="form-control fs-6" value="1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm2" readonly="readonly">
                             </div>
 
