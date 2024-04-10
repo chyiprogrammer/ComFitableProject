@@ -38,12 +38,12 @@
 				<form action="<c:url value='/user/member/createAccountConfirm' />" name="create_account_form" method="post">
 
 					<div class="form-floating mb-1">
-						<input type="text" name="u_m_id" class="form-control" id="floatingInput" placeholder="aaaaa">
+						<input type="text" name="u_m_id" class="form-control" id="floatingInput" placeholder="">
 						<label for="floatingInput">아이디 입력</label>
 					</div>
 
 					<div class="form-floating mb-1 mt-2">
-						<input type="password" name="u_m_pw" class="form-control" id="floatingInput1" placeholder="bbbbb">
+						<input type="password" name="u_m_pw" class="form-control" id="floatingInput1" placeholder="">
 						<label for="floatingInput1">비밀번호 입력</label>
 					</div>
 
@@ -60,8 +60,8 @@
 					<div>
 						<select class="form-select mt-2 mb-1" name="u_m_gender" id="gender" required>
 							<option value="">성별 선택</option>
-							<option value="M">Man</option>
-							<option value="W">Woman</option>
+							<option value="M">남</option>
+							<option value="W">여</option>
 						</select>
 						<div class="invalid-feedback">
 							성별을 선택해주세요
