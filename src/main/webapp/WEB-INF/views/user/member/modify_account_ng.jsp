@@ -18,19 +18,12 @@
 	
 	<jsp:include page="../include/nav.jsp" />
 	
-	<section>
-		
-		<div id="section_wrap">
-		
-			<div class="word">
-			
-				<h3>MODIFY ACCOUNT FAIL!!</h3>
-				
-			</div>
-		
-		</div>
-		
-	</section>
+	<script>
+
+          alert("정보 수정 실패 !")
+          window.location.href = "<c:url value='/user/member/modifyAccountForm' />";
+
+        </script>
 	
 	<jsp:include page="../../include/footer.jsp" />
 	

@@ -55,14 +55,14 @@
 
 <%--					<select name="u_m_gender">
 						<option value="">SELECET USER GENDER.</option>
-						<option value="M" <c:if test="${loginedUserMemberVo.u_m_gender eq 'M'}"> selected </c:if>>Man</option>
-						<option value="W" <c:if test="${loginedUserMemberVo.u_m_gender eq 'W'}"> selected </c:if>>Woman</option>
+						<option value="M" <c:if test="${loginedUserMemberVo.u_m_gender eq 'M'}"> selected </c:if>>남</option>
+						<option value="W" <c:if test="${loginedUserMemberVo.u_m_gender eq 'W'}"> selected </c:if>>여</option>
 					</select>--%>
 
 					<div>
 						<select class="form-select mb-1" name="u_m_gender">
-							<option value="M" <c:if test="${loginedUserMemberVo.u_m_gender eq 'M'}"> selected </c:if>>Man</option>
-							<option value="W" <c:if test="${loginedUserMemberVo.u_m_gender eq 'W'}"> selected </c:if>>Woman</option>
+							<option value="M" <c:if test="${loginedUserMemberVo.u_m_gender eq 'M'}"> selected </c:if>>남</option>
+							<option value="W" <c:if test="${loginedUserMemberVo.u_m_gender eq 'W'}"> selected </c:if>>여</option>
 						</select>
 					</div>
 
@@ -71,7 +71,7 @@
 					</div>
 
 					<div class="form-floating mb-1">
-						<input type="text" name="u_m_phone"	value="${loginedUserMemberVo.u_m_phone}" placeholder="INPUT USER PHONE.">
+						<input type="text" id="floatingInput6" maxlength="13" name="u_m_phone"	value="${loginedUserMemberVo.u_m_phone}" placeholder="INPUT USER PHONE.">
 					</div>
 
 					<input type="button" class="mt-4" value="수정하기" onclick="modifyAccountForm();">
@@ -84,6 +84,24 @@
 		
 	</section>
 	</main>
+
+	<script>
+    		document.getElementById('floatingInput6').addEventListener('input', function(e) {
+    			var input = e.target.value.replace(/\D/g, ''); // 숫자 이외의 문자를 제거합니다.
+    			var formattedInput = '';
+
+    			// 전화번호 형식에 맞게 숫자를 포맷합니다.
+    			for (var i = 0; i < input.length; i++) {
+    				if (i === 3 || i === 7) {
+    					formattedInput += '-';
+    				}
+    				formattedInput += input[i];
+    			}
+
+    			// 포맷된 전화번호를 입력란에 반영합니다.
+    			e.target.value = formattedInput;
+    		});
+    	</script>
 	
 	<jsp:include page="../../include/footer.jsp" />
 	

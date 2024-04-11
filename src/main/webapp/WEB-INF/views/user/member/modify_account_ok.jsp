@@ -18,19 +18,12 @@
 	
 	<jsp:include page="../include/nav.jsp" />
 	
-	<section>
-		
-		<div id="section_wrap">
-		
-			<div class="word">
-			
-				<h3>MODIFY ACCOUNT SUCCESS!!</h3>
-				
-			</div>
-		
-		</div>
-		
-	</section>
+	<script>
+
+      alert("정보 수정 완료 !")
+      window.location.href = "<c:url value='/' />";
+
+    </script>
 	
 	<jsp:include page="../../include/footer.jsp" />
 	

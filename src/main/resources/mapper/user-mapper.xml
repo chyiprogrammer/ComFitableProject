@@ -17,7 +17,7 @@
 
     <insert id="join" >
         INSERT INTO user_member(u_m_id, u_m_pw, u_m_name, u_m_gender, u_m_mail, u_m_phone)
-        VALUES ( #{u_m_id},#{u_m_pw},#{u_m_name},#{u_m_gender},CONCAT(#{u_m_mail}, #{u_m_mailchoose}),#{u_m_phone})
+        VALUES (#{u_m_id},#{u_m_pw},#{u_m_name},#{u_m_gender},CONCAT(#{u_m_mail}, #{u_m_mailchoose}),#{u_m_phone})
     </insert>
 
     <update id="updateAll">
@@ -26,7 +26,7 @@
     </update>
 
     <select id ="userinfo" resultType="kr.co.namu.user.member.UserMemberVO">
-        SELECT * FROM user_member WHERE u_m_no=#{u_m_no}
+        SELECT * FROM user_member WHERE u_m_id=#{u_m_id}
     </select>
 
     <select id="listforpassword" resultType="int">

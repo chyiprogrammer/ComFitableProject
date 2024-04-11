@@ -33,12 +33,12 @@
 		<form action="<c:url value='/user/member/loginConfirm' />" name="login_form" method="post">
 
 			<div class="form-floating mb-1">
-				<input type="text" name="u_m_id" class="form-control" id="floatingInput" placeholder="aaaaa">
+				<input type="text" name="u_m_id" class="form-control" id="floatingInput" placeholder="">
 				<label for="floatingInput">아이디</label>
 			</div>
 
 			<div class="form-floating">
-				<input type="password" name="u_m_pw" class="form-control" id="floatingPassword" placeholder="Password">
+				<input type="password" name="u_m_pw" class="form-control" id="floatingPassword" placeholder="">
 				<label for="floatingPassword">패스워드</label>
 			</div>
 

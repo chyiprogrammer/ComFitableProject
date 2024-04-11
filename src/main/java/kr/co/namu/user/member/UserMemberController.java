@@ -97,7 +97,7 @@ public class UserMemberController {
         
         int result = userMemberService.modifyAccountConfirm(userMemberVO);
 
-        if (result > 0) {
+        if (result >= 0) {
 
             UserMemberVO loginedUserMemberVo = userMemberService.getLoginedUser(userMemberVO.getU_m_no());
 

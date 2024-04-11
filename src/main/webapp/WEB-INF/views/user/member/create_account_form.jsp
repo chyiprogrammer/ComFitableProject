@@ -48,7 +48,7 @@
 					</div>
 
 					<div class="form-floating mb-1 mb-2">
-						<input type="password" name="u_m_pw_again" class="form-control" id="floatingInput2" placeholder="bbbbb">
+						<input type="password" name="u_m_pw_again" class="form-control" id="floatingInput2" placeholder="">
 						<label for="floatingInput2">비밀번호 확인</label>
 					</div>
 
@@ -70,7 +70,7 @@
 
 
 						<div class="form-floating mb-1 mt-2">
-							<input type="email" name="u_m_mail" class="form-control" id="floatingInput5" placeholder="email@example.com">
+							<input type="email" name="u_m_mail" class="form-control" id="floatingInput5" placeholder="">
 							<label for="floatingInput5">이메일 입력</label>
 							<select name="u_m_mailchoose" class="form-select mt-1 mb-2 p-0 text" id="domainSelect">
 								<option value="@naver.com">&nbsp;&nbsp;@naver.com</option>
@@ -80,7 +80,7 @@
 
 
 					<div class="form-floating">
-						<input type="text" name="u_m_phone" maxlength="13" class="form-control" id="floatingInput6" placeholder="010-xxxx-xxxx">
+						<input type="text" name="u_m_phone" maxlength="13" class="form-control" id="floatingInput6" placeholder="">
 						<label for="floatingInput6">휴대폰번호 입력</label>
 					</div>
 
@@ -118,7 +118,7 @@
 			e.target.value = formattedInput;
 		});
 	</script>
-	
+
 	<jsp:include page="../../include/footer.jsp" />
 	
 </body>
